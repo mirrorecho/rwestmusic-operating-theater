@@ -1,34 +1,37 @@
 #(set-default-paper-size "letter" 'portrait)
 #(set-global-staff-size 24)
 
-% startScore = {
-%     % \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
-%     % #'((Y-offset . 22)
-%     %    (alignment-distances . (44)))
-% }
+startScore = {
+    \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
+    #'((Y-offset . 22)
+       (alignment-distances . (14.9)))
+}
 
 
 pluckShowReson = {
     \stopStaff
-    \override Staff.StaffSymbol.transparent = ##f
+    % \override Staff.StaffSymbol.transparent = ##f
+    \override Staff.StaffSymbol.line-positions = #'(-8 -8.1 -4 -2 0 2 4)
     \startStaff
-    \override Staff.StaffSymbol.transparent = ##f
+    % \override Staff.StaffSymbol.transparent = ##f
     \override Staff.NoteHead.no-ledgers = ##f
     \once \override Score.TimeSignature.stencil = ##f 
+    \bar ""
 }
 
 pluckPreSkip = {
     \bar ""
 
     \stopStaff
-    \override Staff.StaffSymbol.transparent = ##t
+    % \override Staff.StaffSymbol.transparent = ##t
+    \override Staff.StaffSymbol.line-positions = #'( -8 -8.1 )
     \startStaff
 
     \override Staff.NoteHead.no-ledgers = ##t
     \once \override Staff.Clef.transparent = ##t
     \clef percussion
     \stemUp
-    \set Timing.defaultBarType = "||"
+    % \set Timing.defaultBarType = "||"
 }
 
 resonPreSkip = {
@@ -37,6 +40,7 @@ resonPreSkip = {
     \startStaff
     \once \override Staff.Clef.transparent = ##t
     \once \override Score.TimeSignature.stencil = ##f
+    \stemUp
 }
 
 resonShow = {
@@ -46,7 +50,6 @@ resonShow = {
     \xNotesOn % TO DO: only needed at beginning ... rethink
     \autoBeamOff % TO DO: only needed at beginning ... rethink
     \override DynamicText.stencil = ##f % TO DO: only needed at beginning ... rethink
-    \clef bass
 }
 
 pluckNoteEvent = {
@@ -57,14 +60,32 @@ pluckRestEvent = {
     \override NoteColumn.glissando-skip = ##t
 }
 
+startPluckArrow = {
+}
+
+stopPluckArrow = {
+}
+
+
+freeLineArrow = {
+      % \unHideNotes
+      % \grace {
+      %   \once \override Rest  #'stencil = #ly:text-interface::print
+      %   \once \override Rest.staff-position = #-9.9
+      %   \once \override Rest #'text = \markup { \fontsize #6 { \general-align #Y #DOWN { \arrow-head #X #RIGHT ##t } } }
+      %   r8
+      % }
+      % \hideNotes
+}
+
 \header {
-    % composer = "Randall West"
+    composer = "Randall West"
     % tagline = ##f
     title = \markup {
         \column {
             \center-align {
-                \fontsize #4 {
-                    "..."
+                \fontsize #2 {
+                    "Operating Theatre"
                 }
             }
         }
@@ -86,7 +107,7 @@ pluckRestEvent = {
         (stretchability . 0)
     )
     system-system-spacing = #'(
-        (basic-distance . 12)
+        (basic-distance . 16)
         (minimum-distance . 18)
         (padding . 12)
         (stretchability . 20)

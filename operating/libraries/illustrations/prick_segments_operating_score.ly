@@ -23,233 +23,116 @@
             }
             {
                 {
-                    \pluckPreSkip
-                    \startScore
+                    \numericTimeSignature
+                    \pluckHide
+                    \hideTime
+                    \pluckStart
                     \accidentalStyle modern-cautionary
-                    s1
+                    \time 8/4
+                    s2
                     \pluckShowReson
-                                \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
-                    \clef "treble"
-                    <b'' bf'''>1
-                    \glissando
-                    \pluckPreSkip
-                    s1
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
+                                \set glissandoMap = #'(( 0 . 0))
+                    \clef "bass"
                     <
-                        d'''
-                        \tweak transparent ##t
-                        e''''
-                    >4
+                        \tweak style #'harmonic-black
+                        fs''''
+                    >1
+                    \glissando
+                    \pluckHide
+                    \pluckRestEvent
+                    s2
+                    \numericTimeSignature
+                    \hideTime
+                    \pluckNoteEvent
+                    \featherFaster
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    \bar ".|:"
+                    \time 6/4
+                    <d'>32
                     \p
+                    [
                     \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
                     \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <
-                        d'''
-                        \tweak transparent ##t
-                        e''''
-                    >4
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <f'>32
+                    \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <a'>32
+                    \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <c''>32
+                    \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <e''>32
+                    \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <g''>32
+                    \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <b''>32
+                    \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <d'''>32
+                    ]
+                    \glissando
+                    \pluckNoteEvent
+                    \featherSlower
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <f'''>32
+                    [
+                    \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <d'''>32
+                    \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <b''>32
+                    \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <g''>32
+                    \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <e''>32
+                    \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <c''>32
+                    \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <a'>32
+                    \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    <f'>32
+                    ]
                     \glissando
                     \pluckRestEvent
                     r1
                     \fermata
                     \bar ":|."
                     \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    \pluckHide
                     \time 8/4
-                    s\breve
-                    \freeLineArrow
-                }
-                {
-                    \pluckPreSkip
-                    \accidentalStyle modern-cautionary
+                    s2
+                    \glissando
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    \pluckHide
                     s1
-                    \pluckShowReson
-                                \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
-                    \clef "treble"
-                    <b'' bf'''>1
                     \glissando
-                    \pluckPreSkip
-                    s1
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <
-                        d'''
-                        \tweak transparent ##t
-                        e''''
-                    >4
-                    \p
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <
-                        d'''
-                        \tweak transparent ##t
-                        e''''
-                    >4
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                }
-                {
-                    \pluckPreSkip
-                    \accidentalStyle modern-cautionary
-                    s1
-                    \pluckShowReson
-                                \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
-                    \clef "treble"
-                    <b'' bf'''>1
-                    \glissando
-                    \pluckPreSkip
-                    s1
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <
-                        d'''
-                        \tweak transparent ##t
-                        e''''
-                    >4
-                    \p
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <
-                        d'''
-                        \tweak transparent ##t
-                        e''''
-                    >4
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                }
-                {
-                    \pluckPreSkip
-                    \accidentalStyle modern-cautionary
-                    s1
-                    \pluckShowReson
-                                \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
-                    \clef "treble"
-                    <b'' bf'''>1
-                    \glissando
-                    \pluckPreSkip
-                    s1
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <
-                        d'''
-                        \tweak transparent ##t
-                        e''''
-                    >4
-                    \p
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <
-                        d'''
-                        \tweak transparent ##t
-                        e''''
-                    >4
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    \pluckHide
+                    s2
                 }
             }
             \context Staff = "reson_staff"
@@ -261,133 +144,53 @@
                 {
                     \crossStaff
                     {
-                        \resonPreSkip
+                        \numericTimeSignature
+                        \resonStart
+                        \hideTime
+                        \resonHide
                         \accidentalStyle modern-cautionary
-                        s1
-                        s1
-                        s1
-                        \numericTimeSignature
-                        \resonShow
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
                         \time 8/4
-                        s\breve
-                        \resonShow
-                        \numericTimeSignature
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b''>4
+                        s2
                         s1
+                        \resonHide
+                        s2
                         \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
+                        \bar ".|:"
+                        \featherFaster
+                        \resonShow
+                        \hideTime
+                        \time 6/4
+                        <fs''''>32
+                        [
+                        <fs''''>32
+                        <fs''''>32
+                        <fs''''>32
+                        <fs''''>32
+                        <fs''''>32
+                        <fs''''>32
+                        <fs''''>32
+                        ]
+                        \featherSlower
+                        <fs''''>32
+                        [
+                        <fs''''>32
+                        <fs''''>32
+                        <fs''''>32
+                        <fs''''>32
+                        <fs''''>32
+                        <fs''''>32
+                        <fs''''>32
+                        ]
+                        r1
+                        \bar ":|."
+                        \numericTimeSignature
+                        \resonHide
                         \time 8/4
-                        s\breve
-                        \resonShow
-                    }
-                }
-                {
-                    \crossStaff
-                    {
-                        \resonPreSkip
-                        \accidentalStyle modern-cautionary
+                        s2
+                        \resonHide
                         s1
-                        s1
-                        s1
-                        \numericTimeSignature
-                        \resonShow
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
-                        \numericTimeSignature
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
-                    }
-                }
-                {
-                    \crossStaff
-                    {
-                        \resonPreSkip
-                        \accidentalStyle modern-cautionary
-                        s1
-                        s1
-                        s1
-                        \numericTimeSignature
-                        \resonShow
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
-                        \numericTimeSignature
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
-                    }
-                }
-                {
-                    \crossStaff
-                    {
-                        \resonPreSkip
-                        \accidentalStyle modern-cautionary
-                        s1
-                        s1
-                        s1
-                        \numericTimeSignature
-                        \resonShow
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
-                        \numericTimeSignature
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
+                        \resonHide
+                        s2
                     }
                 }
             }
@@ -400,210 +203,6 @@
                 \consists Horizontal_bracket_engraver
             }
             {
-                {
-                    \pluckPreSkip
-                    \accidentalStyle modern-cautionary
-                    s1
-                    \pluckShowReson
-                                \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
-                    <e' b'>1
-                    \glissando
-                    \pluckPreSkip
-                    s1
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <d' a'>4
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <
-                        d'''
-                        \tweak transparent ##t
-                        e''''
-                    >4
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                }
-                {
-                    \pluckPreSkip
-                    \accidentalStyle modern-cautionary
-                    s1
-                    \pluckShowReson
-                                \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
-                    <e' b'>1
-                    \glissando
-                    \pluckPreSkip
-                    s1
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <d' a'>4
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <
-                        d'''
-                        \tweak transparent ##t
-                        e''''
-                    >4
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                }
-                {
-                    \pluckPreSkip
-                    \accidentalStyle modern-cautionary
-                    s1
-                    \pluckShowReson
-                                \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
-                    <e' b'>1
-                    \glissando
-                    \pluckPreSkip
-                    s1
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <d' a'>4
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <
-                        d'''
-                        \tweak transparent ##t
-                        e''''
-                    >4
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                }
-                {
-                    \pluckPreSkip
-                    \accidentalStyle modern-cautionary
-                    s1
-                    \pluckShowReson
-                                \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
-                    <e' b'>1
-                    \glissando
-                    \pluckPreSkip
-                    s1
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <d' a'>4
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckNoteEvent
-                    \bar ".|:"
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \time 5/4
-                    <
-                        d'''
-                        \tweak transparent ##t
-                        e''''
-                    >4
-                    \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
-                    \bar ":|."
-                    \numericTimeSignature
-                    \once \override Staff.TimeSignature #'stencil = ##f 
-                    \pluckRestEvent
-                    \time 8/4
-                    s\breve
-                    \freeLineArrow
-                }
             }
             \context Staff = "reson_staff"
             \with
@@ -611,138 +210,6 @@
                 \consists Horizontal_bracket_engraver
             }
             {
-                {
-                    \crossStaff
-                    {
-                        \resonPreSkip
-                        \accidentalStyle modern-cautionary
-                        s1
-                        s1
-                        s1
-                        \numericTimeSignature
-                        \resonShow
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b'' bf'''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
-                        \numericTimeSignature
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
-                    }
-                }
-                {
-                    \crossStaff
-                    {
-                        \resonPreSkip
-                        \accidentalStyle modern-cautionary
-                        s1
-                        s1
-                        s1
-                        \numericTimeSignature
-                        \resonShow
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b'' bf'''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
-                        \numericTimeSignature
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
-                    }
-                }
-                {
-                    \crossStaff
-                    {
-                        \resonPreSkip
-                        \accidentalStyle modern-cautionary
-                        s1
-                        s1
-                        s1
-                        \numericTimeSignature
-                        \resonShow
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b'' bf'''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
-                        \numericTimeSignature
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
-                    }
-                }
-                {
-                    \crossStaff
-                    {
-                        \resonPreSkip
-                        \accidentalStyle modern-cautionary
-                        s1
-                        s1
-                        s1
-                        \numericTimeSignature
-                        \resonShow
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b'' bf'''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
-                        \numericTimeSignature
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 5/4
-                        <b''>4
-                        s1
-                        \numericTimeSignature
-                        \resonPreSkip
-                        \once \override Staff.TimeSignature #'stencil = ##f 
-                        \time 8/4
-                        s\breve
-                        \resonShow
-                    }
-                }
             }
         >>
     >>

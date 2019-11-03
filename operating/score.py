@@ -12,8 +12,8 @@ class OperatingPerformer(calliope.StaffGroup):
     class ResonStaff(calliope.Staff): pass
 
     def add_segment(self, segment):
-        self.staves[0].append(segment.get_pluck_segment())
-        self.staves[1].append(segment.get_reson_segment())
+        self.staves[0].append(segment.get_pluck())
+        self.staves[1].append(segment.get_reson())
 
 
 class OperatingScore(calliope.Score):

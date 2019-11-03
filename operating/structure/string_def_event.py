@@ -1,18 +1,37 @@
-import math
+import math, copy
 import abjad
 import calliope
 
-class StringDefEvent(calliope.Event): 
+from operating.structure.string_base import StringBase
+
+class StringDefEvent(StringBase, calliope.Event): 
     # from lowest to highest, maps pitches in self.pitch to index of string to pluck
     
     string_map = {0: (0,)}
-    init_beats = 4
     pluck_spacing = 4
+    init_beats = 4
+
+    existing_map = {}
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.scale = calliope.Scale()
         self.pitch = [p for p in self.string_map]
+
+    def add_def(self, new_def):
+        combo_map = {}
+        combo_map.update(self.string_map)
+        combo_map.update(new_def.string_map)
+
+        print(combo_map)
+
+        combo_def = StringDefEvent(
+            pluck_spacing = new_def.pluck_spacing,
+            existing_map = copy.deepcopy(self.string_map),
+            string_map = combo_map,
+            )
+        return combo_def
+
 
     @property
     def string_count(self):
@@ -35,13 +54,14 @@ class StringDefEvent(calliope.Event):
                     my_pitch.append(pitch)
         return my_pitch
 
-    def get_pluck_show_reson_event(self):
+    def get_pluck(self):
         my_event = calliope.Event(
             pitch = list(self.string_map.keys()),
-            beats = self.init_beats
+            beats = self.init_beats,
+            def_event = self,
             )
         my_event.tag(*self.tags)
-        my_event.tag(
+        my_event.tag("bass",
             r"""\pluckShowReson
             \set glissandoMap = #'(""" + " ".join(
                 ["( %s . %s)" % (i, v) for i,s in enumerate(self.string_map.items()) 
@@ -49,4 +69,12 @@ class StringDefEvent(calliope.Event):
                 ) + ")"
             )
         my_event.tag("!\\glissando")
+        return my_event
+
+    def get_reson(self):
+        my_event = calliope.Event(
+            beats = self.init_beats,
+            def_event = self,
+            )
+        my_event.skip = True
         return my_event

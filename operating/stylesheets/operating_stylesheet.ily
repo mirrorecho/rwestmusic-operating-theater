@@ -1,55 +1,66 @@
 #(set-default-paper-size "letter" 'portrait)
-#(set-global-staff-size 24)
+#(set-global-staff-size 18)
 
 startScore = {
     \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
     #'((Y-offset . 22)
-       (alignment-distances . (14.9)))
+       (alignment-distances . (16.9)))
 }
 
+pluckStart = {
+    \override Staff.Clef.transparent = ##t
+    \stemUp
+}
+
+resonStart = {
+    \stemUp
+}
+
+pluckShow = {
+    \clef percussion    
+}
 
 pluckShowReson = {
     \stopStaff
     % \override Staff.StaffSymbol.transparent = ##f
-    \override Staff.StaffSymbol.line-positions = #'(-8 -8.1 -4 -2 0 2 4)
+    \override Staff.StaffSymbol.line-positions = #'(
+        -8 -8.1 -4 -2 0 2 4 
+        8 10 12 14 16
+        )
     \startStaff
     % \override Staff.StaffSymbol.transparent = ##f
     \override Staff.NoteHead.no-ledgers = ##f
     \once \override Score.TimeSignature.stencil = ##f 
+    \once \override Staff.Clef.transparent = ##f
     \bar ""
 }
 
-pluckPreSkip = {
-    \bar ""
-
+pluckHide = {
+    \once \override Score.TimeSignature.stencil = ##f 
     \stopStaff
     % \override Staff.StaffSymbol.transparent = ##t
     \override Staff.StaffSymbol.line-positions = #'( -8 -8.1 )
     \startStaff
 
     \override Staff.NoteHead.no-ledgers = ##t
-    \once \override Staff.Clef.transparent = ##t
-    \clef percussion
-    \stemUp
     % \set Timing.defaultBarType = "||"
-}
-
-resonPreSkip = {
-    \stopStaff
-    \override Staff.StaffSymbol.transparent = ##t    
-    \startStaff
-    \once \override Staff.Clef.transparent = ##t
-    \once \override Score.TimeSignature.stencil = ##f
-    \stemUp
 }
 
 resonShow = {
     \stopStaff
     \override Staff.StaffSymbol.transparent = ##f
     \startStaff
-    \xNotesOn % TO DO: only needed at beginning ... rethink
+    % \xNotesOn % TO DO: only needed at beginning ... rethink
     \autoBeamOff % TO DO: only needed at beginning ... rethink
     \override DynamicText.stencil = ##f % TO DO: only needed at beginning ... rethink
+}
+
+resonHide = {
+    \stopStaff
+    \override Staff.StaffSymbol.transparent = ##t    
+    \startStaff
+    \once \override Staff.Clef.transparent = ##t
+    \once \override Score.TimeSignature.stencil = ##f
 }
 
 pluckNoteEvent = {
@@ -66,16 +77,34 @@ startPluckArrow = {
 stopPluckArrow = {
 }
 
+featherFaster = {
+    \override Beam.grow-direction = #RIGHT
+    % \featherDurations #(ly:make-moment 2/1)
+}
+
+featherSlower = {
+  \override Beam.grow-direction = #LEFT
+  % \featherDurations #(ly:make-moment 1/2)
+}
+
+featherOff = {
+  \override Beam.grow-direction = #'()  
+}
+
 
 freeLineArrow = {
-      % \unHideNotes
-      % \grace {
-      %   \once \override Rest  #'stencil = #ly:text-interface::print
-      %   \once \override Rest.staff-position = #-9.9
-      %   \once \override Rest #'text = \markup { \fontsize #6 { \general-align #Y #DOWN { \arrow-head #X #RIGHT ##t } } }
-      %   r8
-      % }
-      % \hideNotes
+      \unHideNotes
+      \grace {
+        \once \override Rest  #'stencil = #ly:text-interface::print
+        \once \override Rest.staff-position = #-9.9
+        \once \override Rest #'text = \markup { \fontsize #6 { \general-align #Y #DOWN { \arrow-head #X #RIGHT ##t } } }
+        r8
+      }
+      \hideNotes
+}
+
+hideTime = {
+    \once \override Staff.TimeSignature #'stencil = ##f
 }
 
 \header {
@@ -126,6 +155,10 @@ freeLineArrow = {
         \override BarNumber #'font-size = #1.4
         \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
         \override RehearsalMark #'font-size = #6
+        \remove "Timing_translator"
+        \remove "Default_bar_line_engraver"
+        %\remove "Repeat_acknowledge_engraver"
+        %\remove "Volta_engraver"
     }
     \context {
         \Staff
@@ -145,6 +178,11 @@ freeLineArrow = {
         % \override Stem.details.style = #'dashed-line
         \override Stem.details = ";"
         \override DynamicLineSpanner.direction = #UP
+        
+        \consists "Timing_translator"
+        \consists "Default_bar_line_engraver"
+        %\consists "Repeat_acknowledge_engraver"
+        %\consists "Volta_engraver"
         
         % \override VerticalAxisGroup.default-staff-staff-spacing =
         %     #'((basic-distance . 22)

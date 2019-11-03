@@ -23,7 +23,7 @@
             }
             {
                 {
-                    \pluckPreSkip
+                    \pluckSkip
                     \accidentalStyle modern-cautionary
                     s1
                     \pluckShowReson
@@ -31,7 +31,7 @@
                     \clef "bass"
                     <a,, a,>1
                     \glissando
-                    \pluckPreSkip
+                    \pluckSkip
                     s1
                     \numericTimeSignature
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ) ( 2 . 2 ) ( 3 . 3 ))
@@ -149,7 +149,7 @@
                 {
                     \crossStaff
                     {
-                        \resonPreSkip
+                        \resonSkip
                         \accidentalStyle modern-cautionary
                         s1
                         s1

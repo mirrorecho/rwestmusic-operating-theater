@@ -32,6 +32,9 @@ class StringDefEvent(StringBase, calliope.Event):
             )
         return combo_def
 
+    @property
+    def strings(self):
+        return tuple(sorted([s for mapped_strings in self.string_map.values() for s in mapped_strings]))
 
     @property
     def string_count(self):

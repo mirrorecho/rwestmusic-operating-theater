@@ -44,7 +44,6 @@ PRICK_STRING_MID2 = StringDefEvent(
     )
 
 
-
 # PRICK_STRING_HIGHEST.tag("treble",)
 # PRICK_STRING_HIGHEST.respell = "sharps"
 

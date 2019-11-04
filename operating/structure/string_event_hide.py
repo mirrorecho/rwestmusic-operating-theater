@@ -6,11 +6,11 @@ from operating.structure.string_event import StringEvent
 
 class StringEventHide(StringEvent): 
 
-    pluck_strings = None
+    pluck_strings = ()
 
     def get_pluck(self):
         my_event = super().get_pluck()
-        my_event.pluck_strings = None
+        my_event.pluck_strings = ()
         my_event.skip = True
         my_event.untag(r"\pluckNoteEvent")
 

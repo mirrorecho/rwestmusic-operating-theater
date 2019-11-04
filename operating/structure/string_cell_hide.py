@@ -35,3 +35,8 @@ class StringCellHide(StringCell):
             )
         
         return super().get_branches_kwargs(*args, **kwargs)
+
+    def get_reson(self):
+        my_cell = super().get_reson()
+        my_cell.events[-1].tag('!\\once \\hide Staff.BarLine')
+        return my_cell

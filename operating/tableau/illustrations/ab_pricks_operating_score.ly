@@ -24,11 +24,12 @@
             {
                 {
                     \numericTimeSignature
-                    \pluckHide
                     \hideTime
                     \pluckStart
-                    \improvisationOff
+                    \pluckShow
                     \pluckRestEvent
+                    \improvisationOff
+                    \pluckHide
                     \accidentalStyle modern-cautionary
                     \time 8/4
                     s2
@@ -44,17 +45,16 @@
                     \pluckRestEvent
                     s2
                     \numericTimeSignature
-                    \pluckNoteEvent
-                    \set glissandoMap = #'(( 0 . 0 ))
                     \hideTime
-                    \featherFaster
+                    \pluckShow
                     \improvisationOff
+                    \set glissandoMap = #'(( 0 . 0 ))
                     \bar ".|:"
+                    \featherFaster
+                    \pluckNoteEvent
                     \time 7/4
                     <d'>32
-                    \pp
                     [
-                    \<
                     \glissando
                     \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ))
@@ -85,13 +85,11 @@
                     <d'''>32
                     ]
                     \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
                     \featherSlower
-                    \pluckNoteEvent
-                    \set glissandoMap = #'(( 0 . 0 ))
                     <f'''>32
-                    \mp
                     [
-                    \>
                     \glissando
                     \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ))
@@ -119,11 +117,10 @@
                     \glissando
                     \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ))
+                    \featherOff
                     <f'>32
-                    \pp
                     ]
                     \glissando
-                    \featherOff
                     \pluckRestEvent
                     s4
                     \pluckRestEvent
@@ -131,33 +128,35 @@
                     \fermata
                     \bar ":|."
                     \numericTimeSignature
-                    \pluckHide
-                    \set glissandoMap = #'(( 0 . 0 ))
                     \once \override TextScript.outside-staff-priority = ##f
-                    \improvisationOff
+                    \pluckShow
                     \pluckRestEvent
+                    \improvisationOff
+                    \set glissandoMap = #'(( 0 . 0 ))
+                    \pluckHide
                     \textLengthOn
                     \time 6/4
                     s4
                     ^ \markup { "repeat until .2 ready" }
                     \glissando
-                    \textLengthOff
+                    \pluckRestEvent
                     \pluckHide
                     \set glissandoMap = #'(( 0 . 0 ))
-                    \pluckRestEvent
+                    \textLengthOff
                     s1
                     \glissando
-                    \pluckHide
-                    \set glissandoMap = #'(( 0 . 0 ))
                     \pluckRestEvent
+                    \pluckHide
                     \freeLineArrow
+                    \set glissandoMap = #'(( 0 . 0 ))
                     s4
                     \glissando
                     \numericTimeSignature
+                    \hideTime
+                    \pluckShow
+                    \improvisationOff
                     \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ))
-                    \hideTime
-                    \improvisationOff
                     \time 5/4
                     <c''>4
                     \glissando
@@ -165,10 +164,11 @@
                     r1
                     \fermata
                     \numericTimeSignature
+                    \hideTime
+                    \pluckShow
+                    \improvisationOff
                     \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ))
-                    \hideTime
-                    \improvisationOff
                     \time 5/4
                     <g'''>4
                     \glissando
@@ -176,10 +176,11 @@
                     r1
                     \fermata
                     \numericTimeSignature
+                    \hideTime
+                    \pluckShow
+                    \improvisationOff
                     \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ))
-                    \hideTime
-                    \improvisationOff
                     \time 5/4
                     <c''>4
                     \glissando
@@ -187,17 +188,16 @@
                     r1
                     \fermata
                     \numericTimeSignature
-                    \pluckNoteEvent
-                    \set glissandoMap = #'(( 0 . 0 ))
                     \hideTime
-                    \featherFaster
+                    \pluckShow
                     \improvisationOff
+                    \set glissandoMap = #'(( 0 . 0 ))
                     \bar ".|:"
+                    \featherFaster
+                    \pluckNoteEvent
                     \time 7/4
                     <d'>32
-                    \pp
                     [
-                    \<
                     \glissando
                     \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ))
@@ -228,13 +228,11 @@
                     <d'''>32
                     ]
                     \glissando
+                    \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ))
                     \featherSlower
-                    \pluckNoteEvent
-                    \set glissandoMap = #'(( 0 . 0 ))
                     <f'''>32
-                    \mp
                     [
-                    \>
                     \glissando
                     \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ))
@@ -262,133 +260,13 @@
                     \glissando
                     \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ))
+                    \featherOff
                     <f'>32
-                    \pp
                     ]
                     \glissando
-                    \featherOff
                     \pluckRestEvent
                     s4
                     r1
-                }
-            }
-            \context Staff = "reson_staff"
-            \with
-            {
-                \consists Horizontal_bracket_engraver
-            }
-            {
-                {
-                    \crossStaff
-                    {
-                        \numericTimeSignature
-                        \improvisationOff
-                        \hideTime
-                        \resonStart
-                        \resonHide
-                        \accidentalStyle modern-cautionary
-                        \time 8/4
-                        s2
-                        s1
-                        \resonHide
-                        s2
-                        \numericTimeSignature
-                        \resonShow
-                        \hideTime
-                        \featherFaster
-                        \improvisationOff
-                        \bar ".|:"
-                        \time 7/4
-                        <fs''''>32
-                        [
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        ]
-                        \featherSlower
-                        <fs''''>32
-                        [
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        ]
-                        s4
-                        r1
-                        \fermata
-                        \bar ":|."
-                        \numericTimeSignature
-                        \improvisationOff
-                        \resonHide
-                        \time 6/4
-                        s4
-                        \resonHide
-                        s1
-                        \resonHide
-                        s4
-                        \once \hide Staff.BarLine
-                        \numericTimeSignature
-                        \hideTime
-                        \improvisationOff
-                        \resonShow
-                        \time 5/4
-                        <fs''''>4
-                        r1
-                        \fermata
-                        \numericTimeSignature
-                        \hideTime
-                        \improvisationOff
-                        \resonShow
-                        \time 5/4
-                        <fs''''>4
-                        r1
-                        \fermata
-                        \numericTimeSignature
-                        \hideTime
-                        \improvisationOff
-                        \resonShow
-                        \time 5/4
-                        <fs''''>4
-                        r1
-                        \fermata
-                        \numericTimeSignature
-                        \resonShow
-                        \hideTime
-                        \featherFaster
-                        \improvisationOff
-                        \bar ".|:"
-                        \time 7/4
-                        <fs''''>32
-                        [
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        ]
-                        \featherSlower
-                        <fs''''>32
-                        [
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        <fs''''>32
-                        ]
-                        s4
-                        r1
-                    }
                 }
             }
         >>
@@ -402,10 +280,11 @@
             {
                 {
                     \numericTimeSignature
+                    \pluckStart
+                    \pluckShow
+                    \improvisationOff
                     \pluckHide
                     \set glissandoMap = #'(( 0 . 0 ))
-                    \pluckStart
-                    \improvisationOff
                     \accidentalStyle modern-cautionary
                     \time 9/4
                     s\breve
@@ -414,10 +293,11 @@
                     s4
                     ]
                     \numericTimeSignature
+                    \hideTime
+                    \pluckShow
+                    \pluckRestEvent
                     \improvisationOff
                     \pluckHide
-                    \pluckRestEvent
-                    \hideTime
                     \time 6/4
                     s8
                     \pluckShowReson
@@ -434,6 +314,7 @@
                     \pluckRestEvent
                     s4.
                     \numericTimeSignature
+                    \pluckShow
                     \improvisationOff
                     \pluckHide
                     \set glissandoMap = #'(( 0 . 0 ))
@@ -441,72 +322,71 @@
                     s4
                     \glissando
                     \numericTimeSignature
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \pluckNoteEvent
                     \hideTime
-                    \featherFaster
+                    \pluckShow
                     \improvisationOff
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \bar ".|:"
+                    \featherFaster
+                    \pluckNoteEvent
                     \time 7/4
                     <
                         b
                         \tweak transparent ##t
                         a'
                     >32
-                    \pp
                     [
-                    \<
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     <
                         d'
                         \tweak transparent ##t
                         c''
                     >32
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     <
                         f'
                         \tweak transparent ##t
                         e''
                     >32
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     <
                         a'
                         \tweak transparent ##t
                         g''
                     >32
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     <
                         c''
                         \tweak transparent ##t
                         b''
                     >32
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     <
                         e''
                         \tweak transparent ##t
                         d'''
                     >32
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     <
                         g''
                         \tweak transparent ##t
                         f'''
                     >32
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     <
                         b''
                         \tweak transparent ##t
@@ -514,77 +394,74 @@
                     >32
                     ]
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \featherSlower
                     <
                         d'''
                         \tweak transparent ##t
                         a'''
                     >32
-                    \mp
                     [
-                    \>
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     <
                         b''
                         \tweak transparent ##t
                         f'''
                     >32
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     <
                         g''
                         \tweak transparent ##t
                         d'''
                     >32
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     <
                         e''
                         \tweak transparent ##t
                         b''
                     >32
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     <
                         c''
                         \tweak transparent ##t
                         g''
                     >32
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     <
                         a'
                         \tweak transparent ##t
                         e''
                     >32
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     <
                         f'
                         \tweak transparent ##t
                         c''
                     >32
                     \glissando
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \pluckNoteEvent
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \featherOff
                     <
                         d'
                         \tweak transparent ##t
                         a'
                     >32
-                    \pp
                     ]
                     \glissando
-                    \featherOff
                     \pluckRestEvent
                     s4
                     \pluckRestEvent
@@ -592,107 +469,28 @@
                     \fermata
                     \bar ":|."
                     \numericTimeSignature
-                    \pluckHide
-                    \set glissandoMap = #'(( 0 . 0 ))
                     \once \override TextScript.outside-staff-priority = ##f
-                    \improvisationOff
+                    \pluckShow
                     \pluckRestEvent
+                    \improvisationOff
+                    \set glissandoMap = #'(( 0 . 0 ))
                     \textLengthOn
+                    \pluckHide
                     \time 6/4
                     s4
                     ^ \markup { "repeat several times" }
                     \glissando
-                    \textLengthOff
+                    \pluckRestEvent
                     \pluckHide
                     \set glissandoMap = #'(( 0 . 0 ))
-                    \pluckRestEvent
+                    \textLengthOff
                     s1
                     \glissando
                     \pluckHide
-                    \pluckRestEvent
-                    \freeLineArrow
                     \set glissandoMap = #'(( 0 . 0 ))
+                    \freeLineArrow
+                    \pluckRestEvent
                     s4
-                }
-            }
-            \context Staff = "reson_staff"
-            \with
-            {
-                \consists Horizontal_bracket_engraver
-            }
-            {
-                {
-                    \crossStaff
-                    {
-                        \numericTimeSignature
-                        \improvisationOff
-                        \resonHide
-                        \resonStart
-                        \accidentalStyle modern-cautionary
-                        \time 9/4
-                        s\breve
-                        [
-                        \once \hide Staff.BarLine
-                        s4
-                        ]
-                        \numericTimeSignature
-                        \improvisationOff
-                        \hideTime
-                        \resonHide
-                        \time 6/4
-                        s8
-                        s1
-                        \resonHide
-                        s4.
-                        \numericTimeSignature
-                        \improvisationOff
-                        \resonHide
-                        \time 1/4
-                        s4
-                        \once \hide Staff.BarLine
-                        \numericTimeSignature
-                        \resonShow
-                        \hideTime
-                        \featherFaster
-                        \improvisationOff
-                        \bar ".|:"
-                        \time 7/4
-                        <bf'''>32
-                        [
-                        <bf'''>32
-                        <bf'''>32
-                        <bf'''>32
-                        <bf'''>32
-                        <bf'''>32
-                        <bf'''>32
-                        <bf'''>32
-                        ]
-                        \featherSlower
-                        <bf'''>32
-                        [
-                        <bf'''>32
-                        <bf'''>32
-                        <bf'''>32
-                        <bf'''>32
-                        <bf'''>32
-                        <bf'''>32
-                        <bf'''>32
-                        ]
-                        s4
-                        r1
-                        \fermata
-                        \bar ":|."
-                        \numericTimeSignature
-                        \improvisationOff
-                        \resonHide
-                        \time 6/4
-                        s4
-                        \resonHide
-                        s1
-                        \resonHide
-                        s4
-                        \once \hide Staff.BarLine
-                    }
                 }
             }
         >>

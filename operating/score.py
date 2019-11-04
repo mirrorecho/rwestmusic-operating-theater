@@ -9,11 +9,11 @@ class OperatingPerformer(calliope.StaffGroup):
     class PluckStaff(calliope.Staff): pass
         # clef = "percussion"
 
-    class ResonStaff(calliope.Staff): pass
+    # class ResonStaff(calliope.Staff): pass
 
     def add_segment(self, segment):
         self.staves[0].append(segment.get_pluck())
-        self.staves[1].append(segment.get_reson())
+        # self.staves[1].append(segment.get_reson())
 
 
 class OperatingScore(calliope.Score):

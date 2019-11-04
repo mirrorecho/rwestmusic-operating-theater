@@ -33,7 +33,7 @@ class StringDefCell(StringCell):
             int(sum(self.padding_beats) + self.string_def_event.beats),
             4
             )
-        self.metrical_durations = (
+        self.metrical_durations = self.metrical_durations or (
             (self.padding_beats[0],4),
             (int(self.string_def_event.beats), 4),
             (self.padding_beats[1],4),

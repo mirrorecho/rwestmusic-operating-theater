@@ -9,27 +9,51 @@ class StringCell(StringBase, calliope.Factory, calliope.Cell):
     reson_type = calliope.Cell
 
     reson_tags = ("\\resonShow",)
+    pluck_tags = ("\\pluckShow",)
 
     branch_type = StringEvent
 
     string_rhythm = (1,)
     pluck_strings = ((0,),)
     tensions = ((0,),)
+    skip_indices = () # not that cool... but workable for now
 
     hide_time = False
     repeat_start = False
     repeat_end = False
+    improvisation = False
 
     def get_branches_kwargs(self, *args, **kwargs):
-        return [
-            dict(
-                beats=r, 
-                pluck_strings=s, 
-                tensions=t,
-                string_def_event = self.string_def_event
-                ) for r, s, t in zip(
-                self.string_rhythm, self.pluck_strings, self.tensions)
-        ]
+        # not exactly elegant... but forgiving
+        
+        pluck_string_length = len(self.pluck_strings)
+        my_pluck_strings = (0,)
+
+        tensions_length = len(self.tensions)
+        my_tensions = (0,)
+
+        my_list = []
+
+        for i,r in enumerate(self.string_rhythm):
+            my_dict = dict(
+                beats=r,
+                string_def_event = self.string_def_event,
+                skip = i in self.skip_indices,
+                )
+            if r < 0:
+                my_pluck_strings = ()
+            elif i < pluck_string_length:
+                my_pluck_strings = self.pluck_strings[i]
+            
+            my_dict["pluck_strings"] = my_pluck_strings
+            
+            if i < tensions_length:
+                my_tensions = self.tensions[i]
+            my_dict["tensions"] = my_tensions
+
+            my_list.append(my_dict)
+
+        return my_list
 
 
     def process_pluck_reson(self, my_cell):
@@ -43,4 +67,7 @@ class StringCell(StringBase, calliope.Factory, calliope.Cell):
             my_cell.events[-1].tag(":|.")
         if self.hide_time:
             my_cell.events[0].tag("\\hideTime")  
-
+        if self.improvisation:
+            my_cell.events[0].tag("\\improvisationOn")
+        else:  
+            my_cell.events[0].tag("\\improvisationOff")

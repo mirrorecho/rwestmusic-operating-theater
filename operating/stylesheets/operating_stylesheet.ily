@@ -1,14 +1,15 @@
 #(set-default-paper-size "letter" 'portrait)
-#(set-global-staff-size 18)
+#(set-global-staff-size 16)
 
 startScore = {
     \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
-    #'((Y-offset . 22)
+    #'((Y-offset . 9)
        (alignment-distances . (16.9)))
 }
 
 pluckStart = {
     \override Staff.Clef.transparent = ##t
+    \override Rest.staff-position = #-9.9
     \stemUp
 }
 
@@ -17,14 +18,21 @@ resonStart = {
 }
 
 pluckShow = {
-    \clef percussion    
+    % \clef percussion
+    \stopStaff
+    % \override Staff.StaffSymbol.transparent = ##f
+    \override Staff.StaffSymbol.line-positions = #'(
+        -12 -12.1 -12.2 
+        29 29.1 29.2
+        )
+    \startStaff
 }
 
 pluckShowReson = {
     \stopStaff
     % \override Staff.StaffSymbol.transparent = ##f
     \override Staff.StaffSymbol.line-positions = #'(
-        -8 -8.1 -4 -2 0 2 4 
+        -4 -2 0 2 4 
         8 10 12 14 16
         )
     \startStaff
@@ -39,7 +47,9 @@ pluckHide = {
     \once \override Score.TimeSignature.stencil = ##f 
     \stopStaff
     % \override Staff.StaffSymbol.transparent = ##t
-    \override Staff.StaffSymbol.line-positions = #'( -8 -8.1 )
+    \override Staff.StaffSymbol.line-positions = #'( 
+        6
+        )
     \startStaff
 
     \override Staff.NoteHead.no-ledgers = ##t
@@ -93,14 +103,12 @@ featherOff = {
 
 
 freeLineArrow = {
-      \unHideNotes
       \grace {
         \once \override Rest  #'stencil = #ly:text-interface::print
         \once \override Rest.staff-position = #-9.9
         \once \override Rest #'text = \markup { \fontsize #6 { \general-align #Y #DOWN { \arrow-head #X #RIGHT ##t } } }
         r8
       }
-      \hideNotes
 }
 
 hideTime = {
@@ -114,21 +122,21 @@ hideTime = {
         \column {
             \center-align {
                 \fontsize #2 {
-                    "Operating Theatre"
+                    "A / B"
                 }
             }
         }
     }
-    tagline = "Copyright 2019 Randall West."
+    % tagline = "Copyright 2019 Randall West."
 }
 
-  #(set! paper-alist (cons '("10x13" . (cons (* 10 in) (* 13 in))) paper-alist))
+  % #(set! paper-alist (cons '("10x13" . (cons (* 10 in) (* 13 in))) paper-alist))
 
-  \paper {
-    #(set-paper-size "10x13")
-    % system-system-spacing #'basic-distance = #22
-    % system-system-spacing #'padding = #22
-
+\paper {
+    #(set-paper-size "17x11")
+    %#(set-paper-size "letter")
+    left-margin = 22\mm
+    % system-separator-markup = \slashSeparator
     markup-system-spacing = #'(
         (basic-distance . 0)
         (minimum-distance . 0)
@@ -136,16 +144,55 @@ hideTime = {
         (stretchability . 0)
     )
     system-system-spacing = #'(
-        (basic-distance . 16)
+        (basic-distance . 12)
         (minimum-distance . 18)
         (padding . 12)
         (stretchability . 20)
     )
+    
+    default-staff-staff-spacing =
+      #'((basic-distance . 8)
+         (minimum-distance . 7)
+         (padding . 22)
+    )
 
-  }  
+    staff-staff-spacing =
+      #'((basic-distance . 8)
+         (minimum-distance . 7)
+         (padding . 22)
+    )
+
+    staffgroup-staff-staff-spacing =
+      #'((basic-distance . 8)
+         (minimum-distance . 7)
+         (padding . 9)
+    )
+
+}
+
+  % \paper {
+  %   #(set-paper-size "10x13")
+  %   % system-system-spacing #'basic-distance = #22
+  %   % system-system-spacing #'padding = #22
+
+  %   markup-system-spacing = #'(
+  %       (basic-distance . 0)
+  %       (minimum-distance . 0)
+  %       (padding . 8)
+  %       (stretchability . 0)
+  %   )
+  %   system-system-spacing = #'(
+  %       (basic-distance . 16)
+  %       (minimum-distance . 18)
+  %       (padding . 12)
+  %       (stretchability . 20)
+  %   )
+
+  % }  
 
 \layout {
     \set Score.markFormatter = #format-mark-circle-letters 
+    indent = 0\cm
     \context {
         \StaffGroup
         \consists #Span_stem_engraver
@@ -163,6 +210,8 @@ hideTime = {
     \context {
         \Staff
         % \remove Instrument_name_engraver
+        % \override StaffGrouper.staffgroup-staff-spacing.basic-distance = #44
+        \override VerticalAxisGroup.default-staff-staff-spacing.basic-distance = #10
         \override Hairpin #'minimum-length = #6
         \override Glissando.springs-and-rods = #ly:spanner::set-spacing-rods
         \override Glissando.style = #'dashed-line
@@ -184,6 +233,8 @@ hideTime = {
         %\consists "Repeat_acknowledge_engraver"
         %\consists "Volta_engraver"
         
+        \override VerticalAxisGroup #'remove-first = ##t % NOTE: comment this out to show staves on first page
+
         % \override VerticalAxisGroup.default-staff-staff-spacing =
         %     #'((basic-distance . 22)
         %     (minimum-distance . 7)

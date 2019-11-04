@@ -2,7 +2,13 @@ import abjad
 import calliope
 
 from operating.structure.string_def_event import StringDefEvent
+
 from operating.structure.string_cell import StringCell
+from operating.structure.string_cell import StringCell
+
+class RepeatCell(StringCell):
+    pass
+
 
 class SingleCell(StringCell):
     string_rhythm = (1, -4,)
@@ -14,8 +20,8 @@ class SingleCell(StringCell):
         )
     time_signature = (5,4)
     hide_time = True
-    repeat_start = True
-    repeat_end = True
+    # repeat_start = True
+    # repeat_end = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -55,13 +61,34 @@ class FeatherSlowerCell(StringCell):
 
 
 class FeatherCell(StringCell):
-    string_rhythm = (0.125,)*16 + (-4,)
-    metrical_durations = ((1,4), (1,4), (4,4),)
+    string_rhythm = (0.125,)*16 + (1, -4,)
+    metrical_durations = ((1,4), (1,4), (1,4), (4,4),)
     tensions = (
         (8, 12,),
-        )*17
-    time_signature = (6,4)
+        )*16
+    time_signature = (7,4)
     hide_time = True
+
+    # dynamics = (
+    #     ("pp", "\\<",),
+    #     ("mp", "\\>",),
+    #     ("pp",)
+    #     )
+
+    dynamics = (
+        (),
+        (),
+        ()
+        )
+
+    directions = (
+        ("\\featherFaster",),
+        ("\\featherSlower",),
+        ("\\featherOff",)
+        )
+
+    midpoint = 8
+    endpoint = 15
 
     repeat_start = True
     repeat_end = True
@@ -69,9 +96,24 @@ class FeatherCell(StringCell):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.events[0].tag(r"\featherFaster")
-        self.events[8].tag(r"\featherSlower")
-        # self.events[-2].tag(r"!\featherOff")
-        # self.events[-2].skip = True
+        self.events[0].tag(*self.dynamics[0])
+        self.events[0].tag(*self.directions[0])
+
+        self.events[self.midpoint].tag(*self.dynamics[1])
+        self.events[self.midpoint].tag(*self.directions[1])
+
+        self.events[self.endpoint].tag(*self.dynamics[2])
+        self.events[self.endpoint].tag(*self.directions[2])
+
+        self.events[-2].skip = True
         self.events[-1].tag("fermata")
+
+class FeatherCellReverse(FeatherCell):
+    directions = (
+        ("\\featherSlower",),
+        ("\\featherFaster",),
+        ("\\featherOff",)
+        )
+
+        
 

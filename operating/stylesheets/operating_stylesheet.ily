@@ -1,76 +1,70 @@
 #(set-default-paper-size "letter" 'portrait)
-#(set-global-staff-size 16)
+#(set-global-staff-size 18)
 
 startScore = {
     \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
     #'((Y-offset . 9)
        (alignment-distances . (16.9)))
+
+      % \set Score.startRepeatType = #"[|:"
+      % \set Score.doubleRepeatType = #":|][|:"
+      % \set Score.endRepeatType = #":|]"
+
 }
 
 pluckStart = {
-    \override Staff.Clef.transparent = ##t
-    \override Rest.staff-position = #-9.9
-    \stemUp
-}
-
-resonStart = {
+    \once \override Staff.Clef.transparent = ##t
+    % \override Staff.Clef.stencil = ##f 
+    % \override Rest.staff-position = #-9.9
     \stemUp
 }
 
 pluckShow = {
-    % \clef percussion
+  \once \override Staff.Clef.stencil = ##f
+    \clef percussion
     \stopStaff
     % \override Staff.StaffSymbol.transparent = ##f
+    % \override Staff.StaffSymbol.line-positions = #'(
+    %     -12 -12.1 -12.2 
+    %     29 29.1 29.2
+    %     )
+    \override Staff.StaffSymbol.transparent = ##f
     \override Staff.StaffSymbol.line-positions = #'(
-        -12 -12.1 -12.2 
-        29 29.1 29.2
+        -12 24
         )
     \startStaff
+    \override Staff.NoteHead.no-ledgers = ##t
+
+    \override Staff.BarLine.bar-extent = #'(-6 . 12)
+
 }
 
 pluckShowReson = {
     \stopStaff
-    % \override Staff.StaffSymbol.transparent = ##f
+    \override Staff.StaffSymbol.transparent = ##f
     \override Staff.StaffSymbol.line-positions = #'(
         -4 -2 0 2 4 
         8 10 12 14 16
         )
+    
     \startStaff
     % \override Staff.StaffSymbol.transparent = ##f
-    \override Staff.NoteHead.no-ledgers = ##f
     \once \override Score.TimeSignature.stencil = ##f 
     \once \override Staff.Clef.transparent = ##f
+    \override Staff.NoteHead.no-ledgers = ##f
     \bar ""
 }
 
 pluckHide = {
     \once \override Score.TimeSignature.stencil = ##f 
     \stopStaff
-    % \override Staff.StaffSymbol.transparent = ##t
-    \override Staff.StaffSymbol.line-positions = #'( 
-        6
-        )
+    \override Staff.StaffSymbol.transparent = ##t
+    % \override Staff.StaffSymbol.line-positions = #'( 
+    %     16
+    %     )
     \startStaff
 
-    \override Staff.NoteHead.no-ledgers = ##t
     % \set Timing.defaultBarType = "||"
-}
-
-resonShow = {
-    \stopStaff
-    \override Staff.StaffSymbol.transparent = ##f
-    \startStaff
-    % \xNotesOn % TO DO: only needed at beginning ... rethink
-    \autoBeamOff % TO DO: only needed at beginning ... rethink
-    \override DynamicText.stencil = ##f % TO DO: only needed at beginning ... rethink
-}
-
-resonHide = {
-    \stopStaff
-    \override Staff.StaffSymbol.transparent = ##t    
-    \startStaff
-    \once \override Staff.Clef.transparent = ##t
-    \once \override Score.TimeSignature.stencil = ##f
 }
 
 pluckNoteEvent = {
@@ -101,11 +95,28 @@ featherOff = {
   \override Beam.grow-direction = #'()  
 }
 
+freeLineStart = {
+    \once \override Score.TimeSignature.stencil = ##f 
+    \stopStaff
+    \override Staff.StaffSymbol.line-positions = #'(
+        16
+        )
+    
+    \startStaff
+}
 
 freeLineArrow = {
+   
+    \stopStaff
+    % \override Staff.StaffSymbol.line-positions = #'(
+    %    16
+    %     )
+     \override Staff.StaffSymbol.transparent = ##t
+
+    \startStaff
       \grace {
         \once \override Rest  #'stencil = #ly:text-interface::print
-        \once \override Rest.staff-position = #-9.9
+        \once \override Rest.staff-position = #14
         \once \override Rest #'text = \markup { \fontsize #6 { \general-align #Y #DOWN { \arrow-head #X #RIGHT ##t } } }
         r8
       }
@@ -193,12 +204,17 @@ hideTime = {
 \layout {
     \set Score.markFormatter = #format-mark-circle-letters 
     indent = 0\cm
-    \context {
-        \StaffGroup
-        \consists #Span_stem_engraver
-    }
+    % \context {
+    %     \StaffGroup
+    %     \consists #Span_stem_engraver
+    % }
     \context {        
         \Score
+        proportionalNotationDuration = #(ly:make-moment 1/6)
+        % defaultBarType = #"!"
+        % startRepeatType = #"[|:"
+        % endRepeatType = #":|]"
+        \override SpacingSpanner.uniform-stretching = ##t
         \override BarNumber #'font-size = #1.4
         \override BarNumber  #'stencil = #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
         \override RehearsalMark #'font-size = #6
@@ -211,6 +227,9 @@ hideTime = {
         \Staff
         % \remove Instrument_name_engraver
         % \override StaffGrouper.staffgroup-staff-spacing.basic-distance = #44
+        % \remove "Separating_line_group_engraver"
+        \override Score.SpacingSpanner.strict-note-spacing = ##t
+        
         \override VerticalAxisGroup.default-staff-staff-spacing.basic-distance = #10
         \override Hairpin #'minimum-length = #6
         \override Glissando.springs-and-rods = #ly:spanner::set-spacing-rods
@@ -240,11 +259,11 @@ hideTime = {
         %     (minimum-distance . 7)
         %     (padding . 1))
     }
-    \context {
-        \RhythmicStaff
+    % \context {
+    %     \RhythmicStaff
         
-        \override Hairpin #'minimum-length = #6
-    }
+    %     \override Hairpin #'minimum-length = #6
+    % }
 }
 
 

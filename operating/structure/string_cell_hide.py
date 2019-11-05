@@ -7,14 +7,14 @@ from operating.structure.string_event_hide import StringEventHide
 
 class StringCellHide(StringCell): 
     branch_type = StringEventHide
-    
-    reson_tags = ("\\resonHide",)
+
+    pluck_tags = ("\\pluckHide",)
 
     tensions = None
-    time_signature = None
-    metrical_durations = None
 
     def get_branches_kwargs(self, *args, **kwargs):
+
+        print("BRANCHES FOR", self)
 
         self.pluck_strings = ((),) * len(self.string_rhythm)
 
@@ -35,8 +35,3 @@ class StringCellHide(StringCell):
             )
         
         return super().get_branches_kwargs(*args, **kwargs)
-
-    def get_reson(self):
-        my_cell = super().get_reson()
-        my_cell.events[-1].tag('!\\once \\hide Staff.BarLine')
-        return my_cell

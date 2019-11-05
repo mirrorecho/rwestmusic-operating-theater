@@ -9,6 +9,7 @@ PRICK_STRING_NONE = StringDefEvent(
 PRICK_STRING_HIGHEST = StringDefEvent(
     string_map = {
         42: (0,),
+        35: (0,),
         },
     )
 

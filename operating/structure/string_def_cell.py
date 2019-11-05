@@ -6,10 +6,11 @@ from operating.structure.string_cell import StringCell
 from operating.structure.string_event_hide import StringEventHide
 
 class StringDefCell(StringCell): 
-    reson_tags = ()
     branch_type = StringDefEvent
     hide_time = True
     padding_beats = (2, 2)
+
+    pluck_tags = ("\\pluckHide",)
 
     def get_branches(self, *args, **kwargs):
         return [
@@ -39,5 +40,11 @@ class StringDefCell(StringCell):
             (self.padding_beats[1],4),
             )
 
+    def process_pluck(self):
+        super().process_pluck()
+        self.events[0].allow_string_over_rest = False
+        # also have to remove this tag manually since already added...
+        self.events[0].untag("\\pluckRestEvent")
+        self.events[2].tag("\\pluckHide",)
 
 

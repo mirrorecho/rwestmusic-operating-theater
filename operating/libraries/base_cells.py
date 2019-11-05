@@ -13,11 +13,7 @@ class RepeatCell(StringCell):
 class SingleCell(StringCell):
     string_rhythm = (1, -4,)
     metrical_durations = ((1,4), (4,4))
-    tensions = (
-        (18,22,),
-        (8, 12,),
-        (8, 12,),
-        )
+    tensions = ((0, 0,),)
     time_signature = (5,4)
     hide_time = True
     # repeat_start = True
@@ -63,9 +59,6 @@ class FeatherSlowerCell(StringCell):
 class FeatherCell(StringCell):
     string_rhythm = (0.125,)*16 + (1, -4,)
     metrical_durations = ((1,4), (1,4), (1,4), (4,4),)
-    tensions = (
-        (8, 12,),
-        )*16
     time_signature = (7,4)
     hide_time = True
 
@@ -90,8 +83,8 @@ class FeatherCell(StringCell):
     midpoint = 8
     endpoint = 15
 
-    repeat_start = True
-    repeat_end = True
+    # repeat_start = True
+    # repeat_end = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -114,6 +107,26 @@ class FeatherCellReverse(FeatherCell):
         ("\\featherFaster",),
         ("\\featherOff",)
         )
+
+class FindResonCell(StringCell):
+    string_rhythm = (1, 1, 1)
+    time_signature = (3,4)
+    metrical_durations = ( (3,4), )
+    hide_time = True
+
+class ThreeJigCell(StringCell):
+    string_rhythm = (1.5, 1, 1)
+    time_signature = (7, 8)
+    metrical_durations = ( (3,8), (2,4) )
+    hide_time = True
+
+class SixPulseCell(StringCell):
+    string_rhythm = (3, 1, 1, 1)
+    time_signature = (6, 4)
+    metrical_durations = ( (3,4), (3,4) )
+    hide_time = True
+
+
 
         
 

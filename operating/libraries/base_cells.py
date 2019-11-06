@@ -2,12 +2,14 @@ import abjad
 import calliope
 
 from operating.structure.string_def_event import StringDefEvent
+from operating.structure.string_def_cell import StringDefCell
 
 from operating.structure.string_cell import StringCell
-from operating.structure.string_cell import StringCell
+from operating.structure.string_segment import StringSegment
+from operating.structure.string_cell_hide import StringCellHide
 
-class RepeatCell(StringCell):
-    pass
+from operating.structure.string_cell_arrow import StringCellArrow
+from operating.libraries.strings import BROKEN_LOW
 
 
 class SingleCell(StringCell):
@@ -15,7 +17,6 @@ class SingleCell(StringCell):
     metrical_durations = ((1,4), (4,4))
     tensions = ((0, 0,),)
     time_signature = (5,4)
-    hide_time = True
     # repeat_start = True
     # repeat_end = True
 
@@ -25,6 +26,29 @@ class SingleCell(StringCell):
         self.events[1].tag("fermata")
         # print(self.events[1].tags)
 
+class FindResonCell(StringCell):
+    string_rhythm = (1, 1, 1)
+    time_signature = (3,4)
+    metrical_durations = ( (3,4), )
+    pluck_strings = ( (0,1), )
+
+
+class SixPulseCell(StringCell):
+    string_rhythm = (1, -1, -1, 1, 1, 1)
+    time_signature = (6, 4)
+    metrical_durations = ( (1,4),)*6
+
+class SlowPulseCell(StringCell):
+    string_rhythm = (1, -1, 1, -1)
+    tensions = ( (4,12), (), (2,2), ())
+    pluck_strings = ((1,), (), (0,), ())
+    time_signature = (4, 4)
+    # hide_time = False
+
+class SimplePulseCell(StringCell):
+    string_rhythm = (1, -1, 1, -1)
+    time_signature = (4, 4)
+
 class FeatherFasterCell(StringCell):
     string_rhythm = (0.125,)*8
     metrical_durations = ((1,4),)
@@ -32,7 +56,6 @@ class FeatherFasterCell(StringCell):
         (8,),
         )*8
     time_signature = (1,4)
-    hide_time = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -47,7 +70,6 @@ class FeatherSlowerCell(StringCell):
         (8, 12,),
         )*8
     time_signature = (1,4)
-    hide_time = True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -60,13 +82,6 @@ class FeatherCell(StringCell):
     string_rhythm = (0.125,)*16 + (1, -4,)
     metrical_durations = ((1,4), (1,4), (1,4), (4,4),)
     time_signature = (7,4)
-    hide_time = True
-
-    # dynamics = (
-    #     ("pp", "\\<",),
-    #     ("mp", "\\>",),
-    #     ("pp",)
-    #     )
 
     dynamics = (
         (),
@@ -83,11 +98,8 @@ class FeatherCell(StringCell):
     midpoint = 8
     endpoint = 15
 
-    # repeat_start = True
-    # repeat_end = True
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def process_pluck(self):
+        super().process_pluck()
 
         self.events[0].tag(*self.dynamics[0])
         self.events[0].tag(*self.directions[0])
@@ -108,24 +120,60 @@ class FeatherCellReverse(FeatherCell):
         ("\\featherOff",)
         )
 
-class FindResonCell(StringCell):
-    string_rhythm = (1, 1, 1)
-    time_signature = (3,4)
-    metrical_durations = ( (3,4), )
-    hide_time = True
+class QuestionCell(StringCell):
+    string_rhythm = (1, -2, 1, 1)
+    pluck_strings = ((1,), (), (0,1), (0,1),)
+    time_signature = (5, 4)
+    metrical_durations = ( (1,4), (2,4), (1,4), (1,4), )
+    tensions = (
+        (2, 2,),
+        (),
+        (2, 20),
+        (2, 12,),
+        )
+    def process_pluck(self):
+        super().process_pluck()
+        # self.events[1].skip=True
+        self.events[2,3].tag("\\noPluck")
 
-class ThreeJigCell(StringCell):
-    string_rhythm = (1.5, 1, 1)
+class SevenJigCell(StringCell):
+    string_rhythm = (0.5, -0.5, -0.5, 1, 1)
     time_signature = (7, 8)
-    metrical_durations = ( (3,8), (2,4) )
-    hide_time = True
+    pluck_strings = ( (0,), (), (), (1,), (0,) )
+    metrical_durations = ( (1,8), (1,8), (1,8), (1,4), (1,4) )
+    tensions = (
+        (0, 0),
+        (),
+        (),
+        (5, 12),
+        (9, 9),
+        )
 
-class SixPulseCell(StringCell):
-    string_rhythm = (3, 1, 1, 1)
-    time_signature = (6, 4)
-    metrical_durations = ( (3,4), (3,4) )
-    hide_time = True
 
+
+
+import sys, inspect
+TEST_SEGMENT = StringSegment(
+    StringDefCell(string_def_event=BROKEN_LOW),
+    )
+for c in inspect.getmembers(sys.modules[__name__], inspect.isclass):
+    if c[1].__module__== "__main__":
+        TEST_SEGMENT.extend([
+        c[1](
+            name = c[0],
+            string_def_event = BROKEN_LOW,
+            ),
+        StringCellArrow()
+        
+        ])
+
+for cell in TEST_SEGMENT.cells:
+    if cell.name:
+        cell.events[0].tag(cell.name)
+
+calliope.illustrate(TEST_SEGMENT)
+
+        
 
 
         

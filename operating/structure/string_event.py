@@ -14,8 +14,10 @@ class StringEvent(StringBase, calliope.Event):
     #     return self.string_def_event.get_reson_pitch(self.pluck_strings)
     
     def process_pluck(self):
+
         if (self.rest or self.skip) and self.allow_string_over_rest:
             self.tag(r"\pluckRestEvent")
+
         else:
             self.pitch = self.string_def_event.get_pluck_pitches(self.tensions)        
             self.tag(r"\pluckNoteEvent")

@@ -1,5 +1,5 @@
 #(set-default-paper-size "letter" 'portrait)
-#(set-global-staff-size 18)
+#(set-global-staff-size 19)
 
 startScore = {
     \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
@@ -15,12 +15,12 @@ startScore = {
 pluckStart = {
     \once \override Staff.Clef.transparent = ##t
     % \override Staff.Clef.stencil = ##f 
-    % \override Rest.staff-position = #-9.9
+    \override Rest.staff-position = #0
     \stemUp
 }
 
 pluckShow = {
-  \once \override Staff.Clef.stencil = ##f
+    \once \override Staff.Clef.stencil = ##f
     \clef percussion
     \stopStaff
     % \override Staff.StaffSymbol.transparent = ##f
@@ -30,21 +30,30 @@ pluckShow = {
     %     )
     \override Staff.StaffSymbol.transparent = ##f
     \override Staff.StaffSymbol.line-positions = #'(
-        -12 24
+        -14 14
         )
     \startStaff
     \override Staff.NoteHead.no-ledgers = ##t
 
-    \override Staff.BarLine.bar-extent = #'(-6 . 12)
+    \override Staff.BarLine.bar-extent = #'(-7 . 7)
 
+}
+
+instructionShow = {
+    \once \override Score.TimeSignature.stencil = ##f 
+    \stopStaff
+    \override Staff.StaffSymbol.transparent = ##f
+    \override Staff.StaffSymbol.line-positions = #'(
+        -14 14
+        )
+    \startStaff
 }
 
 pluckShowReson = {
     \stopStaff
     \override Staff.StaffSymbol.transparent = ##f
     \override Staff.StaffSymbol.line-positions = #'(
-        -4 -2 0 2 4 
-        8 10 12 14 16
+        -4 -2 0 2 4
         )
     
     \startStaff
@@ -52,7 +61,7 @@ pluckShowReson = {
     \once \override Score.TimeSignature.stencil = ##f 
     \once \override Staff.Clef.transparent = ##f
     \override Staff.NoteHead.no-ledgers = ##f
-    \bar ""
+    % \bar ""
 }
 
 pluckHide = {
@@ -99,10 +108,16 @@ freeLineStart = {
     \once \override Score.TimeSignature.stencil = ##f 
     \stopStaff
     \override Staff.StaffSymbol.line-positions = #'(
-        16
+        9
         )
     
     \startStaff
+}
+
+noPluck = {
+    \once \override Staff.NoteHead.style = #'mensural
+    \once \hide NoteHead
+    \once \override Stem.stencil = ##f
 }
 
 freeLineArrow = {
@@ -116,7 +131,7 @@ freeLineArrow = {
     \startStaff
       \grace {
         \once \override Rest  #'stencil = #ly:text-interface::print
-        \once \override Rest.staff-position = #14
+        \once \override Rest.staff-position = #7
         \once \override Rest #'text = \markup { \fontsize #6 { \general-align #Y #DOWN { \arrow-head #X #RIGHT ##t } } }
         r8
       }

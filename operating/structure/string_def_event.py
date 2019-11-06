@@ -8,8 +8,10 @@ class StringDefEvent(StringBase, calliope.Event):
     # from lowest to highest, maps pitches in self.pitch to index of string to pluck
     
     string_map = {0: (0,)}
-    pluck_spacing = 6
+    pluck_spacing = 4
     init_beats = 4
+    pluck_0 = -7
+    clef = "bass"
 
     existing_map = {}
 
@@ -42,7 +44,7 @@ class StringDefEvent(StringBase, calliope.Event):
 
     def get_pluck_pitches(self, tensions=(0,)):
         # TO DO... this math is odd and nasty
-        start_index = 1 - math.floor((self.string_count * self.pluck_spacing) / 2)
+        start_index = self.pluck_0 - math.floor((self.string_count * self.pluck_spacing) / 2)
         return tuple([
             self.scale[start_index+(i*self.pluck_spacing)+(tensions[i % len(tensions)])] 
             for i in range(self.string_count)
@@ -62,7 +64,7 @@ class StringDefEvent(StringBase, calliope.Event):
         self.pitch = list(self.string_map.keys())
 
         self.tag(
-            "bass",
+            self.clef,
             r"""\pluckShowReson
             \set glissandoMap = #'(""" + " ".join(
                 ["( %s . %s)" % (i, v) for i,s in enumerate(self.string_map.items()) 

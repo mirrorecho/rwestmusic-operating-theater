@@ -9,25 +9,28 @@ PRICK_STRING_NONE = StringDefEvent(
 PRICK_STRING_HIGHEST = StringDefEvent(
     string_map = {
         42: (0,),
-        35: (0,),
+        35: (1,),
         },
+    clef = "treble"
     )
 
 # PRICK_STRING_HIGHEST.tag("bass",)
 # PRICK_STRING_HIGHEST.respell = "sharps"
 
-PRICK_STRING_HIGH1 = StringDefEvent(
+PRICK_STRING_HIGH_I = StringDefEvent(
     string_map = {
         34: (0,),
-        33: (1,),
+        29: (1,),
         },
+    clef = "treble"
     )
 
-PRICK_STRING_HIGH2 = StringDefEvent(
+PRICK_STRING_HIGH_II = StringDefEvent(
     string_map = {
-        23: (3,),
-        28: (4,),
+        32: (3,),
+        27: (4,),
         },
+    clef = "treble"
     )
 
 PRICK_STRING_MID1 = StringDefEvent(
@@ -35,6 +38,7 @@ PRICK_STRING_MID1 = StringDefEvent(
         34: (5,),
         33: (6,),
         },
+    clef = "treble"
     )
 
 PRICK_STRING_MID2 = StringDefEvent(
@@ -42,8 +46,15 @@ PRICK_STRING_MID2 = StringDefEvent(
         23: (7,),
         28: (8,),
         },
+    clef = "treble"
     )
 
+BROKEN_LOW = StringDefEvent(
+    string_map = {
+        -12: (0,),
+        -17: (1,),
+        },
+    )
 
 # PRICK_STRING_HIGHEST.tag("treble",)
 # PRICK_STRING_HIGHEST.respell = "sharps"

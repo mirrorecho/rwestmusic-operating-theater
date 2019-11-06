@@ -9,91 +9,93 @@ from operating.structure.string_cell_arrow import StringCellArrow
 from operating.structure.string_segment import StringSegment
 
 from operating.libraries import base_cells
-from operating.libraries import prick_strings
-from operating.libraries import prick_cells
+from operating.libraries import strings
 
 from operating.score import OperatingScore
 
 
-DEF_0 = StringDefCell(
-        string_def_event = prick_strings.PRICK_STRING_HIGHEST(),
+DEF_HIGHEST_0 = StringDefCell(
+        string_def_event = strings.PRICK_STRING_HIGHEST,
         )
-DEF_0.events[1].tag("8va")
-DEF_0.events[2].tag("8va!")
+DEF_HIGHEST_0.events[1].tag("8va")
+DEF_HIGHEST_0.events[2].tag("8va!")
 
-
-SEGMENT_0 = StringSegment(
+SEGMENT_0_I = StringSegment(
     
-    DEF_0,
+    DEF_HIGHEST_0,
     
-    prick_cells.SINGLE_0(),
-    
+    base_cells.SingleCell(
+        string_def_event = strings.PRICK_STRING_HIGHEST,
+        improvisation = True,
+        pluck_strings = ( (0,1), )
+    ),
     StringCellArrow(text="repeat several times") , 
     
-    prick_cells.FEATHER_0(),
-    
+    base_cells.FeatherCell(
+        string_def_event = strings.PRICK_STRING_HIGHEST,
+        # pluck_strings = ( (0,),) * 16,
+        tensions = (
+            [(2+i*2,) for i in range(8)] + 
+            [(18-i*2,) for i in range(10)]
+            ),
+        dynamics = (
+            ("pp", "\\<",),
+            ("mp", "\\>",),
+            ("pp",)
+            )
+    ),
     StringCellArrow(text="repeat several times") , 
     
-    prick_cells.FIND_RESON_0(),
-
+    base_cells.FindResonCell(
+        string_def_event = strings.PRICK_STRING_HIGHEST,
+    ),
     StringCellArrow(text="repeat several times"), 
 
-    prick_cells.FIND_RESON_1(),
-
+    base_cells.FindResonCell(
+        string_def_event = strings.PRICK_STRING_HIGHEST,
+        pluck_strings = ( (1,), )
+    ),
     StringCellArrow(text="repeat several times"), 
 
-    prick_cells.THREE_JIG_0(),
-
+    base_cells.ThreeJigCell(
+        string_def_event = strings.PRICK_STRING_HIGHEST,
+        pluck_strings = ( (0,1,), ),
+        tensions = ( (0,0,), (6,6), (3, 3) ),
+        improvisation = True
+    ),
     StringCellArrow(text="repeat several times"), 
 
-    prick_cells.SIX_PULSE_0(),
+    base_cells.SixPulseCell(
+        string_def_event = strings.PRICK_STRING_HIGHEST,
+        pluck_strings = ( (0,1,), ),
+        tensions = ( (4,4,), (0,0,), (6,6), (3, 3) ),
+        improvisation = True
+    ),
+    StringCellArrow(text="repeat several times"),
+)
+
+SEGMENT_0_II = StringSegment(
+
+    StringDefCell(
+        string_def_event = strings.PRICK_STRING_HIGH_I,
+    ),
+
+    base_cells.FeatherFasterCell(
+    string_def_event = strings.PRICK_STRING_HIGH_I,
+    tensions = (
+        [(2+i*2, 4+i*2 ) for i in range(8)]
+        )
+    ),
+
+    StringCellArrow(text="repeat several times"), 
 
     )
 
 
-# sa =  
-
-
-# highest_pricks_3 = [
-#     base_cells.SingleCell(
-#         string_def_event = prick_strings.PRICK_STRING_HIGHEST,
-#         tensions = ( (t,), )
-#         )
-#     for t in (8,19,8)
-# ]
-
-
-# seg0_a = StringSegment(
-#     StringDefCell(
-#         string_def_event = prick_strings.PRICK_STRING_HIGHEST(),
-#         ),
-#     prick_cells.FEATHER_0(),
-#     sa(),
-#     *highest_pricks_3,
-#     prick_cells.FEATHER_0(),
-#     )
-
-# ======================================================
-
-
-
-# seg1_a = StringSegment(
-#     StringCellHide(string_rhythm = (9,),),
-#     StringDefCell(
-#         string_def_event = prick_strings.PRICK_STRING_HIGH1,
-#         padding_beats = (0.5,1.5),
-#         metrical_durations = ( (1,8), (4,4), (3,8) )
-#         ),
-#     StringCellHide(string_rhythm = (1,),),
-#     prick_cells.FEATHER_1(),
-#     sa(text="repeat several times"),
-#     )
-
-# ======================================================
 
 
 op = OperatingScore()
-op.staves[0].extend([SEGMENT_0])
+op.staves[0].extend([SEGMENT_0_I, SEGMENT_0_II])
 # op.staves[1].extend([seg0_a(), seg1_a()])
 
 calliope.illustrate(op)

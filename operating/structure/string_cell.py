@@ -15,7 +15,7 @@ class StringCell(StringBase, calliope.Factory, calliope.Cell):
     tensions = ((0,),)
     skip_indices = () # not that cool... but workable for now
 
-    hide_time = False
+    hide_time = True
 
     repeat_start = False
     repeat_end = False

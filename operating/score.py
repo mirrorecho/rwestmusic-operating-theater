@@ -19,10 +19,10 @@ from operating import _settings
 class OperatingScore(calliope.Score):
     stylesheets=(_settings.OPERATING_PATH + "/stylesheets/operating_stylesheet.ily",)
 
-    # class OperatingPerformers(calliope.StaffGroup):
-    class PluckA(calliope.Staff): pass
+    class OperatingPerformers(calliope.StaffGroup):
+        class PluckA(calliope.Staff): pass
 
-    class PluckB(calliope.Staff): pass
+        class PluckB(calliope.Staff): pass
 
 
 class OperatingScoreSinglePlayer(calliope.Score):

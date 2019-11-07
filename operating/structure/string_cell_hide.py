@@ -14,8 +14,6 @@ class StringCellHide(StringCell):
 
     def get_branches_kwargs(self, *args, **kwargs):
 
-        print("BRANCHES FOR", self)
-
         self.pluck_strings = ((),) * len(self.string_rhythm)
 
         if self.tensions is None:

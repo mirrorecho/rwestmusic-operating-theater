@@ -29,73 +29,67 @@ SEGMENT_0_I = StringSegment(
         improvisation = True,
         pluck_strings = ( (0,1), )
     ),
-    StringCellArrow(text="repeat several times") , 
+    StringCellArrow(text="several Xs") , 
     
-    base_cells.FeatherCell(
+    base_cells.FeatherFasterCell(
         string_def_event = strings.PRICK_STRING_HIGHEST,
-        # pluck_strings = ( (0,),) * 16,
-        tensions = (
-            [(2+i*2,) for i in range(8)] + 
-            [(18-i*2,) for i in range(10)]
-            ),
         dynamics = (
             ("pp", "\\<",),
+            (),
+            ()
+            )
+    ),
+    base_cells.FeatherSlowerCell(
+        string_def_event = strings.PRICK_STRING_HIGHEST,
+        bar_start ="",
+        no_break = True,
+        dynamics = (
             ("mp", "\\>",),
             ("pp",)
             )
-    ),
-    StringCellArrow(text="repeat several times") , 
-    
+    ).swap_strings(),
+    StringCellArrow(text="several Xs") , 
+   
     base_cells.FindResonCell(
         string_def_event = strings.PRICK_STRING_HIGHEST,
     ),
-    StringCellArrow(text="repeat several times"), 
+    StringCellArrow(text="repeat freely; find resonant position"), 
 
     base_cells.FindResonCell(
         string_def_event = strings.PRICK_STRING_HIGHEST,
-        pluck_strings = ( (1,), )
-    ),
-    StringCellArrow(text="repeat several times"), 
+    ).swap_strings(),
+    StringCellArrow(text="(sim.) repeat freely; find resonant position"), 
+    StringCellArrow(text="(sim.) repeat freely; find resonant position"), 
 
-    base_cells.ThreeJigCell(
-        string_def_event = strings.PRICK_STRING_HIGHEST,
-        pluck_strings = ( (0,1,), ),
-        tensions = ( (0,0,), (6,6), (3, 3) ),
-        improvisation = True
-    ),
-    StringCellArrow(text="repeat several times"), 
-
-    base_cells.SixPulseCell(
-        string_def_event = strings.PRICK_STRING_HIGHEST,
-        pluck_strings = ( (0,1,), ),
-        tensions = ( (4,4,), (0,0,), (6,6), (3, 3) ),
-        improvisation = True
-    ),
-    StringCellArrow(text="repeat several times"),
 )
 
-SEGMENT_0_II = StringSegment(
+SEGMENT_1_I = StringSegment(
 
+    base_cells.FermataCell(string_def_event = strings.PRICK_STRING_NONE,),
+    StringCellArrow(string_rhythm=(15,1,1,1)), 
+    
     StringDefCell(
         string_def_event = strings.PRICK_STRING_HIGH_I,
     ),
 
-    base_cells.FeatherFasterCell(
-    string_def_event = strings.PRICK_STRING_HIGH_I,
-    tensions = (
-        [(2+i*2, 4+i*2 ) for i in range(8)]
-        )
-    ),
 
-    StringCellArrow(text="repeat several times"), 
 
-    )
+    # base_cells.FeatherFasterCell(
+    # string_def_event = strings.PRICK_STRING_HIGH_I,
+    # tensions = (
+    #     [(2+i*2, 4+i*2 ) for i in range(8)]
+    #     )
+    # ),
+
+    # StringCellArrow(text="repeat several times"), 
+
+)
 
 
 
 
 op = OperatingScore()
-op.staves[0].extend([SEGMENT_0_I, SEGMENT_0_II])
-# op.staves[1].extend([seg0_a(), seg1_a()])
+op.staves[0].extend([SEGMENT_0_I, ])
+op.staves[1].extend([SEGMENT_1_I, ])
 
 calliope.illustrate(op)

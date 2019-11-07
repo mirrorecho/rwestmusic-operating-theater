@@ -17,8 +17,9 @@ class StringCell(StringBase, calliope.Factory, calliope.Cell):
 
     hide_time = True
 
-    repeat_start = False
-    repeat_end = False
+    bar_start = None # set to customize barline, e.g. 
+
+    no_break = False
 
     improvisation = False
 
@@ -54,16 +55,33 @@ class StringCell(StringBase, calliope.Factory, calliope.Cell):
 
         return my_list
 
+    def swap_strings(self):
+        """
+        swaps between 0 and 1 strings
+        """
+        print(self.pluck_strings)
+        my_pluck_strings = []
+        for i,r in enumerate(self.string_rhythm):
+            old_ps = self.pluck_strings[i % len(self.pluck_strings)]
+            my_pluck_strings.append(
+                [1 if p==0 else 0 for p in old_ps]
+                )
+        self.pluck_strings = tuple(my_pluck_strings)
+        for p, e in zip(my_pluck_strings, self.events):
+            e.pluck_strings = p
+        print(self.pluck_strings)
+        return self
+
 
     def process_pluck(self):
-        if self.repeat_start:
+        if self.bar_start is not None:
             # a little bit of a hack so this is at the beginning of the cell
-            self.events[0].tag('\\bar ".|:"') 
-        if self.repeat_end:
-            self.events[-1].tag(":|.")
+            self.tag('\\bar "' + self.bar_start + '"') 
+        if self.no_break:
+            self.tag("\\noBreak")
         if self.hide_time:
-            self.events[0].tag("\\hideTime")  
+            self.tag("\\hideTime")  
         if self.improvisation:
-            self.events[0].tag("\\improvisationOn")
+            self.tag("\\improvisationOn")
         else:  
-            self.events[0].tag("\\improvisationOff")
+            self.tag("\\improvisationOff")

@@ -9,6 +9,7 @@ class StringDefCell(StringCell):
     branch_type = StringDefEvent
     hide_time = True
     padding_beats = (2, 2)
+    bar_start = ""
 
     pluck_tags = ("\\pluckHide",)
 

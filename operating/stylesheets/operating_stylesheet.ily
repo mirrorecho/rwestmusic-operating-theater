@@ -121,20 +121,19 @@ noPluck = {
 }
 
 freeLineArrow = {
-   
     \stopStaff
     % \override Staff.StaffSymbol.line-positions = #'(
     %    16
     %     )
      \override Staff.StaffSymbol.transparent = ##t
 
-    \startStaff
-      \grace {
+    % \startStaff
+      % \grace {
         \once \override Rest  #'stencil = #ly:text-interface::print
         \once \override Rest.staff-position = #7
         \once \override Rest #'text = \markup { \fontsize #6 { \general-align #Y #DOWN { \arrow-head #X #RIGHT ##t } } }
-        r8
-      }
+      %   r8
+      % }
 }
 
 hideTime = {
@@ -237,6 +236,11 @@ hideTime = {
         \remove "Default_bar_line_engraver"
         %\remove "Repeat_acknowledge_engraver"
         %\remove "Volta_engraver"
+    }
+    \context {
+        \StaffGroup 
+        \remove "Timing_translator"
+        \remove "Default_bar_line_engraver"
     }
     \context {
         \Staff

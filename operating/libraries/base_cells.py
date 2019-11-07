@@ -11,92 +11,30 @@ from operating.structure.string_cell_hide import StringCellHide
 from operating.structure.string_cell_arrow import StringCellArrow
 from operating.libraries.strings import BROKEN_LOW
 
-
-class SingleCell(StringCell):
-    string_rhythm = (1, -4,)
-    metrical_durations = ((1,4), (4,4))
-    tensions = ((0, 0,),)
-    time_signature = (5,4)
-    # repeat_start = True
-    # repeat_end = True
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        self.events[1].tag("fermata")
-        # print(self.events[1].tags)
-
-class FindResonCell(StringCell):
-    string_rhythm = (1, 1, 1)
-    time_signature = (3,4)
-    metrical_durations = ( (3,4), )
-    pluck_strings = ( (0,1), )
-
-
-class SixPulseCell(StringCell):
-    string_rhythm = (1, -1, -1, 1, 1, 1)
-    time_signature = (6, 4)
-    metrical_durations = ( (1,4),)*6
-
-class SlowPulseCell(StringCell):
-    string_rhythm = (1, -1, 1, -1)
-    tensions = ( (4,12), (), (2,2), ())
-    pluck_strings = ((1,), (), (0,), ())
-    time_signature = (4, 4)
-    # hide_time = False
-
-class SimplePulseCell(StringCell):
-    string_rhythm = (1, -1, 1, -1)
-    time_signature = (4, 4)
-
 class FeatherFasterCell(StringCell):
     string_rhythm = (0.125,)*8
     metrical_durations = ((1,4),)
-    tensions = (
-        (8,),
-        )*8
     time_signature = (1,4)
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        self.events[0].tag(r"\featherFaster")
-        # self.events[-1].tag(r"!\featherOff")
-
-class FeatherSlowerCell(StringCell):
-    string_rhythm = (0.125,)*8
-    metrical_durations = ((1,4),)
-    tensions = (
-        (8, 12,),
-        )*8
-    time_signature = (1,4)
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        self.events[0].tag(r"\featherSlower")
-        # self.events[-1].tag(r"!\featherOff")
-
-
-class FeatherCell(StringCell):
-    string_rhythm = (0.125,)*16 + (1, -4,)
-    metrical_durations = ((1,4), (1,4), (1,4), (4,4),)
-    time_signature = (7,4)
+    start_tension = 0
+    increment_tension = 2
 
     dynamics = (
-        (),
         (),
         ()
         )
 
     directions = (
         ("\\featherFaster",),
-        ("\\featherSlower",),
-        ("\\featherOff",)
+        ("\\featherOff",),
         )
 
-    midpoint = 8
-    endpoint = 15
+    def get_branches_kwargs(self, *args, **kwargs):
+        self.tensions = (
+            [(self.start_tension + i*self.increment_tension,) 
+            for i in range(len(self.string_rhythm))]
+            )
+        return super().get_branches_kwargs(*args, **kwargs)
 
     def process_pluck(self):
         super().process_pluck()
@@ -104,21 +42,98 @@ class FeatherCell(StringCell):
         self.events[0].tag(*self.dynamics[0])
         self.events[0].tag(*self.directions[0])
 
-        self.events[self.midpoint].tag(*self.dynamics[1])
-        self.events[self.midpoint].tag(*self.directions[1])
+        self.events[-1].tag(*self.dynamics[1])
+        self.events[-1].tag(*self.directions[1])
 
-        self.events[self.endpoint].tag(*self.dynamics[2])
-        self.events[self.endpoint].tag(*self.directions[2])
 
-        self.events[-2].skip = True
-        self.events[-1].tag("fermata")
-
-class FeatherCellReverse(FeatherCell):
+class FeatherSlowerCell(FeatherFasterCell):
+    start_tension = 14
+    increment_tension = -2
     directions = (
         ("\\featherSlower",),
-        ("\\featherFaster",),
-        ("\\featherOff",)
+        ("\\featherOff",),
         )
+
+class FermataCell(StringCell):
+    string_rhythm = (3, -4,)
+    metrical_durations = ((3,4), (4,4))
+    time_signature = (7,4)
+
+    def process_pluck(self):
+        super().process_pluck()
+        self.events[0].skip = True
+        self.events[1].tag("fermata")
+
+
+class FindResonCell(StringCell):
+    string_rhythm = (1, 1, 1, 1)
+    time_signature = (4,4)
+    metrical_durations = ( (4,4), )
+    pluck_strings = ( (1,), )
+    tensions = (
+        (4,),
+        (9,),
+        (3,),
+        (7,),
+        )
+    def process_pluck(self):
+        super().process_pluck()
+        self.events[3].tag("\\noPluck")
+
+
+
+class JigSevenCell(StringCell):
+    string_rhythm = (0.5, -0.5, 0.5, 1, 1)
+    time_signature = (7, 8)
+    pluck_strings = ( (0,), (), (1,), (1,), (0,) )
+    metrical_durations = ( (1,8), (1,8), (1,8), (1,4), (1,4) )
+    tensions = (
+        (0, 0),
+        (),
+        (4,6,),
+        (6,12),
+        (8,9),
+        )
+
+class JigSixCell(StringCell):
+    string_rhythm = (0.5, -0.5, -0.5,)*2
+    time_signature = (6, 8)
+    pluck_strings = ( (1,), (), (), (0,), (), (), )
+    metrical_durations = ( (1,8),)*6
+    tensions = (
+        (8, 12),
+        (),
+        (),
+        (6,6),
+        (),
+        (),
+        )
+
+
+class PulseSimpleCell(StringCell):
+    string_rhythm = (1, 1, 1, 1)
+    metrical_durations = ((4,4),)
+    time_signature = (4, 4)
+    pluck_strings = ( (1,), (0,), (1,), (0,) )
+    tensions = (
+        (10,12),
+        (6,8),
+        (8,9),
+        (3,4),
+        )
+
+class PulseSixCell(StringCell):
+    string_rhythm = (1, -1, -1, 1, 1, 1)
+    time_signature = (6, 4)
+    metrical_durations = ( (1,4),)*6
+
+
+class PulseSlowCell(StringCell):
+    string_rhythm = (1, -1, 1, -1)
+    tensions = ( (4,12), (), (2,2), ())
+    pluck_strings = ((1,), (), (0,), ())
+    time_signature = (4, 4)
+
 
 class QuestionCell(StringCell):
     string_rhythm = (1, -2, 1, 1)
@@ -136,19 +151,43 @@ class QuestionCell(StringCell):
         # self.events[1].skip=True
         self.events[2,3].tag("\\noPluck")
 
-class SevenJigCell(StringCell):
-    string_rhythm = (0.5, -0.5, -0.5, 1, 1)
-    time_signature = (7, 8)
-    pluck_strings = ( (0,), (), (), (1,), (0,) )
-    metrical_durations = ( (1,8), (1,8), (1,8), (1,4), (1,4) )
+
+class RunIntroCell(StringCell):
+    string_rhythm = (-0.5, 0.5, 0.5,  0.5,)
+    time_signature = (2, 4)
+    pluck_strings = ( (), (1,), )
+    metrical_durations = ( (1,8), (1,8), (1,4) )
     tensions = (
-        (0, 0),
         (),
-        (),
-        (5, 12),
-        (9, 9),
+        (2,),
+        (4,),
+        (6,),
         )
 
+
+class RunSimpleCell(StringCell):
+    string_rhythm = (0.5, 0.5, 0.5, 0.5,)
+    time_signature = (2, 4)
+    pluck_strings = ( (1,), (1,), )
+    metrical_durations = ( (1,4), (1,4) )
+    tensions = (
+        (8,),
+        (6,),
+        (4,),
+        (2,),
+        )
+
+
+class SingleCell(StringCell):
+    string_rhythm = (1, 3, -4)
+    metrical_durations = ((1,4), (3,4), (4,4))
+    tensions = ((0,),)
+    time_signature = (8,4)
+
+    def process_pluck(self):
+        super().process_pluck()
+        self.events[1].skip = True
+        self.events[2].tag("fermata")
 
 
 

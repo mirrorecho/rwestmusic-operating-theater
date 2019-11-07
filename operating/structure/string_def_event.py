@@ -44,6 +44,8 @@ class StringDefEvent(StringBase, calliope.Event):
 
     def get_pluck_pitches(self, tensions=(0,)):
         # TO DO... this math is odd and nasty
+        if not tensions:
+            return ()
         start_index = self.pluck_0 - math.floor((self.string_count * self.pluck_spacing) / 2)
         return tuple([
             self.scale[start_index+(i*self.pluck_spacing)+(tensions[i % len(tensions)])] 

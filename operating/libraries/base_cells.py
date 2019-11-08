@@ -9,7 +9,7 @@ from operating.structure.string_segment import StringSegment
 from operating.structure.string_cell_hide import StringCellHide
 
 from operating.structure.string_cell_arrow import StringCellArrow
-from operating.libraries.strings import BROKEN_LOW
+from operating.libraries.strings import DEF_4_MID
 
 class FeatherFasterCell(StringCell):
     string_rhythm = (0.125,)*8
@@ -95,6 +95,9 @@ class JigSevenCell(StringCell):
         (8,9),
         )
 
+class JigSevenSimpleCell(JigSevenCell):
+    string_rhythm = (0.5, -0.5, -0.5, 1, -1)
+
 class JigSixCell(StringCell):
     string_rhythm = (0.5, -0.5, -0.5,)*2
     time_signature = (6, 8)
@@ -126,7 +129,17 @@ class PulseSixCell(StringCell):
     string_rhythm = (1, -1, -1, 1, 1, 1)
     time_signature = (6, 4)
     metrical_durations = ( (1,4),)*6
+    pluck_strings = ( (0,), (), (), (   1,), (0,    ), (  1,), )
+    tensions =      ( (8,), (), (), (0, 4,), (12,   ), (0,1,) 
+        )
 
+class PulseFourIntroCell(StringCell):
+    string_rhythm = (-1, 1, 1, 1)
+    time_signature = (4, 4)
+    metrical_durations = ( (1,4),)*4
+    pluck_strings = ( (), (0,), (1,    ), (1,), )
+    tensions =      ( (), (2,), (10,   ), (4,) 
+        )
 
 class PulseSlowCell(StringCell):
     string_rhythm = (1, -1, 1, -1)
@@ -137,7 +150,7 @@ class PulseSlowCell(StringCell):
 
 class QuestionCell(StringCell):
     string_rhythm = (1, -2, 1, 1)
-    pluck_strings = ((1,), (), (0,1), (0,1),)
+    pluck_strings = ((1,), (), (), (),)
     time_signature = (5, 4)
     metrical_durations = ( (1,4), (2,4), (1,4), (1,4), )
     tensions = (
@@ -153,12 +166,12 @@ class QuestionCell(StringCell):
 
 
 class RunIntroCell(StringCell):
-    string_rhythm = (-0.5, 0.5, 0.5,  0.5,)
+    string_rhythm = (-0.5, 0.5, 0.5, 0.5,)
     time_signature = (2, 4)
-    pluck_strings = ( (), (1,), )
+    pluck_strings = ( (1,), (1,), (1,), (1,), )
     metrical_durations = ( (1,8), (1,8), (1,4) )
     tensions = (
-        (),
+        (0,),
         (2,),
         (4,),
         (6,),
@@ -190,30 +203,30 @@ class SingleCell(StringCell):
         self.events[2].tag("fermata")
 
 
+if __name__ == "__main__":
+    import sys, inspect
+    TEST_SEGMENT = StringSegment(
+        StringDefCell(string_def_event=DEF_4_MID),
+        )
+    for c in inspect.getmembers(sys.modules[__name__], inspect.isclass):
+        if c[1].__module__== "__main__":
+            TEST_SEGMENT.extend([
+            c[1](
+                name = c[0],
+                string_def_event = DEF_4_MID,
+                ),
+            StringCellArrow()
+            
+            ])
 
-import sys, inspect
-TEST_SEGMENT = StringSegment(
-    StringDefCell(string_def_event=BROKEN_LOW),
-    )
-for c in inspect.getmembers(sys.modules[__name__], inspect.isclass):
-    if c[1].__module__== "__main__":
-        TEST_SEGMENT.extend([
-        c[1](
-            name = c[0],
-            string_def_event = BROKEN_LOW,
-            ),
-        StringCellArrow()
-        
-        ])
+    for cell in TEST_SEGMENT.cells:
+        if cell.name:
+            cell.events[0].tag(cell.name)
 
-for cell in TEST_SEGMENT.cells:
-    if cell.name:
-        cell.events[0].tag(cell.name)
+    calliope.illustrate(TEST_SEGMENT)
 
-calliope.illustrate(TEST_SEGMENT)
-
-        
+            
 
 
-        
+            
 

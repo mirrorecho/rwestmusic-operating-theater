@@ -11,6 +11,7 @@ class StringDefEvent(StringBase, calliope.Event):
     pluck_spacing = 4
     init_beats = 4
     pluck_0 = -7
+    max_tension = 14
     clef = "bass"
 
     existing_map = {}

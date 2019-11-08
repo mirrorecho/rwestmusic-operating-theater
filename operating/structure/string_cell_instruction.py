@@ -1,7 +1,7 @@
 import abjad
 import calliope
 
-from operating.structure.string_base import StringCellHide
+from operating.structure.string_cell_hide import StringCellHide
 
 class StringCellInstruction(StringCellHide):
     string_rhythm = (4,1)

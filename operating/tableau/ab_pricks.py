@@ -14,25 +14,26 @@ from operating.libraries import strings
 from operating.score import OperatingScore
 
 
-DEF_HIGHEST_0 = StringDefCell(
-        string_def_event = strings.PRICK_STRING_HIGHEST,
-        )
-DEF_HIGHEST_0.events[1].tag("8va")
-DEF_HIGHEST_0.events[2].tag("8va!")
+# DEF_HIGHEST_0 = 
+# DEF_HIGHEST_0.events[1].tag("8va")
+# DEF_HIGHEST_0.events[2].tag("8va!")
 
 SEGMENT_0_I = StringSegment(
     
-    DEF_HIGHEST_0,
+    StringDefCell(
+        string_def_event = strings.DEF_1_HIGHEST,
+        ).tag_events((), ("8va",), ("8va!",)),
     
-    base_cells.SingleCell(
-        string_def_event = strings.PRICK_STRING_HIGHEST,
-        improvisation = True,
-        pluck_strings = ( (0,1), )
-    ),
+    base_cells.SingleCell(string_def_event=strings.DEF_1_HIGHEST,
+        ).swap_strings().tag_events(("pp",)),
     StringCellArrow(text="several Xs") , 
     
+    base_cells.SingleCell(string_def_event=strings.DEF_1_HIGHEST,
+        ),
+    StringCellArrow(text="several Xs") , 
+
     base_cells.FeatherFasterCell(
-        string_def_event = strings.PRICK_STRING_HIGHEST,
+        string_def_event = strings.DEF_1_HIGHEST,
         dynamics = (
             ("pp", "\\<",),
             (),
@@ -40,7 +41,7 @@ SEGMENT_0_I = StringSegment(
             )
     ),
     base_cells.FeatherSlowerCell(
-        string_def_event = strings.PRICK_STRING_HIGHEST,
+        string_def_event = strings.DEF_1_HIGHEST,
         bar_start ="",
         no_break = True,
         dynamics = (
@@ -51,37 +52,26 @@ SEGMENT_0_I = StringSegment(
     StringCellArrow(text="several Xs") , 
    
     base_cells.FindResonCell(
-        string_def_event = strings.PRICK_STRING_HIGHEST,
+        string_def_event = strings.DEF_1_HIGHEST,
     ),
     StringCellArrow(text="repeat freely; find resonant position"), 
 
     base_cells.FindResonCell(
-        string_def_event = strings.PRICK_STRING_HIGHEST,
+        string_def_event = strings.DEF_1_HIGHEST,
     ).swap_strings(),
     StringCellArrow(text="(sim.) repeat freely; find resonant position"), 
-    StringCellArrow(text="(sim.) repeat freely; find resonant position"), 
+    # StringCellArrow(text="(sim.) repeat freely; find resonant position"), 
 
 )
 
 SEGMENT_1_I = StringSegment(
 
-    base_cells.FermataCell(string_def_event = strings.PRICK_STRING_NONE,),
+    base_cells.FermataCell(string_def_event = strings.DEF_0_NONE,),
     StringCellArrow(string_rhythm=(15,1,1,1)), 
     
     StringDefCell(
-        string_def_event = strings.PRICK_STRING_HIGH_I,
+        string_def_event = strings.DEF_2_HIGH,
     ),
-
-
-
-    # base_cells.FeatherFasterCell(
-    # string_def_event = strings.PRICK_STRING_HIGH_I,
-    # tensions = (
-    #     [(2+i*2, 4+i*2 ) for i in range(8)]
-    #     )
-    # ),
-
-    # StringCellArrow(text="repeat several times"), 
 
 )
 

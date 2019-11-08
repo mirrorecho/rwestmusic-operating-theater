@@ -13,16 +13,12 @@ from operating.libraries import strings
 
 from operating.score import OperatingScore
 
+DEF_5_6_MID = strings.DEF_5_MID.add_def(strings.DEF_5_MID)
+
 SEGMENT_0 = StringSegment(
-    
-    StringDefCell(string_def_event=strings.BROKEN_LOW),
-    base_cells.FeatherFasterCell(string_def_event=strings.BROKEN_LOW,),
-    base_cells.FeatherSlowerCell(string_def_event=strings.BROKEN_LOW,
-        bar_start="",
-        ),
-    base_cells.FermataCell(string_def_event=strings.BROKEN_LOW, 
-        bar_start="",),
-    base_cells.StringCellArrow(string_def_event=strings.BROKEN_LOW,),
+    StringDefCell(string_def_event=DEF_5_6_MID),
+    base_cells.PulseSimpleCell(string_def_event=DEF_5_6_MID),
+    base_cells.StringCellArrow(string_def_event=DEF_5_6_MID,),
     )
 
 op = OperatingScore()

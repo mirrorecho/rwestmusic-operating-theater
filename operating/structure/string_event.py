@@ -19,7 +19,7 @@ class StringEvent(StringBase, calliope.Event):
             self.tag(r"\pluckRestEvent")
 
         else:
-            self.pitch = self.string_def_event.get_pluck_pitches(self.tensions)        
+            self.pitch = self.string_def_event.get_pluck_pitches(self.tensions)
             self.tag(r"\pluckNoteEvent")
             self.tag(
                 r"""\set glissandoMap = #'(""" + " ".join(

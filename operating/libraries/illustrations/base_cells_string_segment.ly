@@ -22,11 +22,11 @@
         {
             {
                 \numericTimeSignature
-                \pluckStart
                 \pluckHide
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \improvisationOff
                 \bar ""
+                \pluckStart
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \hideTime
                 \accidentalStyle modern-cautionary
                 \time 8/4
@@ -41,16 +41,16 @@
                     \tweak style #'harmonic-black
                     bf'''
                 >1
-                \pluckHide
                 \pluckRestEvent
+                \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckNoteEvent
                 \pluckShow
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \improvisationOff
-                \hideTime
                 \featherFaster
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \hideTime
+                \pluckNoteEvent
                 \time 1/4
                 <
                     f,
@@ -122,8 +122,8 @@
                     a'
                 >32
                 \glissando
-                \pluckNoteEvent
                 \featherOff
+                \pluckNoteEvent
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 <
                     f'
@@ -136,17 +136,17 @@
                 \glissando
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -154,9 +154,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -165,12 +165,12 @@
                 ]
                 \glissando
                 \numericTimeSignature
-                \pluckNoteEvent
                 \pluckShow
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \improvisationOff
-                \hideTime
                 \featherSlower
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \hideTime
+                \pluckNoteEvent
                 \time 1/4
                 <
                     f'
@@ -242,8 +242,8 @@
                     e
                 >32
                 \glissando
-                \pluckNoteEvent
                 \featherOff
+                \pluckNoteEvent
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 <
                     f,
@@ -256,17 +256,17 @@
                 \glissando
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -274,9 +274,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -285,10 +285,10 @@
                 ]
                 \glissando
                 \numericTimeSignature
-                \pluckNoteEvent
                 \pluckShow
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \pluckNoteEvent
                 \improvisationOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \hideTime
                 \time 7/4
                 s2.
@@ -299,17 +299,17 @@
                 \fermata
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -317,9 +317,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -328,10 +328,10 @@
                 ]
                 \glissando
                 \numericTimeSignature
-                \pluckNoteEvent
                 \pluckShow
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \pluckNoteEvent
                 \improvisationOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \hideTime
                 \time 4/4
                 <
@@ -376,17 +376,17 @@
                 \glissando
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -394,9 +394,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -405,10 +405,10 @@
                 ]
                 \glissando
                 \numericTimeSignature
-                \pluckNoteEvent
                 \pluckShow
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \pluckNoteEvent
                 \improvisationOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \hideTime
                 \time 7/8
                 <
@@ -454,17 +454,17 @@
                 \glissando
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -472,9 +472,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -483,10 +483,10 @@
                 ]
                 \glissando
                 \numericTimeSignature
-                \pluckNoteEvent
                 \pluckShow
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \pluckNoteEvent
                 \improvisationOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \hideTime
                 \time 7/8
                 <
@@ -515,17 +515,17 @@
                 r4
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -533,9 +533,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -544,9 +544,9 @@
                 ]
                 \glissando
                 \numericTimeSignature
-                \pluckNoteEvent
-                \pluckShow
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \pluckShow
+                \pluckNoteEvent
                 \improvisationOff
                 \hideTime
                 \time 6/8
@@ -577,17 +577,17 @@
                 r8
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -595,9 +595,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -607,12 +607,12 @@
                 \glissando
                 \numericTimeSignature
                 \pluckShow
-                \pluckRestEvent
                 \improvisationOff
+                \pluckRestEvent
                 \hideTime
                 \time 4/4
                 r4
-                ^ \markup { PulseFourIntroCell }
+                ^ \markup { PulseFourIntoCell }
                 \pluckNoteEvent
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 <
@@ -645,17 +645,17 @@
                 \glissando
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -663,9 +663,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -674,10 +674,10 @@
                 ]
                 \glissando
                 \numericTimeSignature
-                \pluckNoteEvent
                 \pluckShow
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \pluckNoteEvent
                 \improvisationOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \hideTime
                 \time 4/4
                 <
@@ -721,17 +721,17 @@
                 \glissando
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -739,9 +739,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -750,10 +750,10 @@
                 ]
                 \glissando
                 \numericTimeSignature
-                \pluckNoteEvent
                 \pluckShow
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \pluckNoteEvent
                 \improvisationOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \hideTime
                 \time 6/4
                 <
@@ -800,17 +800,17 @@
                 \glissando
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -818,9 +818,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -829,10 +829,10 @@
                 ]
                 \glissando
                 \numericTimeSignature
-                \pluckNoteEvent
                 \pluckShow
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \pluckNoteEvent
                 \improvisationOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \hideTime
                 \time 4/4
                 <
@@ -860,17 +860,17 @@
                 r4
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -878,9 +878,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -889,10 +889,10 @@
                 ]
                 \glissando
                 \numericTimeSignature
-                \pluckNoteEvent
                 \pluckShow
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \pluckNoteEvent
                 \improvisationOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \hideTime
                 \time 5/4
                 <
@@ -918,17 +918,17 @@
                 \glissando
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -936,9 +936,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -948,12 +948,12 @@
                 \glissando
                 \numericTimeSignature
                 \pluckShow
-                \pluckRestEvent
                 \improvisationOff
+                \pluckRestEvent
                 \hideTime
                 \time 2/4
                 r8
-                ^ \markup { RunIntroCell }
+                ^ \markup { RunIntoCell }
                 \pluckNoteEvent
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 <
@@ -988,17 +988,17 @@
                 \glissando
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -1006,9 +1006,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -1017,10 +1017,10 @@
                 ]
                 \glissando
                 \numericTimeSignature
-                \pluckNoteEvent
                 \pluckShow
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \pluckNoteEvent
                 \improvisationOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \hideTime
                 \time 2/4
                 <
@@ -1068,17 +1068,17 @@
                 \glissando
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -1086,9 +1086,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()
@@ -1097,10 +1097,10 @@
                 ]
                 \glissando
                 \numericTimeSignature
-                \pluckNoteEvent
                 \pluckShow
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \pluckNoteEvent
                 \improvisationOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \hideTime
                 \time 8/4
                 <
@@ -1121,17 +1121,17 @@
                 \fermata
                 \numericTimeSignature
                 \freeLineStart
-                \pluckRestEvent
                 \improvisationOff
-                \noBreak
                 \set glissandoMap = #'()
+                \pluckRestEvent
+                \noBreak
                 \hideTime
                 \time 4/4
                 s4
                 [
                 \glissando
-                \once \hide Rest
                 \set glissandoMap = #'()
+                \once \hide Rest
                 \pluckRestEvent
                 r4
                 \glissando
@@ -1139,9 +1139,9 @@
                 \pluckRestEvent
                 s4
                 \glissando
-                \freeLineArrow
                 \set glissandoMap = #'()
                 \pluckRestEvent
+                \freeLineArrow
                 r8
                 \glissando
                 \set glissandoMap = #'()

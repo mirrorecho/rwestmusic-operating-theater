@@ -224,7 +224,7 @@ hideTime = {
     % }
     \context {        
         \Score
-        proportionalNotationDuration = #(ly:make-moment 1/9)
+        proportionalNotationDuration = #(ly:make-moment 1/6)
         % defaultBarType = #"!"
         % startRepeatType = #"[|:"
         % endRepeatType = #":|]"

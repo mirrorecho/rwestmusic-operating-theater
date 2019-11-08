@@ -133,7 +133,7 @@ class PulseSixCell(StringCell):
     tensions =      ( (8,), (), (), (0, 4,), (12,   ), (0,1,) 
         )
 
-class PulseFourIntroCell(StringCell):
+class PulseFourIntoCell(StringCell):
     string_rhythm = (-1, 1, 1, 1)
     time_signature = (4, 4)
     metrical_durations = ( (1,4),)*4
@@ -165,7 +165,7 @@ class QuestionCell(StringCell):
         self.events[2,3].tag("\\noPluck")
 
 
-class RunIntroCell(StringCell):
+class RunIntoCell(StringCell):
     string_rhythm = (-0.5, 0.5, 0.5, 0.5,)
     time_signature = (2, 4)
     pluck_strings = ( (1,), (1,), (1,), (1,), )

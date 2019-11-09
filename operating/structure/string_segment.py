@@ -11,7 +11,7 @@ class StringSegment(StringBase, calliope.Segment):
     pluck_tags = ("\\pluckStart",)
 
     def process_pluck(self):
-        self.note_events[-1].untag("!\\glissando")
+        self.note_events(-1).untag("!\\glissando")
 
     def process_logical_tie(self, music, music_logical_tie, data_logical_tie, leaf_index):
         

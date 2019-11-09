@@ -192,10 +192,10 @@ class RunSimpleCell(StringCell):
 
 
 class SingleCell(StringCell):
-    string_rhythm = (1, 3, -4)
-    metrical_durations = ((1,4), (3,4), (4,4))
+    string_rhythm = (1, 2, -4)
+    metrical_durations = ((1,4), (2,4), (4,4))
     tensions = ((0,),)
-    time_signature = (8,4)
+    time_signature = (7,4)
 
     def process_pluck(self):
         super().process_pluck()
@@ -221,7 +221,7 @@ if __name__ == "__main__":
 
     for cell in TEST_SEGMENT.cells:
         if cell.name:
-            cell.events[0].tag(cell.name)
+            cell.events[0].tag("%s : %s " % (cell.name, cell.beats))
 
     calliope.illustrate(TEST_SEGMENT)
 

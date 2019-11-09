@@ -7,7 +7,8 @@ class StringCellArrow(StringCellHide):
     string_rhythm = (1, 1, 1, 0.5, 0.5) 
     metrical_durations = ((4,4),)
     text = ""
-    no_break = True
+    break_start = True
+    text_length_on = True
 
     def process_pluck(self):
         super().process_pluck()
@@ -25,7 +26,8 @@ class StringCellArrow(StringCellHide):
         self.events.tag("\\pluckRestEvent")
 
         if self.text:
-            self.events[0].tag(r"\textLengthOn")
+            if self.text_length_on:
+                self.events[0].tag(r"\textLengthOn")
             self.events[0].tag(r"\once \override TextScript.outside-staff-priority = ##f")
             self.events[0].tag(self.text)
             self.events[1].tag(r"\textLengthOff")

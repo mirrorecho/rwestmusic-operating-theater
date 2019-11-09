@@ -10,8 +10,8 @@ DEF_0_NONE = StringDefEvent(
 
 DEF_1_HIGHEST = StringDefEvent(
     string_map = {
-        42: (1,),
-        35: (0,),
+        42: (0,),
+        35: (1,),
         },
     clef = "treble"
     )
@@ -44,8 +44,8 @@ DEF_4_MID = StringDefEvent(
 
 DEF_5_MID = StringDefEvent(
     string_map = {
-        25: (7,),
-        24: (8,),
+        25: (0,),
+        24: (1,),
         },
     clef = "treble"
     )

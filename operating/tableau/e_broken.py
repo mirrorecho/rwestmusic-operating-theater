@@ -29,17 +29,17 @@ SEGMENT_0 = StringSegment(
 
     base_cells.PulseSlowCell(
         string_def_event = strings.DEF_7_LOW,
-        no_break = True,
+        break_start = True,
     ),
     base_cells.PulseSixCell(
         string_def_event = strings.DEF_7_LOW,
-        no_break = True,
+        break_start = True,
     ),
     base_cells.SingleCell(
         string_def_event = strings.DEF_7_LOW,
         tensions = ( (8,), ),
         pluck_strings = ( (0,), ),
-        no_break = True,
+        break_start = True,
     ),
     StringCellArrow(text="choose boxes at random (with pulse constant), for 10-15"), 
 

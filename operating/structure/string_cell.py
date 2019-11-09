@@ -19,7 +19,7 @@ class StringCell(StringBase, calliope.Factory, calliope.Cell):
 
     bar_start = None # set to customize barline, e.g. 
 
-    no_break = False
+    break_start = None # set to True/False to set break
 
     improvisation = False
 
@@ -96,14 +96,19 @@ class StringCell(StringBase, calliope.Factory, calliope.Cell):
         if self.bar_start is not None:
             # a little bit of a hack so this is at the beginning of the cell
             self.tag('\\bar "' + self.bar_start + '"') 
-        if self.no_break:
+        
+        if self.break_start == True:
+            self.tag("\\break")
+        elif self.break_start == False:
             self.tag("\\noBreak")
+
         if self.hide_time:
             self.tag("\\hideTime")  
         if self.improvisation:
-            self.tag("\\improvisationOn")
+            # self.tag("\\improvisationOn")
+            self.tag("\\xNotesOn")
             for e in self.note_events:
                 if len(e.pluck_strings) > 0:
                     e.pluck_strings = tuple([i for i in range(self.string_def_event.string_count)])
         else:  
-            self.tag("\\improvisationOff")
+            self.tag("\\xNotesOff")

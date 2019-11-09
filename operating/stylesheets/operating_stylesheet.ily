@@ -1,6 +1,18 @@
 #(set-default-paper-size "letter" 'portrait)
 #(set-global-staff-size 19)
 
+#(define-public (bracket-stencils grob)
+  (let ((lp (grob-interpret-markup grob (markup #:fontsize 3.5 #:translate (cons -0.3 -0.5) "[")))
+        (rp (grob-interpret-markup grob (markup #:fontsize 3.5 #:translate (cons -0.3 -0.5) "]"))))
+    (list lp rp)))
+
+bracketify = #(define-music-function (parser loc arg) (ly:music?)
+   (_i "Tag @var{arg} to be parenthesized.")
+#{
+  \once \override ParenthesesItem.stencils = #bracket-stencils
+  \parenthesize $arg
+#})
+
 startScore = {
     \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
     #'((Y-offset . 9)
@@ -64,6 +76,11 @@ pluckShowReson = {
     % \bar ""
 }
 
+pluckShowBoard = {
+    \pluckShowReson
+    \xNotesOn
+}
+
 pluckHide = {
     \once \override Score.TimeSignature.stencil = ##f 
     \stopStaff
@@ -74,6 +91,11 @@ pluckHide = {
     \startStaff
 
     % \set Timing.defaultBarType = "||"
+}
+
+pluckEndBoard = {
+    \pluckHide
+    \xNotesOff
 }
 
 pluckNoteEvent = {
@@ -108,7 +130,7 @@ freeLineStart = {
     \once \override Score.TimeSignature.stencil = ##f 
     \stopStaff
     \override Staff.StaffSymbol.line-positions = #'(
-        9
+        8
         )
     
     \startStaff
@@ -130,7 +152,7 @@ freeLineArrow = {
     % \startStaff
       % \grace {
         \once \override Rest  #'stencil = #ly:text-interface::print
-        \once \override Rest.staff-position = #7
+        \once \override Rest.staff-position = #6
         \once \override Rest #'text = \markup { \fontsize #6 { \general-align #Y #DOWN { \arrow-head #X #RIGHT ##t } } }
       %   r8
       % }

@@ -29,3 +29,15 @@ class OperatingScoreSinglePlayer(calliope.Score):
     stylesheets=(_settings.OPERATING_PATH + "/stylesheets/operating_stylesheet.ily",)
     
     class PluckA(calliope.Staff): pass
+
+
+class OperatingScoreSixStaff(calliope.Score):
+    stylesheets=(_settings.OPERATING_PATH + "/stylesheets/operating_stylesheet.ily",)
+    
+
+    class PluckI(calliope.Staff): pass
+    class PluckII(calliope.Staff): pass
+    class PluckIII(calliope.Staff): pass
+    class PluckIV(calliope.Staff): pass
+    class PluckV(calliope.Staff): pass
+    class PluckVI(calliope.Staff): pass

@@ -83,20 +83,20 @@ class FindResonCell(StringCell):
 
 
 class JigSevenCell(StringCell):
-    string_rhythm = (0.5, -0.5, 0.5, 1, 1)
+    string_rhythm = (1, 0.5, 1, 1)
     time_signature = (7, 8)
-    pluck_strings = ( (0,), (), (1,), (1,), (0,) )
-    metrical_durations = ( (1,8), (1,8), (1,8), (1,4), (1,4) )
+    pluck_strings = ( (0,), (1,), (1,), (0,) )
+    metrical_durations = ( (1,4), (1,8), (1,4), (1,4) )
     tensions = (
         (0, 0),
-        (),
         (4,6,),
         (6,12),
         (8,9),
         )
 
 class JigSevenSimpleCell(JigSevenCell):
-    string_rhythm = (0.5, -0.5, -0.5, 1, -1)
+    string_rhythm = (1, -0.5, 2)
+    metrical_durations = ( (1,4), (1,8), (2,4) )
 
 class JigSixCell(StringCell):
     string_rhythm = (0.5, -0.5, -0.5,)*2

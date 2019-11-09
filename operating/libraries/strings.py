@@ -75,13 +75,22 @@ DEF_8_LOW = StringDefEvent(
         clef = "bass"
     )
 
-DEF_9_LOWEST = StringDefEvent(
+DEF_9_LOW = StringDefEvent(
     string_map = {
         -12: (0,),
         -17: (1,),
         },
         clef = "bass"
     )
+
+DEF_12_LOWEST = StringDefEvent(
+    string_map = {
+        -12: (0,),
+        -17: (1,),
+        },
+        clef = "bass"
+    )
+
 
 
 if __name__ == "__main__":

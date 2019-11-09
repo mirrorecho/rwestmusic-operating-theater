@@ -48,25 +48,45 @@ SEGMENT_0_I = StringSegment(
         beats=15,
         ).tag_events(("markup_column:several Xs,|until pl.2 starts again",)),
 
-    JigSixCell(string_def_event=strings.DEF_8_LOW,
+    JigSixCell(string_def_event=DEF_5_6_MID,
         ).tag_events(("mf",)),
-    PulseSixCell(string_def_event=strings.DEF_8_LOW,
+    PulseSixCell(string_def_event=DEF_5_6_MID,
         bar_start = ";"
         ),
-    FermataCell(string_def_event = strings.DEF_8_LOW,
+    FermataCell(string_def_event = DEF_5_6_MID,
         bar_start=";",),
     StringCellSpace(
         beats=7,
         text="markup_column:several Xs,|until pl.2 continues",
         text_length_on = False,
         ), 
-    SingleCell(string_def_event=strings.DEF_8_LOW,
+    SingleCell(string_def_event=DEF_5_6_MID,
         break_start=False,
-        ).tag_events(("together",)),
+        ).tag_events(("together",)
+        ),
+    
+    QuestionCell(string_def_event=DEF_5_6_MID, break_start=True,
+        ).tag_events((),("fermata",)),
+    StringCellSpace(
+        beats=14,
+        text="repeat several Xs (together)",
+        text_length_on = False,
+        ),
+
+    StringDefCell(string_def_event=strings.DEF_8_LOW(),
+        padding_beats = (1,2)
+        ),
+
+    StringCellSpace(
+        beats=14,
+        text="D: repeat",
+        text_length_on = False,
+        ),
 
 )
 
-
+# =====================================================================
+# =====================================================================
 
 SEGMENT_1_I = StringSegment(
     JigSevenCell(string_def_event=strings.DEF_8_LOW),
@@ -121,6 +141,24 @@ SEGMENT_1_II = StringSegment(
     SingleCell(string_def_event=strings.DEF_7_LOW,
         break_start=False,
         ).tag_events(("together",)),
+
+    QuestionCell(string_def_event=strings.DEF_7_LOW, break_start=True,
+        ).tag_events((),("fermata",)),
+    StringCellSpace(
+        beats=14,
+        text="repeat several Xs (together)",
+        text_length_on = False,
+        ),
+    
+    BoardCell(board_name="III", 
+        # init_rhythm = (1,1,4,1),
+        # time_signature = (7,4)
+        ),
+    StringCellSpace(
+        beats=14,
+        text="D: repeat",
+        text_length_on = False,
+        ),
 
 )
 

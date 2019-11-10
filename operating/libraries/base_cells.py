@@ -9,7 +9,7 @@ from operating.structure.string_segment import StringSegment
 from operating.structure.string_cell_hide import StringCellHide
 
 from operating.structure.string_cell_arrow import StringCellArrow
-from operating.libraries.strings import DEF_4_MID
+from operating.libraries.strings import DEF_6_MID
 
 class FeatherFasterCell(StringCell):
     string_rhythm = (0.125,)*8
@@ -206,14 +206,14 @@ class SingleCell(StringCell):
 if __name__ == "__main__":
     import sys, inspect
     TEST_SEGMENT = StringSegment(
-        StringDefCell(string_def_event=DEF_4_MID),
+        StringDefCell(string_def_event=DEF_6_MID),
         )
     for c in inspect.getmembers(sys.modules[__name__], inspect.isclass):
         if c[1].__module__== "__main__":
             TEST_SEGMENT.extend([
             c[1](
                 name = c[0],
-                string_def_event = DEF_4_MID,
+                string_def_event = DEF_6_MID,
                 ),
             StringCellArrow()
             

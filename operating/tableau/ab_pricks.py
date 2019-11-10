@@ -27,21 +27,23 @@ SEGMENT_0_I = StringSegment(
         ).tag_events((), ("8va",), ("8va!",)),
     
     SingleCell(string_def_event=strings.DEF_1_HIGHEST,
+        improvisation=True,
         ).swap_strings().tag_events(("pp",)),
-    StringCellSpace(text="several Xs"), 
+    StringCellSpace(text="markup_column:several Xs|then pick up string from pl.2"), 
     
-    SingleCell(string_def_event=strings.DEF_1_HIGHEST,
+    SingleCell(string_def_event=strings.DEF_2_HIGHEST,
+        improvisation=True,
         ),
     StringCellSpace(text="several Xs"), 
 
-    FeatherFasterCell(string_def_event = strings.DEF_1_HIGHEST,
+    FeatherFasterCell(string_def_event = strings.DEF_2_HIGHEST,
         dynamics = (
             ("pp", "\\<",),
             (),
             ()
             )
     ),
-    FeatherSlowerCell(string_def_event = strings.DEF_1_HIGHEST,
+    FeatherSlowerCell(string_def_event = strings.DEF_2_HIGHEST,
         bar_start ="",
         break_start = True,
         dynamics = (
@@ -49,13 +51,13 @@ SEGMENT_0_I = StringSegment(
             ("pp",)
             )
         ).swap_strings(),
-    FermataCell(string_def_event = strings.DEF_1_HIGHEST,
+    FermataCell(string_def_event = strings.DEF_2_HIGHEST,
         break_start=True,
         bar_start="",),
     StringCellSpace(text="several Xs"), 
    
     FindResonCell(
-        string_def_event = strings.DEF_1_HIGHEST,
+        string_def_event = strings.DEF_2_HIGHEST,
     ).tag_events(("p",)),
     StringCellSpace(
         beats=10,
@@ -65,7 +67,7 @@ SEGMENT_0_I = StringSegment(
 
 
     FindResonCell(
-        string_def_event = strings.DEF_1_HIGHEST,
+        string_def_event = strings.DEF_2_HIGHEST,
     ).swap_strings().tag_events(("p",)),
     StringCellSpace(
         beats=13,
@@ -73,46 +75,59 @@ SEGMENT_0_I = StringSegment(
         text_length_on = False,
         ), 
 
-    StringDefCell(string_def_event = strings.DEF_1_HIGHEST(),
-        ).tag_events((), ("8va", "hand to player 2",), ("8va!",)),
+    StringDefCell(string_def_event = strings.DEF_4_HIGH(),
+        ).tag_events((), ("hand to player 2",),),
 )
 
 SEGMENT_0_II = StringSegment(
-    StringDefCell(string_def_event = strings.DEF_3_HIGH(),
+    StringDefCell(string_def_event = strings.DEF_5_HIGH(),
         ),
 
-    PulseSixCell(string_def_event = strings.DEF_3_HIGH),
+    PulseSixCell(string_def_event = strings.DEF_5_HIGH),
     StringCellSpace(text="several Xs"), 
 
-    FeatherFasterCell(string_def_event = strings.DEF_3_HIGH),
-    SingleCell(string_def_event=strings.DEF_3_HIGH,
+    FeatherFasterCell(string_def_event = strings.DEF_5_HIGH),
+    SingleCell(string_def_event=strings.DEF_5_HIGH,
+        bar_start="",
         ).inverse_tensions(),
     StringCellSpace(text="several Xs"), 
 
     BoardCell(),
 )
 
+# =======================================================================
+# =======================================================================
+
 
 SEGMENT_1_I = StringSegment(    
+
+
     FermataCell(string_def_event = strings.DEF_0_NONE,),
-    StringCellSpace(beats=28),
+
+    StringCellSpace(beats=3),
 
     StringDefCell(
-        string_def_event = strings.DEF_2_HIGH,
+        string_def_event=strings.DEF_2_HIGHEST,
+    ).tag_events((),("8va","hand to pl.1"), ("8va!",)),
+
+    StringCellSpace(beats=17),
+
+    StringDefCell(
+        string_def_event = strings.DEF_3_HIGH,
     ),
 
-    SingleCell(string_def_event=strings.DEF_2_HIGH,
+    SingleCell(string_def_event=strings.DEF_2_HIGHEST,
         ).swap_strings().tag_events(("pp",)),
     StringCellSpace(text="several Xs"), 
 
-    FeatherFasterCell(string_def_event = strings.DEF_1_HIGHEST,
+    FeatherFasterCell(string_def_event = strings.DEF_2_HIGHEST,
         dynamics = (
             ("pp", "\\<",),
             (),
             ()
             )
     ),
-    FeatherSlowerCell(string_def_event = strings.DEF_1_HIGHEST,
+    FeatherSlowerCell(string_def_event = strings.DEF_2_HIGHEST,
         bar_start ="",
         break_start = False,
         dynamics = (
@@ -120,15 +135,15 @@ SEGMENT_1_I = StringSegment(
             ("pp",)
             )
         ).swap_strings(),
-    FermataCell(string_def_event = strings.DEF_1_HIGHEST,
+    FermataCell(string_def_event = strings.DEF_2_HIGHEST,
         break_start=False,
         bar_start="",),
     StringCellSpace(text="several Xs") , 
 
-    JigSevenCell(string_def_event = strings.DEF_1_HIGHEST,
+    JigSevenCell(string_def_event = strings.DEF_2_HIGHEST,
         improvisation=False,
         ),
-    FermataCell(string_def_event = strings.DEF_1_HIGHEST,
+    FermataCell(string_def_event = strings.DEF_2_HIGHEST,
         break_start=False,
         bar_start="",),
     StringCellSpace(beats=4.5, 
@@ -137,11 +152,11 @@ SEGMENT_1_I = StringSegment(
 
 SEGMENT_1_II = StringSegment(
     StringDefCell(
-        string_def_event = strings.DEF_4_MID,
-    ),
+        string_def_event = strings.DEF_4_HIGH,
+    ).tag_events(("pick up from pl.1",),),
 
     FindResonCell(
-        string_def_event = strings.DEF_1_HIGHEST,
+        string_def_event = strings.DEF_4_HIGH,
     ).swap_strings().tag_events(("p",)),
     StringCellSpace(
         beats=10,
@@ -152,7 +167,7 @@ SEGMENT_1_II = StringSegment(
     )
 
 SEGMENT_1_III = StringSegment(
-    StringDefCell(string_def_event = strings.DEF_5_MID(),
+    StringDefCell(string_def_event = strings.DEF_6_MID(),
         padding_beats=(2,9),
         ),
 )

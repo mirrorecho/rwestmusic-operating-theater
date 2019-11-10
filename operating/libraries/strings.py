@@ -9,6 +9,15 @@ DEF_0_NONE = StringDefEvent(
     )
 
 DEF_1_HIGHEST = StringDefEvent(
+    indicator = 1,
+    string_map = {
+        48: (0,1,),
+        },
+    clef = "treble"
+    )
+
+DEF_2_HIGHEST = StringDefEvent(
+    indicator = 2,
     string_map = {
         42: (0,),
         35: (1,),
@@ -18,7 +27,8 @@ DEF_1_HIGHEST = StringDefEvent(
 
 # PRICK_STRING_HIGHEST.respell = "sharps"
 
-DEF_2_HIGH = StringDefEvent(
+DEF_3_HIGH = StringDefEvent(
+    indicator = 3,
     string_map = {
         34: (0,),
         29: (1,),
@@ -26,67 +36,110 @@ DEF_2_HIGH = StringDefEvent(
     clef = "treble"
     )
 
-DEF_3_HIGH = StringDefEvent(
+DEF_4_HIGH = StringDefEvent(
+    indicator = 4,
     string_map = {
-        32: (3,),
-        27: (4,),
+        28: (3,),
+        23: (4,),
         },
     clef = "treble"
     )
 
-DEF_4_MID = StringDefEvent(
+DEF_5_HIGH = StringDefEvent(
+    indicator = 5,
     string_map = {
-        34: (5,),
-        33: (6,),
-        },
-    clef = "treble"
-    )
-
-DEF_5_MID = StringDefEvent(
-    string_map = {
-        25: (0,),
-        24: (1,),
+        17: (5,),
+        16: (6,),
         },
     clef = "treble"
     )
 
 DEF_6_MID = StringDefEvent(
+    indicator = 6,
     string_map = {
-        23: (7,),
-        22: (8,),
+        14: (0,),
+        9: (1,),
         },
     clef = "treble"
     )
 
-
 DEF_7_LOW = StringDefEvent(
+    indicator = 7,
     string_map = {
-        -12: (0,),
+        -24: (0,),
+        -25: (1,),
+        },
+        clef = "bass"
+    )
+
+DEF_8_MID = StringDefEvent(
+    indicator = 8,
+    string_map = {
+        7: (0,),
+        5: (1,),
+        },
+    clef = "treble"
+    )
+
+DEF_9_MID = StringDefEvent(
+    indicator = 9,
+    string_map = {
+        4: (0,),
+        -1: (1,),
+        },
+        clef = "treble"
+    )
+
+DEF_10_MID = StringDefEvent(
+    indicator = 10,
+    string_map = {
+        -3: (0,),
+        -5: (1,),
+        },
+        clef = "bass"
+    )
+
+DEF_11_LOW = StringDefEvent(
+    indicator = 11,
+    string_map = {
+        -15: (0,),
         -17: (1,),
         },
         clef = "bass"
     )
 
-DEF_8_LOW = StringDefEvent(
+DEF_12_LOW = StringDefEvent(
+    indicator = 12,
     string_map = {
-        -12: (0,),
-        -17: (1,),
+        -19: (0,),
+        -24: (1,),
         },
         clef = "bass"
     )
 
-DEF_9_LOW = StringDefEvent(
+DEF_13_LOW = StringDefEvent(
+    indicator = 13,
     string_map = {
-        -12: (0,),
-        -17: (1,),
+        -29: (0,),
+        -31: (1,),
         },
         clef = "bass"
     )
 
-DEF_12_LOWEST = StringDefEvent(
+DEF_14_MID = StringDefEvent(
+    indicator = 14,
     string_map = {
-        -12: (0,),
-        -17: (1,),
+        -7: (0,),
+        -12: (1,),
+        },
+        clef = "bass"
+    )
+
+DEF_15_LOWEST = StringDefEvent(
+    indicator = 15,
+    string_map = {
+        -34: (0,),
+        -39: (1,),
         },
         clef = "bass"
     )

@@ -22,12 +22,12 @@
         {
             {
                 \numericTimeSignature
-                \hideTime
-                \improvisationOff
-                \set glissandoMap = #'()
-                \bar ""
-                \pluckStart
+                \xNotesOff
                 \pluckHide
+                \set glissandoMap = #'()
+                \hideTime
+                \pluckStart
+                \bar ""
                 \accidentalStyle modern-cautionary
                 \time 8/4
                 s2
@@ -42,14 +42,173 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \hideTime
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \improvisationOff
+                \xNotesOff
                 \pluckHide
+                \bar ""
+                \hideTime
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \time 8/4
+                s2
+                ^ \markup { DEF_10_MID }
+                \glissando
+                \pluckShowReson
+                            \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
+                \clef "bass"
+                <
+                    \tweak style #'harmonic-black
+                    g
+                    \tweak style #'harmonic-black
+                    a
+                >1
+                \glissando
+                \pluckRestEvent
+                \pluckHide
+                s2
+                \numericTimeSignature
+                \xNotesOff
+                \pluckHide
+                \bar ""
+                \hideTime
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \time 8/4
+                s2
+                ^ \markup { DEF_11_LOW }
+                \glissando
+                \pluckShowReson
+                            \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
+                \clef "bass"
+                <
+                    \tweak style #'harmonic-black
+                    g,
+                    \tweak style #'harmonic-black
+                    a,
+                >1
+                \glissando
+                \pluckRestEvent
+                \pluckHide
+                s2
+                \numericTimeSignature
+                \xNotesOff
+                \pluckHide
+                \bar ""
+                \hideTime
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \time 8/4
+                s2
+                ^ \markup { DEF_12_LOW }
+                \glissando
+                \pluckShowReson
+                            \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
+                \clef "bass"
+                <
+                    \tweak style #'harmonic-black
+                    c,
+                    \tweak style #'harmonic-black
+                    f,
+                >1
+                \glissando
+                \pluckRestEvent
+                \pluckHide
+                s2
+                \numericTimeSignature
+                \xNotesOff
+                \pluckHide
+                \bar ""
+                \hideTime
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \time 8/4
+                s2
+                ^ \markup { DEF_13_LOW }
+                \glissando
+                \pluckShowReson
+                            \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
+                \clef "bass"
+                <
+                    \tweak style #'harmonic-black
+                    f,,
+                    \tweak style #'harmonic-black
+                    g,,
+                >1
+                \glissando
+                \pluckRestEvent
+                \pluckHide
+                s2
+                \numericTimeSignature
+                \xNotesOff
+                \pluckHide
+                \bar ""
+                \hideTime
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \time 8/4
+                s2
+                ^ \markup { DEF_14_MID }
+                \glissando
+                \pluckShowReson
+                            \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
+                \clef "bass"
+                <
+                    \tweak style #'harmonic-black
+                    c
+                    \tweak style #'harmonic-black
+                    f
+                >1
+                \glissando
+                \pluckRestEvent
+                \pluckHide
+                s2
+                \numericTimeSignature
+                \xNotesOff
+                \pluckHide
+                \bar ""
+                \hideTime
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \time 8/4
+                s2
+                ^ \markup { DEF_15_LOWEST }
+                \glissando
+                \pluckShowReson
+                            \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
+                \clef "bass"
+                <
+                    \tweak style #'harmonic-black
+                    a,,,
+                    \tweak style #'harmonic-black
+                    d,,
+                >1
+                \glissando
+                \pluckRestEvent
+                \pluckHide
+                s2
+                \numericTimeSignature
+                \xNotesOff
+                \pluckHide
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_1_HIGHEST }
+                \glissando
+                \pluckShowReson
+                            \set glissandoMap = #'(( 0 . 0) ( 0 . 1))
+                \clef "treble"
+                <
+                    \tweak style #'harmonic-black
+                    c'''''
+                >1
+                \glissando
+                \pluckRestEvent
+                \pluckHide
+                s2
+                \numericTimeSignature
+                \xNotesOff
+                \pluckHide
+                \bar ""
+                \hideTime
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \time 8/4
+                s2
+                ^ \markup { DEF_2_HIGHEST }
                 \glissando
                 \pluckShowReson
                             \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
@@ -65,14 +224,14 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \hideTime
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \improvisationOff
+                \xNotesOff
                 \pluckHide
+                \bar ""
+                \hideTime
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \time 8/4
                 s2
-                ^ \markup { DEF_2_HIGH }
+                ^ \markup { DEF_3_HIGH }
                 \glissando
                 \pluckShowReson
                             \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
@@ -88,103 +247,80 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \hideTime
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \improvisationOff
+                \xNotesOff
                 \pluckHide
+                \bar ""
+                \hideTime
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \time 8/4
                 s2
-                ^ \markup { DEF_3_HIGH }
+                ^ \markup { DEF_4_HIGH }
                 \glissando
                 \pluckShowReson
                             \set glissandoMap = #'(( 0 . 3) ( 1 . 4))
                 \clef "treble"
                 <
                     \tweak style #'harmonic-black
-                    ef'''
+                    b''
                     \tweak style #'harmonic-black
-                    af'''
+                    e'''
                 >1
                 \glissando
                 \pluckRestEvent
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \hideTime
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \improvisationOff
+                \xNotesOff
                 \pluckHide
+                \bar ""
+                \hideTime
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \time 8/4
                 s2
-                ^ \markup { DEF_4_MID }
+                ^ \markup { DEF_5_HIGH }
                 \glissando
                 \pluckShowReson
                             \set glissandoMap = #'(( 0 . 5) ( 1 . 6))
                 \clef "treble"
                 <
                     \tweak style #'harmonic-black
-                    a'''
+                    e''
                     \tweak style #'harmonic-black
-                    bf'''
+                    f''
                 >1
                 \glissando
                 \pluckRestEvent
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \hideTime
-                \bar ""
+                \xNotesOff
+                \pluckHide
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \improvisationOff
-                \pluckHide
-                \time 8/4
-                s2
-                ^ \markup { DEF_5_MID }
-                \glissando
-                \pluckShowReson
-                            \set glissandoMap = #'(( 0 . 7) ( 1 . 8))
-                \clef "treble"
-                <
-                    \tweak style #'harmonic-black
-                    b''
-                    \tweak style #'harmonic-black
-                    e'''
-                >1
-                \glissando
-                \pluckRestEvent
-                \pluckHide
-                s2
-                \numericTimeSignature
-                \hideTime
                 \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \improvisationOff
-                \pluckHide
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_6_MID }
                 \glissando
                 \pluckShowReson
-                            \set glissandoMap = #'(( 0 . 7) ( 1 . 8))
+                            \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
                 \clef "treble"
                 <
                     \tweak style #'harmonic-black
-                    b''
+                    a'
                     \tweak style #'harmonic-black
-                    e'''
+                    d''
                 >1
                 \glissando
                 \pluckRestEvent
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \hideTime
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \improvisationOff
+                \xNotesOff
                 \pluckHide
+                \bar ""
+                \hideTime
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \time 8/4
                 s2
                 ^ \markup { DEF_7_LOW }
@@ -194,56 +330,57 @@
                 \clef "bass"
                 <
                     \tweak style #'harmonic-black
-                    g,
+                    b,,
                     \tweak style #'harmonic-black
-                    c
+                    c,
                 >1
                 \glissando
                 \pluckRestEvent
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \hideTime
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \improvisationOff
+                \xNotesOff
                 \pluckHide
+                \bar ""
+                \hideTime
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \time 8/4
                 s2
-                ^ \markup { DEF_8_LOW }
+                ^ \markup { DEF_8_MID }
                 \glissando
                 \pluckShowReson
                             \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
-                \clef "bass"
+                \clef "treble"
                 <
                     \tweak style #'harmonic-black
-                    g,
+                    f'
                     \tweak style #'harmonic-black
-                    c
+                    g'
                 >1
                 \glissando
                 \pluckRestEvent
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \hideTime
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \improvisationOff
+                \xNotesOff
                 \pluckHide
+                \bar ""
+                \hideTime
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \time 8/4
                 s2
-                ^ \markup { DEF_9_LOWEST }
+                ^ \markup { DEF_9_MID }
                 \glissando
                 \pluckShowReson
                             \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
-                \clef "bass"
+                \clef "treble"
                 <
                     \tweak style #'harmonic-black
-                    g,
+                    b
                     \tweak style #'harmonic-black
-                    c
+                    e'
                 >1
+                \glissando
                 \pluckRestEvent
                 \pluckHide
                 s2

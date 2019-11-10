@@ -13,6 +13,7 @@ class StringDefEvent(StringBase, calliope.Event):
     pluck_0 = -7
     max_tension = 14
     clef = "bass"
+    indicator = 0
 
     existing_map = {}
 
@@ -68,6 +69,7 @@ class StringDefEvent(StringBase, calliope.Event):
 
         self.tag(
             self.clef,
+            "_" + str(self.indicator),
             r"""\pluckShowReson
             \set glissandoMap = #'(""" + " ".join(
                 ["( %s . %s)" % (i, v) for i,s in enumerate(self.string_map.items()) 

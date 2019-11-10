@@ -129,6 +129,7 @@ featherOff = {
 freeLineStart = {
     \once \override Score.TimeSignature.stencil = ##f 
     \stopStaff
+    \override Staff.StaffSymbol.transparent = ##f
     \override Staff.StaffSymbol.line-positions = #'(
         8
         )

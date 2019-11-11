@@ -1,5 +1,7 @@
 import abjad, calliope
 
+from operating import _settings
+
 from operating.structure.string_def_event import StringDefEvent
 from operating.structure.string_def_cell import StringDefCell
 from operating.structure.string_cell_space import StringCellSpace
@@ -17,7 +19,10 @@ from operating.libraries.base_cells import (
     )
 
 
-DEF_5_6_MID = strings.DEF_5_MID.add_def(strings.DEF_5_MID)
+DEF_5_6_MID = strings.DEF_5_HIGH.add_def(strings.DEF_6_MID)
+
+# TO DO... remove this... 
+DEF_5_6_MID = strings.DEF_6_MID()
 
 SEGMENT_0_I = StringSegment(
     StringDefCell(string_def_event=DEF_5_6_MID),
@@ -73,7 +78,7 @@ SEGMENT_0_I = StringSegment(
         text_length_on = False,
         ),
 
-    StringDefCell(string_def_event=strings.DEF_8_LOW(),
+    StringDefCell(string_def_event=strings.DEF_8_MID(),
         padding_beats = (1,2)
         ),
 
@@ -89,20 +94,20 @@ SEGMENT_0_I = StringSegment(
 # =====================================================================
 
 SEGMENT_1_I = StringSegment(
-    JigSevenCell(string_def_event=strings.DEF_8_LOW),
+    JigSevenCell(string_def_event=strings.DEF_7_LOW),
     StringCellSpace(
         beats=3.5,
         text="(cont.)"
         ),
-    StringDefCell(string_def_event=strings.DEF_8_LOW(),
+    StringDefCell(string_def_event=strings.DEF_7_LOW(),
         ).tag_events(("at the foot of the piano",)),
 
-    JigSixCell(string_def_event=strings.DEF_8_LOW,
+    JigSixCell(string_def_event=strings.DEF_7_LOW,
         ).tag_events(("mf",)),
-    PulseSixCell(string_def_event=strings.DEF_8_LOW,
+    PulseSixCell(string_def_event=strings.DEF_7_LOW,
         bar_start = ";"
         ),
-    FermataCell(string_def_event = strings.DEF_1_HIGHEST,
+    FermataCell(string_def_event = strings.DEF_0_NONE,
         bar_start=";",),
     StringCellSpace(
         beats=9,
@@ -169,5 +174,6 @@ op.staves[0].extend([SEGMENT_0_I,])
 op.staves[1].extend([SEGMENT_1_I, SEGMENT_1_II])
 # op.staves[1].extend([seg0_a(), seg1_a()])
 
+op.stylesheets+=(_settings.OPERATING_PATH + "/stylesheets/cd_pulse.ily",)
 
 calliope.illustrate(op)

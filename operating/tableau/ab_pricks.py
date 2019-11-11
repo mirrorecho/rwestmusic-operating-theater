@@ -1,5 +1,7 @@
 import abjad, calliope
 
+from operating import _settings
+
 from operating.structure.string_def_event import StringDefEvent
 from operating.structure.string_def_cell import StringDefCell
 from operating.structure.string_cell_space import StringCellSpace
@@ -176,6 +178,9 @@ SEGMENT_1_III = StringSegment(
 op = OperatingScore()
 op.staves[0].extend([SEGMENT_0_I, SEGMENT_0_II, ])
 op.staves[1].extend([SEGMENT_1_I, SEGMENT_1_II, SEGMENT_1_III])
+
+op.stylesheets+=(_settings.OPERATING_PATH + "/stylesheets/ab_pricks.ily",)
+
 
 # for c in op.cells:
 #     c.tag(str(c.beats_before(c.parent)))

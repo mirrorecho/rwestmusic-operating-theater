@@ -163,20 +163,7 @@ hideTime = {
     \once \override Staff.TimeSignature #'stencil = ##f
 }
 
-\header {
-    composer = "Randall West"
-    % tagline = ##f
-    title = \markup {
-        \column {
-            \center-align {
-                \fontsize #2 {
-                    "A / B"
-                }
-            }
-        }
-    }
-    % tagline = "Copyright 2019 Randall West."
-}
+
 
   % #(set! paper-alist (cons '("10x13" . (cons (* 10 in) (* 13 in))) paper-alist))
 

@@ -1,5 +1,7 @@
 import abjad, calliope
 
+from operating import _settings
+
 from operating.structure.string_def_event import StringDefEvent
 from operating.structure.string_def_cell import StringDefCell
 from operating.structure.string_cell_space import StringCellSpace
@@ -19,10 +21,10 @@ from operating.libraries.base_cells import (
 
 SEGMENT_0_I = StringSegment(
     StringDefCell(
-        string_def_event=strings.DEF_5_MID,
+        string_def_event=strings.DEF_14_MID,
         ),
     PulseSimpleCell(
-        string_def_event=strings.DEF_5_MID,
+        string_def_event=strings.DEF_14_MID,
         ),
     StringCellSpace(
         beats=21,
@@ -38,7 +40,7 @@ SEGMENT_0_I = StringSegment(
 
     BoardCell(board_name="IV"),
 
-    FermataCell(string_def_event=strings.DEF_5_MID,
+    FermataCell(string_def_event=strings.DEF_14_MID,
         break_start=True,
         ),
     StringCellSpace(
@@ -46,21 +48,21 @@ SEGMENT_0_I = StringSegment(
         arrow=False,
         # text_length_on=False,
         ),
-    RunIntoCell(string_def_event=strings.DEF_5_MID,
+    RunIntoCell(string_def_event=strings.DEF_14_MID,
         break_start=True,
         ).tag_events(("repeat, getting lower",),),
-    JigSixCell(string_def_event=strings.DEF_5_MID,
+    JigSixCell(string_def_event=strings.DEF_14_MID,
         bar_start=";",
         ),
-    PulseSixCell(string_def_event=strings.DEF_5_MID,
+    PulseSixCell(string_def_event=strings.DEF_14_MID,
         bar_start=";",
         ),
-    JigSevenCell(string_def_event=strings.DEF_5_MID,
+    JigSevenCell(string_def_event=strings.DEF_14_MID,
         ).tag_events(("together",),),
-    PulseFourIntoCell(string_def_event=strings.DEF_5_MID,
+    PulseFourIntoCell(string_def_event=strings.DEF_14_MID,
         bar_start=";",
         ),
-    PulseSimpleCell(string_def_event=strings.DEF_12_LOWEST,
+    PulseSimpleCell(string_def_event=strings.DEF_15_LOWEST,
         ),
     StringCellSpace(
         beats=7,
@@ -74,7 +76,7 @@ SEGMENT_0_I = StringSegment(
 
 SEGMENT_1_I = StringSegment(
     StringDefCell(
-        string_def_event=strings.DEF_12_LOWEST,
+        string_def_event=strings.DEF_15_LOWEST,
         padding_beats=(2,1),
         ),
     StringCellSpace(
@@ -82,21 +84,21 @@ SEGMENT_1_I = StringSegment(
         text="climb up the ladder a little",
         text_length_on=False,
         ),
-    SingleCell(string_def_event=strings.DEF_12_LOWEST,
+    SingleCell(string_def_event=strings.DEF_15_LOWEST,
         ),
     StringCellSpace(
         text="several Xs",
         ),
-    FindResonCell(string_def_event=strings.DEF_12_LOWEST,
+    FindResonCell(string_def_event=strings.DEF_15_LOWEST,
         ),
     StringCellSpace(
         text="markup_column:repeat (with same pulse as pl. 1)|find resonant position"
         ),
 
-    FeatherFasterCell(string_def_event=strings.DEF_12_LOWEST,
+    FeatherFasterCell(string_def_event=strings.DEF_15_LOWEST,
         break_start=True,
         ),
-    FeatherSlowerCell(string_def_event=strings.DEF_12_LOWEST,
+    FeatherSlowerCell(string_def_event=strings.DEF_15_LOWEST,
         bar_start="",
         ),
     StringCellSpace(
@@ -108,14 +110,14 @@ SEGMENT_1_I = StringSegment(
         text="markup_column:(optional get off the ladder|hand string to 3rd performer)"
         ),
 
-    PulseSlowCell(string_def_event=strings.DEF_12_LOWEST,
+    PulseSlowCell(string_def_event=strings.DEF_15_LOWEST,
         ).tag_events(("(optional, for 3rd performer)",),),
     StringCellSpace(
         beats=2.5,
         text="markup_column:(3rd performer repeats)"
         ),
 
-    PulseSimpleCell(string_def_event=strings.DEF_12_LOWEST,
+    PulseSimpleCell(string_def_event=strings.DEF_15_LOWEST,
         break_start=True,
         ),
     StringCellSpace(
@@ -123,12 +125,12 @@ SEGMENT_1_I = StringSegment(
         text="until other pl. cue",
         text_length_on=False,
         ),
-    JigSevenCell(string_def_event=strings.DEF_12_LOWEST,
+    JigSevenCell(string_def_event=strings.DEF_15_LOWEST,
         ).tag_events(("together",),),
-    PulseFourIntoCell(string_def_event=strings.DEF_12_LOWEST,
+    PulseFourIntoCell(string_def_event=strings.DEF_15_LOWEST,
         bar_start=";",
         ),
-    FermataCell(string_def_event=strings.DEF_12_LOWEST,
+    FermataCell(string_def_event=strings.DEF_15_LOWEST,
         ),
     StringCellSpace(
         text="several Xs"
@@ -140,6 +142,8 @@ SEGMENT_1_I = StringSegment(
 op = OperatingScore()
 op.staves[0].extend([SEGMENT_0_I,])
 op.staves[1].extend([SEGMENT_1_I,])
+
+op.stylesheets+=(_settings.OPERATING_PATH + "/stylesheets/g_ladder.ily",)
 
 calliope.illustrate(op)
 

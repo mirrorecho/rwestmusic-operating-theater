@@ -5,7 +5,7 @@
         \column {
             \center-align {
                 \fontsize #2 {
-                    "C / D"
+                    "E"
                 }
             }
         }

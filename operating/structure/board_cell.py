@@ -7,8 +7,10 @@ from operating.structure.string_segment import StringSegment
 
 class BoardCell(calliope.Cell): 
 
+    # TO DO: THESE NO LONGER USED THE SAME
     board_name = "I"
     board_verb = "place" # "place", "remove", "move" ...used for instruction
+    
     init_rhythm = (1,1,4,1)
     time_signature = (7,4)
     metrical_durations = ((1,4),(1,4),(4,4),(1,4),)
@@ -23,7 +25,7 @@ class BoardCell(calliope.Cell):
         # self.events[0].untag("\\pluckRestEvent")
         self.events[0].tag("\\pluckHide",)
         self.events[1].tag(self.clef)
-        self.events[1].tag("\\pluckShowBoard", "%s board %s" % (self.board_verb, self.board_name) )
+        self.events[1].tag("\\pluckShowBoard", "%s boards " % self.board_verb)
         self.events[2].tag("\\arpeggioBracket")
         self.events[2].tag("!\\arpeggio")
         self.events[3].tag("\\pluckEndBoard",)

@@ -22,7 +22,7 @@ op = OperatingScoreSixStaff()
 
 op.staves[0].extend([StringSegment(
     JigSevenCell(string_def_event=strings.DEF_6_MID,
-        ),
+        ).tag_events(("mf",)),
     PulseSlowCell(string_def_event=strings.DEF_6_MID,
         bar_start=";",
         ),
@@ -35,7 +35,7 @@ op.staves[0].extend([StringSegment(
 
 op.staves[1].extend([StringSegment(
     JigSevenSimpleCell(string_def_event=strings.DEF_6_MID,
-        ),
+        ).tag_events(("mf",)),
     PulseSimpleCell(string_def_event=strings.DEF_6_MID,
         bar_start=";",
         ),
@@ -46,7 +46,7 @@ op.staves[1].extend([StringSegment(
 
 op.staves[2].extend([StringSegment(
     JigSevenSimpleCell(string_def_event=strings.DEF_6_MID,
-        ),
+        ).tag_events(("mf",)),
     QuestionCell(string_def_event=strings.DEF_6_MID,
         bar_start=";",
         ),
@@ -57,7 +57,7 @@ op.staves[2].extend([StringSegment(
 
 op.staves[3].extend([StringSegment(
     JigSevenSimpleCell(string_def_event=strings.DEF_6_MID,
-        ),
+        ).tag_events(("mf",)),
     PulseFourIntoCell(string_def_event=strings.DEF_6_MID,
         bar_start=";",
         ),
@@ -68,7 +68,7 @@ op.staves[3].extend([StringSegment(
 
 op.staves[4].extend([StringSegment(
     QuestionCell(string_def_event=strings.DEF_6_MID,
-        ),
+        ).tag_events(("mf",)),
     PulseFourIntoCell(string_def_event=strings.DEF_6_MID,
         bar_start=";",
         ),
@@ -79,7 +79,7 @@ op.staves[4].extend([StringSegment(
 
 op.staves[5].extend([StringSegment(
     JigSevenCell(string_def_event=strings.DEF_6_MID,
-        ),
+        ).tag_events(("mf",)),
     RunIntoCell(string_def_event=strings.DEF_6_MID,
         bar_start=";",
         ),

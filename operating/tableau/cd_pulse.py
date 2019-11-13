@@ -122,7 +122,9 @@ SEGMENT_1_I = StringSegment(
         text="walk to front"
         ),
 
-    BoardCell(board_name="II", 
+    BoardCell(
+        board_verb="remove",
+        pitches = ("S", "S", "S", "S"),
         # init_rhythm = (1,1,4,1),
         # time_signature = (7,4)
         ),
@@ -155,10 +157,13 @@ SEGMENT_1_II = StringSegment(
         text_length_on = False,
         ),
     
-    BoardCell(board_name="III", 
+    BoardCell(
+        board_verb="place",
+        pitches = ("S", "S", (-31, -25,), "S"),
         # init_rhythm = (1,1,4,1),
         # time_signature = (7,4)
         ),
+
     StringCellSpace(
         beats=14,
         text="D: repeat",
@@ -177,3 +182,4 @@ op.staves[1].extend([SEGMENT_1_I, SEGMENT_1_II])
 op.stylesheets+=(_settings.OPERATING_PATH + "/stylesheets/cd_pulse.ily",)
 
 calliope.illustrate(op)
+

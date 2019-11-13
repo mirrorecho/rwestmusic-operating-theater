@@ -20,18 +20,21 @@ from operating.libraries.base_cells import (
 
 
 SEGMENT_0_I = StringSegment(
-    BoardCell(board_verb="remove", board_name="1,2"),
-    StringDefCell(string_def_event = strings.DEF_9_MID),
+    BoardCell(board_verb="remove",
+        pitches = ("S", "S", "S", "S"),
+        ),
+    StringDefCell(string_def_event = strings.DEF_9_MID
+        ),
     
     PulseSlowCell(string_def_event = strings.DEF_9_MID,
-        ),
+        ).tag_events(("mf",)),
     PulseSixCell(string_def_event = strings.DEF_9_MID,
         ),
     SingleCell(string_def_event = strings.DEF_9_MID,
         ),
     StringCellSpace(
         beats=8,
-        text="markup_column:boxes from these 3 boxes at random|(keeping pulse constant ith pl.2)",
+        text="markup_column:boxes from these 3 boxes at random|(keeping pulse constant with pl.2)",
         text_length_on = False,
         ), 
 
@@ -135,7 +138,7 @@ SEGMENT_1_I = StringSegment(
     StringDefCell(string_def_event = strings.DEF_10_MID()),
 
     PulseSlowCell(string_def_event = strings.DEF_10_MID
-        ),
+        ).tag_events(("mf",)),
     StringCellSpace(
         beats=24,
         text="repeat, keeping pulse constant",
@@ -157,7 +160,13 @@ SEGMENT_1_I = StringSegment(
         bar_start=";"
         ),
 
-    BoardCell(board_verb="remove", board_name="3"),
+    StringCellSpace(
+        beats=7,
+        arrow=False,
+        show_line=False,
+        break_start=True
+        ), 
+    # BoardCell(board_verb="remove", board_name="3"),
 
     JigSevenCell(string_def_event=strings.DEF_10_MID,
         ),

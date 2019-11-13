@@ -47,14 +47,14 @@ SEGMENT_0_I = StringSegment(
     ),
     FeatherSlowerCell(string_def_event = strings.DEF_2_HIGHEST,
         bar_start ="",
-        break_start = True,
+        break_start = False,
         dynamics = (
             ("mp", "\\>",),
             ("pp",)
             )
         ).swap_strings(),
     FermataCell(string_def_event = strings.DEF_2_HIGHEST,
-        break_start=True,
+        break_start=False,
         bar_start="",),
     StringCellSpace(text="several Xs"), 
    

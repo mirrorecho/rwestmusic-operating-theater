@@ -19,13 +19,16 @@ from operating.libraries.base_cells import (
     )
 
 
-DEF_5_6_MID = strings.DEF_5_HIGH.add_def(strings.DEF_6_MID)
+# TO DO... remove this... 
+# DEF_5_6_MID = strings.DEF_5_HIGH.add_def(strings.DEF_6_MID)
+# DEF_5_6_MID = strings.DEF_5_6_MID()
 
 # TO DO... remove this... 
 DEF_5_6_MID = strings.DEF_6_MID()
 
 SEGMENT_0_I = StringSegment(
-    StringDefCell(string_def_event=DEF_5_6_MID),
+    StringDefCell(string_def_event=DEF_5_6_MID,
+        ).tag_events((), ("pick up 5 and 6")),
     
     PulseSimpleCell(string_def_event=DEF_5_6_MID),
     StringCellSpace(

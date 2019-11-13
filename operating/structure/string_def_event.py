@@ -69,6 +69,7 @@ class StringDefEvent(StringBase, calliope.Event):
 
         self.tag(
             self.clef,
+            # "_\\markup \\fontsize #2 {" + str(self.indicator) + "}",
             "_" + str(self.indicator),
             r"""\pluckShowReson
             \set glissandoMap = #'(""" + " ".join(

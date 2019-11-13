@@ -1,5 +1,5 @@
 #(set-default-paper-size "letter" 'portrait)
-#(set-global-staff-size 19)
+#(set-global-staff-size 20)
 
 #(define-public (bracket-stencils grob)
   (let ((lp (grob-interpret-markup grob (markup #:fontsize 3.5 #:translate (cons -0.3 -0.5) "[")))
@@ -78,10 +78,12 @@ pluckShowReson = {
 
 pluckShowBoard = {
     \pluckShowReson
-    \xNotesOn
+    % \xNotesOn
+    \override Staff.NoteHead.style = #'xcircle
 }
 
 pluckHide = {
+    \once \override Staff.Clef.stencil = ##f
     \once \override Score.TimeSignature.stencil = ##f 
     \stopStaff
     \override Staff.StaffSymbol.transparent = ##t
@@ -95,7 +97,8 @@ pluckHide = {
 
 pluckEndBoard = {
     \pluckHide
-    \xNotesOff
+    % \xNotesOff
+    \override Staff.NoteHead.style = #'default
 }
 
 pluckNoteEvent = {
@@ -127,6 +130,7 @@ featherOff = {
 }
 
 freeLineStart = {
+    \once \override Staff.Clef.stencil = ##f
     \once \override Score.TimeSignature.stencil = ##f 
     \stopStaff
     \override Staff.StaffSymbol.transparent = ##f
@@ -168,7 +172,7 @@ hideTime = {
   % #(set! paper-alist (cons '("10x13" . (cons (* 10 in) (* 13 in))) paper-alist))
 
 \paper {
-    #(set-paper-size "17x11")
+    #(set-paper-size "11x17")
     %#(set-paper-size "letter")
     left-margin = 22\mm
     % system-separator-markup = \slashSeparator

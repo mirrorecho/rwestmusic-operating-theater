@@ -39,8 +39,8 @@ DEF_3_HIGH = StringDefEvent(
 DEF_4_HIGH = StringDefEvent(
     indicator = 4,
     string_map = {
-        28: (3,),
-        23: (4,),
+        28: (0,),
+        23: (1,),
         },
     clef = "treble"
     )
@@ -48,8 +48,8 @@ DEF_4_HIGH = StringDefEvent(
 DEF_5_HIGH = StringDefEvent(
     indicator = 5,
     string_map = {
-        17: (5,),
-        16: (6,),
+        17: (0,),
+        16: (1,),
         },
     clef = "treble"
     )
@@ -59,6 +59,17 @@ DEF_6_MID = StringDefEvent(
     string_map = {
         14: (0,),
         9: (1,),
+        },
+    clef = "treble"
+    )
+
+DEF_5_6_MID = StringDefEvent(
+    indicator = 6,
+    string_map = {
+        17: (0,),
+        16: (1,),
+        14: (2,),
+        9: (3,),
         },
     clef = "treble"
     )

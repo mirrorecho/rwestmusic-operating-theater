@@ -25,11 +25,11 @@
             {
                 {
                     \numericTimeSignature
-                    \xNotesOff
-                    \pluckStart
-                    \pluckHide
-                    \hideTime
                     \bar ""
+                    \pluckHide
+                    \xNotesOff
+                    \hideTime
+                    \pluckStart
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \accidentalStyle modern-cautionary
                     \time 8/4
@@ -45,16 +45,16 @@
                     >1
                     _ \markup { 1 }
                     \glissando
-                    \pluckRestEvent
                     \pluckHide
+                    \pluckRestEvent
                     s2
                     \ottava #0
                     \numericTimeSignature
-                    \pluckShow
-                    \xNotesOn
-                    \hideTime
                     \pluckNoteEvent
+                    \pluckShow
+                    \hideTime
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \xNotesOn
                     \time 7/4
                     <
                         \tweak Stem.avoid-note-head ##t
@@ -65,22 +65,22 @@
                     >4
                     \pp
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     s2
                     \glissando
                     \pluckRestEvent
                     r1
                     \fermata
                     \numericTimeSignature
-                    \textLengthOn
                     \set glissandoMap = #'()
                     \hideTime
-                    \once \override TextScript.outside-staff-priority = ##f
-                    \xNotesOff
-                    \freeLineStart
                     \noBreak
                     \pluckRestEvent
+                    \freeLineStart
+                    \xNotesOff
+                    \once \override TextScript.outside-staff-priority = ##f
+                    \textLengthOn
                     \time 8/8
                     s8
                     ^ \markup {
@@ -108,38 +108,38 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
                     s8
                     \glissando
                     \numericTimeSignature
-                    \pluckShow
-                    \xNotesOn
-                    \hideTime
                     \pluckNoteEvent
+                    \pluckShow
+                    \hideTime
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \xNotesOn
                     \time 7/4
                     <f, c>4
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     s2
                     \glissando
                     \pluckRestEvent
                     r1
                     \fermata
                     \numericTimeSignature
-                    \textLengthOn
                     \set glissandoMap = #'()
                     \hideTime
-                    \once \override TextScript.outside-staff-priority = ##f
-                    \xNotesOff
-                    \freeLineStart
                     \noBreak
                     \pluckRestEvent
+                    \freeLineStart
+                    \xNotesOff
+                    \once \override TextScript.outside-staff-priority = ##f
+                    \textLengthOn
                     \time 8/8
                     s8
                     ^ \markup { "several Xs" }
@@ -161,20 +161,20 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
                     s8
                     \glissando
                     \numericTimeSignature
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \featherFaster
-                    \xNotesOff
+                    \pluckNoteEvent
                     \pluckShow
                     \hideTime
-                    \pluckNoteEvent
+                    \xNotesOff
+                    \featherFaster
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 1/4
                     <
                         f,
@@ -187,8 +187,8 @@
                     [
                     \<
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         a,
                         \tweak Stem.avoid-note-head ##t
@@ -197,8 +197,8 @@
                         e
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         c
                         \tweak Stem.avoid-note-head ##t
@@ -207,8 +207,8 @@
                         g
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         e
                         \tweak Stem.avoid-note-head ##t
@@ -217,8 +217,8 @@
                         b
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         g
                         \tweak Stem.avoid-note-head ##t
@@ -227,8 +227,8 @@
                         d'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         b
                         \tweak Stem.avoid-note-head ##t
@@ -237,8 +237,8 @@
                         f'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         d'
                         \tweak Stem.avoid-note-head ##t
@@ -247,9 +247,9 @@
                         a'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \featherOff
+                    \pluckNoteEvent
                     <
                         f'
                         \tweak Stem.avoid-note-head ##t
@@ -260,14 +260,14 @@
                     ]
                     \glissando
                     \numericTimeSignature
-                    \break
-                    \featherSlower
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \xNotesOff
+                    \bar ""
+                    \pluckNoteEvent
                     \pluckShow
                     \hideTime
-                    \pluckNoteEvent
-                    \bar ""
+                    \noBreak
+                    \xNotesOff
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \featherSlower
                     \time 1/4
                     <
                         \tweak Stem.avoid-note-head ##t
@@ -280,8 +280,8 @@
                     [
                     \>
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -290,8 +290,8 @@
                         a'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -300,8 +300,8 @@
                         f'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -310,8 +310,8 @@
                         d'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -320,8 +320,8 @@
                         b
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -330,8 +330,8 @@
                         g
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -354,13 +354,13 @@
                     ]
                     \glissando
                     \numericTimeSignature
-                    \break
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \xNotesOff
+                    \bar ""
+                    \pluckNoteEvent
                     \pluckShow
                     \hideTime
-                    \pluckNoteEvent
-                    \bar ""
+                    \noBreak
+                    \xNotesOff
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 7/4
                     s2.
                     \glissando
@@ -368,14 +368,14 @@
                     r1
                     \fermata
                     \numericTimeSignature
-                    \textLengthOn
                     \set glissandoMap = #'()
                     \hideTime
-                    \once \override TextScript.outside-staff-priority = ##f
-                    \xNotesOff
-                    \freeLineStart
                     \noBreak
                     \pluckRestEvent
+                    \freeLineStart
+                    \xNotesOff
+                    \once \override TextScript.outside-staff-priority = ##f
+                    \textLengthOn
                     \time 8/8
                     s8
                     ^ \markup { "several Xs" }
@@ -397,8 +397,8 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -406,8 +406,8 @@
                     \glissando
                     \numericTimeSignature
                     \xNotesOff
-                    \pluckShow
                     \pluckNoteEvent
+                    \pluckShow
                     \hideTime
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 4/4
@@ -420,8 +420,8 @@
                     >4
                     \p
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -430,8 +430,8 @@
                         e'
                     >4
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -440,9 +440,9 @@
                         f
                     >4
                     \glissando
-                    \pluckNoteEvent
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \noPluck
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -454,11 +454,11 @@
                     \numericTimeSignature
                     \set glissandoMap = #'()
                     \hideTime
-                    \once \override TextScript.outside-staff-priority = ##f
-                    \xNotesOff
-                    \freeLineStart
                     \noBreak
                     \pluckRestEvent
+                    \freeLineStart
+                    \xNotesOff
+                    \once \override TextScript.outside-staff-priority = ##f
                     \time 20/8
                     s8
                     ^ \markup {
@@ -521,8 +521,8 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -530,8 +530,8 @@
                     \glissando
                     \numericTimeSignature
                     \xNotesOff
-                    \pluckShow
                     \pluckNoteEvent
+                    \pluckShow
                     \hideTime
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 4/4
@@ -544,8 +544,8 @@
                     >4
                     \p
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         a
                         \tweak Stem.avoid-note-head ##t
@@ -554,8 +554,8 @@
                         e'
                     >4
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         b,
                         \tweak Stem.avoid-note-head ##t
@@ -564,9 +564,9 @@
                         f
                     >4
                     \glissando
-                    \pluckNoteEvent
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \noPluck
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         f
                         \tweak Stem.avoid-note-head ##t
@@ -578,11 +578,11 @@
                     \numericTimeSignature
                     \set glissandoMap = #'()
                     \hideTime
-                    \once \override TextScript.outside-staff-priority = ##f
-                    \xNotesOff
-                    \freeLineStart
                     \noBreak
                     \pluckRestEvent
+                    \freeLineStart
+                    \xNotesOff
+                    \once \override TextScript.outside-staff-priority = ##f
                     \time 26/8
                     s8
                     ^ \markup {
@@ -663,18 +663,18 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
                     s8
                     \glissando
                     \numericTimeSignature
-                    \xNotesOff
-                    \pluckHide
-                    \hideTime
                     \bar ""
+                    \pluckHide
+                    \xNotesOff
+                    \hideTime
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 8/4
                     s2
@@ -691,17 +691,17 @@
                     ^ \markup { "hand to player 2" }
                     _ \markup { 4 }
                     \glissando
-                    \pluckRestEvent
                     \pluckHide
+                    \pluckRestEvent
                     s2
                 }
                 {
                     \numericTimeSignature
-                    \xNotesOff
-                    \pluckStart
-                    \pluckHide
-                    \hideTime
                     \bar ""
+                    \pluckHide
+                    \xNotesOff
+                    \hideTime
+                    \pluckStart
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \accidentalStyle modern-cautionary
                     \time 8/4
@@ -718,13 +718,13 @@
                     >1
                     _ \markup { 5 }
                     \glissando
-                    \pluckRestEvent
                     \pluckHide
+                    \pluckRestEvent
                     s2
                     \numericTimeSignature
                     \xNotesOff
-                    \pluckShow
                     \pluckNoteEvent
+                    \pluckShow
                     \hideTime
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 6/4
@@ -740,8 +740,8 @@
                     \pluckRestEvent
                     r4
                     r4
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -750,8 +750,8 @@
                         g
                     >4
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         d'
                         \tweak Stem.avoid-note-head ##t
@@ -760,8 +760,8 @@
                         a'
                     >4
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -771,14 +771,14 @@
                     >4
                     \glissando
                     \numericTimeSignature
-                    \textLengthOn
                     \set glissandoMap = #'()
                     \hideTime
-                    \once \override TextScript.outside-staff-priority = ##f
-                    \xNotesOff
-                    \freeLineStart
                     \noBreak
                     \pluckRestEvent
+                    \freeLineStart
+                    \xNotesOff
+                    \once \override TextScript.outside-staff-priority = ##f
+                    \textLengthOn
                     \time 8/8
                     s8
                     ^ \markup { "several Xs" }
@@ -800,8 +800,8 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -809,11 +809,11 @@
                     \glissando
                     \numericTimeSignature
                     \xNotesOff
+                    \featherFaster
+                    \pluckNoteEvent
                     \pluckShow
                     \hideTime
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \featherFaster
                     \time 1/4
                     <
                         f,
@@ -824,8 +824,8 @@
                     >32
                     [
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         a,
                         \tweak Stem.avoid-note-head ##t
@@ -834,8 +834,8 @@
                         e
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         c
                         \tweak Stem.avoid-note-head ##t
@@ -844,8 +844,8 @@
                         g
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         e
                         \tweak Stem.avoid-note-head ##t
@@ -854,8 +854,8 @@
                         b
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         g
                         \tweak Stem.avoid-note-head ##t
@@ -864,8 +864,8 @@
                         d'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         b
                         \tweak Stem.avoid-note-head ##t
@@ -874,8 +874,8 @@
                         f'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         d'
                         \tweak Stem.avoid-note-head ##t
@@ -884,9 +884,9 @@
                         a'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \featherOff
+                    \pluckNoteEvent
                     <
                         f'
                         \tweak Stem.avoid-note-head ##t
@@ -897,11 +897,11 @@
                     ]
                     \glissando
                     \numericTimeSignature
+                    \bar ""
                     \xNotesOff
+                    \pluckNoteEvent
                     \pluckShow
                     \hideTime
-                    \pluckNoteEvent
-                    \bar ""
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 7/4
                     <
@@ -912,22 +912,22 @@
                         c''
                     >4
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     s2
                     \glissando
                     \pluckRestEvent
                     r1
                     \fermata
                     \numericTimeSignature
-                    \textLengthOn
                     \set glissandoMap = #'()
                     \hideTime
-                    \once \override TextScript.outside-staff-priority = ##f
-                    \xNotesOff
-                    \freeLineStart
                     \noBreak
                     \pluckRestEvent
+                    \freeLineStart
+                    \xNotesOff
+                    \once \override TextScript.outside-staff-priority = ##f
+                    \textLengthOn
                     \time 8/8
                     s8
                     ^ \markup { "several Xs" }
@@ -949,8 +949,8 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -964,10 +964,8 @@
                     \pluckShowBoard
                     \clef "treble"
                     s4
-                    ^ \markup { "place boards" }
-                    \arpeggioBracket
+                    ^ \markup { "place pencils" }
                     <a' d'' e'' f'' b'' e''' f'''>1
-                    \arpeggio
                     \pluckEndBoard
                     s4
                 }
@@ -981,11 +979,11 @@
                 {
                     \numericTimeSignature
                     \xNotesOff
-                    \pluckShow
                     \set glissandoMap = #'()
                     \pluckNoteEvent
-                    \pluckStart
+                    \pluckShow
                     \hideTime
+                    \pluckStart
                     \accidentalStyle modern-cautionary
                     \time 7/4
                     s2.
@@ -994,12 +992,12 @@
                     r1
                     \fermata
                     \numericTimeSignature
-                    \xNotesOff
                     \freeLineStart
-                    \noBreak
+                    \xNotesOff
                     \set glissandoMap = #'()
-                    \pluckRestEvent
                     \hideTime
+                    \noBreak
+                    \pluckRestEvent
                     \time 6/8
                     s8
                     \glissando
@@ -1013,18 +1011,18 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
                     s8
                     \glissando
                     \numericTimeSignature
-                    \xNotesOff
-                    \pluckHide
-                    \hideTime
                     \bar ""
+                    \pluckHide
+                    \xNotesOff
+                    \hideTime
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 8/4
                     s2
@@ -1042,17 +1040,17 @@
                     ^ \markup { "hand to pl.1" }
                     _ \markup { 2 }
                     \glissando
-                    \pluckRestEvent
                     \pluckHide
+                    \pluckRestEvent
                     s2
                     \ottava #0
                     \numericTimeSignature
-                    \xNotesOff
                     \freeLineStart
-                    \noBreak
+                    \xNotesOff
                     \set glissandoMap = #'()
-                    \pluckRestEvent
                     \hideTime
+                    \noBreak
+                    \pluckRestEvent
                     \time 34/8
                     s8
                     \glissando
@@ -1150,18 +1148,18 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
                     s8
                     \glissando
                     \numericTimeSignature
-                    \xNotesOff
-                    \pluckHide
-                    \hideTime
                     \bar ""
+                    \pluckHide
+                    \xNotesOff
+                    \hideTime
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 8/4
                     s2
@@ -1177,14 +1175,14 @@
                     >1
                     _ \markup { 3 }
                     \glissando
-                    \pluckRestEvent
                     \pluckHide
+                    \pluckRestEvent
                     s2
                     \numericTimeSignature
                     \xNotesOff
+                    \pluckNoteEvent
                     \pluckShow
                     \hideTime
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 7/4
                     <
@@ -1196,22 +1194,22 @@
                     >4
                     \pp
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     s2
                     \glissando
                     \pluckRestEvent
                     r1
                     \fermata
                     \numericTimeSignature
-                    \textLengthOn
                     \set glissandoMap = #'()
                     \hideTime
-                    \once \override TextScript.outside-staff-priority = ##f
-                    \xNotesOff
-                    \freeLineStart
                     \noBreak
                     \pluckRestEvent
+                    \freeLineStart
+                    \xNotesOff
+                    \once \override TextScript.outside-staff-priority = ##f
+                    \textLengthOn
                     \time 8/8
                     s8
                     ^ \markup { "several Xs" }
@@ -1233,20 +1231,20 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
                     s8
                     \glissando
                     \numericTimeSignature
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \featherFaster
-                    \xNotesOff
+                    \pluckNoteEvent
                     \pluckShow
                     \hideTime
-                    \pluckNoteEvent
+                    \xNotesOff
+                    \featherFaster
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 1/4
                     <
                         f,
@@ -1259,8 +1257,8 @@
                     [
                     \<
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         a,
                         \tweak Stem.avoid-note-head ##t
@@ -1269,8 +1267,8 @@
                         e
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         c
                         \tweak Stem.avoid-note-head ##t
@@ -1279,8 +1277,8 @@
                         g
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         e
                         \tweak Stem.avoid-note-head ##t
@@ -1289,8 +1287,8 @@
                         b
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         g
                         \tweak Stem.avoid-note-head ##t
@@ -1299,8 +1297,8 @@
                         d'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         b
                         \tweak Stem.avoid-note-head ##t
@@ -1309,8 +1307,8 @@
                         f'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         d'
                         \tweak Stem.avoid-note-head ##t
@@ -1319,9 +1317,9 @@
                         a'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \featherOff
+                    \pluckNoteEvent
                     <
                         f'
                         \tweak Stem.avoid-note-head ##t
@@ -1332,14 +1330,14 @@
                     ]
                     \glissando
                     \numericTimeSignature
-                    \featherSlower
-                    \noBreak
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \xNotesOff
+                    \bar ""
+                    \pluckNoteEvent
                     \pluckShow
                     \hideTime
-                    \pluckNoteEvent
-                    \bar ""
+                    \noBreak
+                    \xNotesOff
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \featherSlower
                     \time 1/4
                     <
                         \tweak Stem.avoid-note-head ##t
@@ -1352,8 +1350,8 @@
                     [
                     \>
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -1362,8 +1360,8 @@
                         a'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -1372,8 +1370,8 @@
                         f'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -1382,8 +1380,8 @@
                         d'
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -1392,8 +1390,8 @@
                         b
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -1402,8 +1400,8 @@
                         g
                     >32
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -1426,13 +1424,13 @@
                     ]
                     \glissando
                     \numericTimeSignature
-                    \hideTime
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \xNotesOff
-                    \pluckShow
-                    \noBreak
-                    \pluckNoteEvent
                     \bar ""
+                    \pluckNoteEvent
+                    \pluckShow
+                    \hideTime
+                    \noBreak
+                    \xNotesOff
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 7/4
                     s2.
                     \glissando
@@ -1440,14 +1438,14 @@
                     r1
                     \fermata
                     \numericTimeSignature
-                    \textLengthOn
                     \set glissandoMap = #'()
                     \hideTime
-                    \once \override TextScript.outside-staff-priority = ##f
-                    \xNotesOff
-                    \freeLineStart
                     \noBreak
                     \pluckRestEvent
+                    \freeLineStart
+                    \xNotesOff
+                    \once \override TextScript.outside-staff-priority = ##f
+                    \textLengthOn
                     \time 8/8
                     s8
                     ^ \markup { "several Xs" }
@@ -1469,8 +1467,8 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -1478,9 +1476,9 @@
                     \glissando
                     \numericTimeSignature
                     \xNotesOff
+                    \pluckNoteEvent
                     \pluckShow
                     \hideTime
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 7/8
                     <
@@ -1491,8 +1489,8 @@
                         c
                     >4
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -1501,8 +1499,8 @@
                         b
                     >8
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         \tweak Stem.avoid-note-head ##t
                         \tweak style #'mensural
@@ -1511,8 +1509,8 @@
                         a'
                     >4
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         g
                         \tweak Stem.avoid-note-head ##t
@@ -1522,13 +1520,13 @@
                     >4
                     \glissando
                     \numericTimeSignature
-                    \hideTime
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \xNotesOff
-                    \pluckShow
-                    \noBreak
-                    \pluckNoteEvent
                     \bar ""
+                    \pluckNoteEvent
+                    \pluckShow
+                    \hideTime
+                    \noBreak
+                    \xNotesOff
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 7/4
                     s2.
                     \glissando
@@ -1536,14 +1534,14 @@
                     r1
                     \fermata
                     \numericTimeSignature
-                    \textLengthOn
                     \set glissandoMap = #'()
                     \hideTime
-                    \once \override TextScript.outside-staff-priority = ##f
-                    \xNotesOff
-                    \freeLineStart
                     \noBreak
                     \pluckRestEvent
+                    \freeLineStart
+                    \xNotesOff
+                    \once \override TextScript.outside-staff-priority = ##f
+                    \textLengthOn
                     \time 9/8
                     s8
                     ^ \markup { "several Xs" }
@@ -1568,8 +1566,8 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -1578,12 +1576,12 @@
                 }
                 {
                     \numericTimeSignature
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \xNotesOff
                     \bar ""
                     \pluckHide
                     \hideTime
                     \pluckStart
+                    \xNotesOff
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \accidentalStyle modern-cautionary
                     \time 8/4
                     s2
@@ -1600,13 +1598,13 @@
                     >1
                     _ \markup { 4 }
                     \glissando
-                    \pluckRestEvent
                     \pluckHide
+                    \pluckRestEvent
                     s2
                     \numericTimeSignature
                     \xNotesOff
-                    \pluckShow
                     \pluckNoteEvent
+                    \pluckShow
                     \hideTime
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \time 4/4
@@ -1619,8 +1617,8 @@
                     >4
                     \p
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         a
                         \tweak Stem.avoid-note-head ##t
@@ -1629,8 +1627,8 @@
                         e'
                     >4
                     \glissando
-                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         b,
                         \tweak Stem.avoid-note-head ##t
@@ -1639,9 +1637,9 @@
                         f
                     >4
                     \glissando
-                    \pluckNoteEvent
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \noPluck
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckNoteEvent
                     <
                         f
                         \tweak Stem.avoid-note-head ##t
@@ -1653,11 +1651,11 @@
                     \numericTimeSignature
                     \set glissandoMap = #'()
                     \hideTime
-                    \once \override TextScript.outside-staff-priority = ##f
-                    \xNotesOff
-                    \freeLineStart
                     \noBreak
                     \pluckRestEvent
+                    \freeLineStart
+                    \xNotesOff
+                    \once \override TextScript.outside-staff-priority = ##f
                     \time 20/8
                     s8
                     ^ \markup {
@@ -1720,8 +1718,8 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -1730,11 +1728,11 @@
                 }
                 {
                     \numericTimeSignature
-                    \xNotesOff
-                    \pluckStart
-                    \pluckHide
-                    \hideTime
                     \bar ""
+                    \pluckHide
+                    \xNotesOff
+                    \hideTime
+                    \pluckStart
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     \accidentalStyle modern-cautionary
                     \time 15/4
@@ -1751,8 +1749,8 @@
                     >1
                     _ \markup { 6 }
                     \glissando
-                    \pluckRestEvent
                     \pluckHide
+                    \pluckRestEvent
                     s\breve
                     [
                     s4

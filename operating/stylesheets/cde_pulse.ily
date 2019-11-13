@@ -1,11 +1,11 @@
 \header {
-    composer = "Randall West"
+    % composer = "Randall West"
     % tagline = ##f
     title = \markup {
         \column {
             \center-align {
                 \fontsize #2 {
-                    "A / B"
+                    "C / D / E"
                 }
             }
         }
@@ -13,7 +13,7 @@
     subtitle = \markup {
             \center-align {
                 \fontsize #1 {
-                    { "Slow" \note #"4" #UP "= 60 approx., freely" }
+                    { "Moderately faster," \note #"4" #UP "= 90 approx., steady pulse" }
                 }
             }
     }

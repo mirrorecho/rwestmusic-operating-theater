@@ -10,5 +10,12 @@
             }
         }
     }
+    subtitle = \markup {
+            \center-align {
+                \fontsize #1 {
+                    { "Faster," \note #"4" #UP "= 102 approx., speeding up" }
+                }
+            }
+    }
     % tagline = "Copyright 2019 Randall West."
 }

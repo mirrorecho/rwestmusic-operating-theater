@@ -22,12 +22,12 @@
         {
             {
                 \numericTimeSignature
+                \set glissandoMap = #'()
                 \pluckHide
                 \xNotesOff
-                \hideTime
                 \bar ""
                 \pluckStart
-                \set glissandoMap = #'()
+                \hideTime
                 \accidentalStyle modern-cautionary
                 \time 8/4
                 s2
@@ -43,11 +43,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_10_MID }
@@ -67,10 +67,10 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \pluckHide
                 \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
                 \hideTime
                 \time 8/4
                 s2
@@ -91,11 +91,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_12_LOW }
@@ -115,11 +115,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_13_LOW }
@@ -139,11 +139,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_14_MID }
@@ -163,11 +163,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_15_LOWEST }
@@ -187,11 +187,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_1_HIGHEST }
@@ -209,11 +209,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_2_HIGHEST }
@@ -233,11 +233,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_3_HIGH }
@@ -257,11 +257,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_4_HIGH }
@@ -281,11 +281,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_5_HIGH }
@@ -305,11 +305,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_6_MID }
@@ -329,11 +329,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_7_LOW }
@@ -353,11 +353,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_8_MID }
@@ -377,11 +377,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \bar ""
-                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                \xNotesOff
-                \hideTime
                 \pluckHide
+                \xNotesOff
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                \bar ""
+                \hideTime
                 \time 8/4
                 s2
                 ^ \markup { DEF_9_MID }

@@ -98,11 +98,15 @@ class JigSevenSimpleCell(JigSevenCell):
     string_rhythm = (1, -0.5, 2)
     metrical_durations = ( (1,4), (1,8), (2,4) )
 
+class JigSevenSingleCell(JigSevenCell):
+    string_rhythm = (1, -0.5, -1, -1)
+    metrical_durations = ( (1,4), (1,8), (1,4), (1,4),  )
+
 class JigSixCell(StringCell):
     string_rhythm = (0.5, -0.5, -0.5,)*2
     time_signature = (6, 8)
     pluck_strings = ( (1,), (), (), (0,), (), (), )
-    metrical_durations = ( (1,8),)*6
+    metrical_durations = ( (1,4),)*3
     tensions = (
         (8, 12),
         (),
@@ -117,7 +121,7 @@ class PulseSimpleCell(StringCell):
     string_rhythm = (1, 1, 1, 1)
     metrical_durations = ((4,4),)
     time_signature = (4, 4)
-    pluck_strings = ( (1,), (0,), (1,), (0,) )
+    pluck_strings = ( (1,), (1,), (0,), (0,) )
     tensions = (
         (10,12),
         (6,8),

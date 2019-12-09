@@ -107,7 +107,7 @@ op.staves[4].cells[0].time_signature=(7,8)
 op.staves[4].cells[0].metrical_durations=((1,4),(1,8),(1,4),(1,4),)
 op.staves[4].cells[0].rhythm=(1,0.5,1,1)
 
-op.stylesheets+=(_settings.OPERATING_PATH + "/stylesheets/f_jig.ily",)
+op.stylesheets+=(_settings.OPERATING_PATH + "/stylesheets/d_jig.ily",)
 
 calliope.illustrate(op)
 

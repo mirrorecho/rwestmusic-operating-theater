@@ -154,7 +154,7 @@ op = OperatingScore()
 op.staves[0].extend([SEGMENT_0_I,])
 op.staves[1].extend([SEGMENT_1_I,])
 
-op.stylesheets+=(_settings.OPERATING_PATH + "/stylesheets/g_ladder.ily",)
+op.stylesheets+=(_settings.OPERATING_PATH + "/stylesheets/e_ladder.ily",)
 
 calliope.illustrate(op)
 

@@ -5,7 +5,7 @@
         \column {
             \center-align {
                 \fontsize #2 {
-                    "F"
+                    "E"
                 }
             }
         }
@@ -13,7 +13,7 @@
     subtitle = \markup {
             \center-align {
                 \fontsize #1 {
-                    { "Faster," \note #"4" #UP "= 102 approx., speeding up" }
+                    { "Faster," \note #"4" #UP "= 112 approx., speeding up" }
                 }
             }
     }

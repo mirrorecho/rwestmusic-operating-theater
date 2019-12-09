@@ -11,42 +11,36 @@ DEF_0_NONE = StringDefEvent(
 DEF_1_HIGHEST = StringDefEvent(
     indicator = 1,
     string_map = {
-        48: (0,1,),
+        48: (0,),
+        42: (1,),
         },
     clef = "treble"
     )
 
-DEF_2_HIGHEST = StringDefEvent(
+# DEF_2_HIGH = StringDefEvent(
+#     indicator = 2,
+#     string_map = {
+#         42: (0,),
+#         35: (1,),
+#         },
+#     clef = "treble"
+#     )
+
+DEF_2_HIGH = StringDefEvent(
     indicator = 2,
+    respell="sharps",
     string_map = {
-        42: (0,),
-        35: (1,),
+        # 42: (0,),
+        34: (0,),
+        23: (1,),
         },
     clef = "treble"
     )
 
 # PRICK_STRING_HIGHEST.respell = "sharps"
 
-DEF_3_HIGH = StringDefEvent(
+DEF_3_HIGH = StringDefEvent( # HAD BEEN 5 HIGH
     indicator = 3,
-    string_map = {
-        34: (0,),
-        29: (1,),
-        },
-    clef = "treble"
-    )
-
-DEF_4_HIGH = StringDefEvent(
-    indicator = 4,
-    string_map = {
-        28: (0,),
-        23: (1,),
-        },
-    clef = "treble"
-    )
-
-DEF_5_HIGH = StringDefEvent(
-    indicator = 5,
     string_map = {
         17: (0,),
         16: (1,),
@@ -54,14 +48,70 @@ DEF_5_HIGH = StringDefEvent(
     clef = "treble"
     )
 
-DEF_6_MID = StringDefEvent(
-    indicator = 6,
+# DEF_4_HIGH = StringDefEvent(
+#     indicator = 4,
+#     string_map = {
+#         28: (0,),
+#         23: (1,),
+#         },
+#     clef = "treble"
+#     )
+DEF_4_HIGH = StringDefEvent( #  HAD BEEN 6 MID
+    indicator = 4,
     string_map = {
         14: (0,),
         9: (1,),
         },
     clef = "treble"
     )
+
+
+DEF_3_4_HIGH = StringDefEvent( # HAD BEEN 5 HIGH
+    indicator = "3 and 4",
+    string_map = {
+        17: (0,),
+        16: (1,),
+        14: (2,),
+        9: (3,),
+        },
+    clef = "treble"
+    )
+
+# DEF_4_HIGH = StringDefEvent(
+#     indicator = 4,
+#     string_map = {
+#         28: (0,),
+#         23: (1,),
+#         },
+#     clef = "treble"
+#     )
+# DEF_4_HIGH = StringDefEvent( #  HAD BEEN 6 MID
+#     indicator = 4,
+#     string_map = {
+
+#         },
+#     clef = "treble"
+#     )
+
+
+# DEF_5_HIGH = StringDefEvent(
+#     indicator = 5,
+#     string_map = {
+#         17: (0,),
+#         16: (1,),
+#         },
+#     clef = "treble"
+#     )
+
+
+# DEF_6_MID = StringDefEvent(
+#     indicator = 6,
+#     string_map = {
+#         14: (0,),
+#         9: (1,),
+#         },
+#     clef = "treble"
+#     )
 
 DEF_5_6_MID = StringDefEvent(
     indicator = 6,

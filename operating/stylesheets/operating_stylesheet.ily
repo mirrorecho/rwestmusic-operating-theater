@@ -1,5 +1,5 @@
 #(set-default-paper-size "letter" 'portrait)
-#(set-global-staff-size 20)
+#(set-global-staff-size 19)
 
 #(define-public (bracket-stencils grob)
   (let ((lp (grob-interpret-markup grob (markup #:fontsize 3.5 #:translate (cons -0.3 -0.5) "[")))
@@ -172,10 +172,11 @@ hideTime = {
   % #(set! paper-alist (cons '("10x13" . (cons (* 10 in) (* 13 in))) paper-alist))
 
 \paper {
+    % #(set-paper-size "17x11")
     #(set-paper-size "11x17")
     %#(set-paper-size "letter")
     left-margin = 22\mm
-    % system-separator-markup = \slashSeparator
+    system-separator-markup = \slashSeparator
     markup-system-spacing = #'(
         (basic-distance . 0)
         (minimum-distance . 0)
@@ -183,29 +184,29 @@ hideTime = {
         (stretchability . 0)
     )
     system-system-spacing = #'(
-        (basic-distance . 12)
+        (basic-distance . 42)
         (minimum-distance . 18)
         (padding . 12)
         (stretchability . 20)
     )
     
-    default-staff-staff-spacing =
-      #'((basic-distance . 8)
-         (minimum-distance . 7)
-         (padding . 22)
-    )
+    % default-staff-staff-spacing =
+    %   #'((basic-distance . 44)
+    %      (minimum-distance . 44)
+    %      (padding . 44)
+    % )
 
-    staff-staff-spacing =
-      #'((basic-distance . 8)
-         (minimum-distance . 7)
-         (padding . 22)
-    )
+    % staff-staff-spacing =
+    %   #'((basic-distance . 44)
+    %      (minimum-distance . 44)
+    %      (padding . 44)
+    % )
 
-    staffgroup-staff-staff-spacing =
-      #'((basic-distance . 8)
-         (minimum-distance . 7)
-         (padding . 9)
-    )
+    % staffgroup-staff-staff-spacing =
+    %   #'((basic-distance . 44)
+    %      (minimum-distance . 44)
+    %      (padding . 44)
+    % )
 
 }
 
@@ -248,6 +249,7 @@ hideTime = {
         \override RehearsalMark #'font-size = #6
         \remove "Timing_translator"
         \remove "Default_bar_line_engraver"
+        \override StaffGrouper.staff-staff-spacing.basic-distance = #22
         %\remove "Repeat_acknowledge_engraver"
         %\remove "Volta_engraver"
     }

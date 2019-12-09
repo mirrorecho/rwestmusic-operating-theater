@@ -5,7 +5,7 @@
         \column {
             \center-align {
                 \fontsize #2 {
-                    "E"
+                    "C"
                 }
             }
         }

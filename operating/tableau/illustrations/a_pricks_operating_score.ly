@@ -2,7 +2,7 @@
 \language "english"
 
 \include "/Users/rwest/Code/mirrorecho/rwestmusic-operating-theater/operating/stylesheets/operating_stylesheet.ily"
-\include "/Users/rwest/Code/mirrorecho/rwestmusic-operating-theater/operating/stylesheets/ab_pricks.ily"
+\include "/Users/rwest/Code/mirrorecho/rwestmusic-operating-theater/operating/stylesheets/a_pricks.ily"
 
 \header {
     tagline = ##f
@@ -25,12 +25,12 @@
             {
                 {
                     \numericTimeSignature
-                    \pluckHide
-                    \hideTime
                     \xNotesOff
-                    \pluckStart
-                    \bar ""
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckHide
+                    \pluckStart
+                    \hideTime
+                    \bar ""
                     \accidentalStyle modern-cautionary
                     \time 8/4
                     s2
@@ -52,11 +52,11 @@
                     s2
                     \ottava #0
                     \numericTimeSignature
-                    \xNotesOn
-                    \hideTime
-                    \pluckNoteEvent
                     \pluckShow
+                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \hideTime
+                    \xNotesOn
                     \time 7/4
                     <f, c>4
                     \pp
@@ -69,21 +69,21 @@
                     r1
                     \fermata
                     \numericTimeSignature
-                    \set glissandoMap = #'()
                     \noBreak
-                    \xNotesOff
                     \pluckRestEvent
                     \freeLineStart
-                    \hideTime
+                    \xNotesOff
                     \textLengthOn
+                    \set glissandoMap = #'()
+                    \hideTime
                     \once \override TextScript.outside-staff-priority = ##f
                     \time 8/8
                     s8
                     ^ \markup { repeat }
                     \glissando
-                    \once \hide Rest
                     \set glissandoMap = #'()
                     \textLengthOff
+                    \once \hide Rest
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -98,20 +98,20 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
                     s8
                     \glissando
                     \numericTimeSignature
-                    \xNotesOff
-                    \pluckShow
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \hideTime
-                    \pluckNoteEvent
+                    \xNotesOff
                     \featherFaster
+                    \pluckShow
+                    \pluckNoteEvent
+                    \hideTime
                     \time 1/4
                     <
                         f,
@@ -199,12 +199,12 @@
                     \numericTimeSignature
                     \noBreak
                     \xNotesOff
-                    \bar ""
-                    \pluckShow
-                    \featherSlower
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \hideTime
+                    \pluckShow
                     \pluckNoteEvent
+                    \hideTime
+                    \featherSlower
+                    \bar ""
                     \time 1/4
                     <
                         \tweak Stem.avoid-note-head ##t
@@ -293,133 +293,135 @@
                     \numericTimeSignature
                     \noBreak
                     \xNotesOff
-                    \pluckShow
-                    \bar ""
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \hideTime
+                    \pluckShow
                     \pluckNoteEvent
+                    \hideTime
+                    \bar ""
                     \time 7/4
                     s2.
                     \glissando
-                    \pluckRestEvent
                     r1
-                    \fermata
-                    \numericTimeSignature
-                    \set glissandoMap = #'()
-                    \noBreak
-                    \xNotesOff
-                    \pluckRestEvent
-                    \freeLineStart
-                    \hideTime
-                    \textLengthOn
-                    \once \override TextScript.outside-staff-priority = ##f
-                    \time 32/8
-                    s8
-                    ^ \markup { repeat }
-                    \glissando
-                    \once \hide Rest
-                    \set glissandoMap = #'()
-                    \textLengthOff
-                    r8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
-                    \freeLineArrow
-                    \set glissandoMap = #'()
-                    r8
-                    \glissando
-                    \set glissandoMap = #'()
-                    s8
-                    \glissando
                 }
                 {
                     \numericTimeSignature
+                    \pluckRestEvent
+                    \freeLineStart
+                    \xNotesOff
                     \pluckStart
+                    \break
+                    \set glissandoMap = #'()
+                    \hideTime
+                    \once \override TextScript.outside-staff-priority = ##f
+                    \accidentalStyle modern-cautionary
+                    \time 34/8
+                    s8
+                    ^ \markup { repeat }
+                    \glissando
+                    \set glissandoMap = #'()
+                    \once \hide Rest
+                    r8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    \freeLineArrow
+                    r8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \numericTimeSignature
                     \pluckHide
                     \bar ""
-                    \accidentalStyle modern-cautionary
                     \time 7/4
                     s4
                     \pluckShowBoard
@@ -429,13 +431,17 @@
                     <a' d'' e'' f'' b''>1
                     \pluckEndBoard
                     s4
+                }
+                {
                     \numericTimeSignature
+                    \xNotesOff
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckStart
+                    \break
+                    \pluckHide
                     \hideTime
                     \bar ""
-                    \xNotesOff
-                    \pluckHide
-                    \break
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \accidentalStyle modern-cautionary
                     \time 8/4
                     s2
                     \glissando
@@ -454,11 +460,11 @@
                     \pluckHide
                     s2
                     \numericTimeSignature
-                    \xNotesOn
-                    \hideTime
-                    \pluckNoteEvent
                     \pluckShow
+                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \hideTime
+                    \xNotesOn
                     \time 4/4
                     <c g>4
                     \p
@@ -472,19 +478,19 @@
                     <b, f>4
                     \glissando
                     \pluckNoteEvent
-                    \noPluck
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \noPluck
                     <f c'>4
                     \glissando
                     \numericTimeSignature
-                    \set glissandoMap = #'()
                     \noBreak
-                    \xNotesOff
                     \pluckRestEvent
                     \freeLineStart
+                    \xNotesOff
+                    \set glissandoMap = #'()
                     \hideTime
                     \once \override TextScript.outside-staff-priority = ##f
-                    \time 20/8
+                    \time 30/8
                     s8
                     ^ \markup {
                         \column
@@ -546,19 +552,53 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
                     s8
                     \glissando
+                }
+                {
                     \numericTimeSignature
-                    \hideTime
-                    \pluckNoteEvent
                     \xNotesOff
-                    \pluckShow
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckStart
+                    \pluckNoteEvent
+                    \pluckShow
+                    \hideTime
+                    \accidentalStyle modern-cautionary
                     \time 6/4
                     <
                         g
@@ -603,14 +643,14 @@
                     >4
                     \glissando
                     \numericTimeSignature
-                    \set glissandoMap = #'()
                     \noBreak
-                    \xNotesOff
                     \pluckRestEvent
                     \freeLineStart
+                    \xNotesOff
+                    \set glissandoMap = #'()
                     \hideTime
                     \once \override TextScript.outside-staff-priority = ##f
-                    \time 8/8
+                    \time 12/8
                     s8
                     ^ \markup { repeat }
                     \glissando
@@ -630,20 +670,32 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
                     s8
                     \glissando
                     \numericTimeSignature
-                    \hideTime
-                    \pluckNoteEvent
-                    \featherFaster
-                    \xNotesOff
                     \pluckShow
+                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \xNotesOff
+                    \hideTime
+                    \featherFaster
                     \time 1/4
                     <
                         f,
@@ -727,12 +779,12 @@
                     ]
                     \glissando
                     \numericTimeSignature
-                    \hideTime
+                    \pluckShow
                     \pluckNoteEvent
                     \xNotesOff
-                    \pluckShow
-                    \bar ""
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \hideTime
+                    \bar ""
                     \time 7/4
                     <
                         f'
@@ -746,25 +798,25 @@
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                     s2
                     \glissando
-                    \pluckRestEvent
-                    r1
-                    \fermata
+                    {
+                        R1 * 1
+                    }
                     \numericTimeSignature
-                    \set glissandoMap = #'()
                     \noBreak
-                    \xNotesOff
                     \pluckRestEvent
                     \freeLineStart
-                    \hideTime
+                    \xNotesOff
                     \textLengthOn
+                    \set glissandoMap = #'()
+                    \hideTime
                     \once \override TextScript.outside-staff-priority = ##f
-                    \time 8/8
+                    \time 12/8
                     s8
                     ^ \markup { repeat }
                     \glissando
-                    \once \hide Rest
                     \set glissandoMap = #'()
                     \textLengthOff
+                    \once \hide Rest
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -779,8 +831,20 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -796,12 +860,12 @@
             {
                 {
                     \numericTimeSignature
-                    \hideTime
                     \pluckNoteEvent
+                    \pluckShow
                     \set glissandoMap = #'()
                     \xNotesOff
-                    \pluckShow
                     \pluckStart
+                    \hideTime
                     \accidentalStyle modern-cautionary
                     \time 7/4
                     s2.
@@ -810,13 +874,13 @@
                     r1
                     \fermata
                     \numericTimeSignature
-                    \hideTime
-                    \pluckRestEvent
-                    \set glissandoMap = #'()
                     \noBreak
-                    \xNotesOff
+                    \set glissandoMap = #'()
                     \freeLineStart
-                    \time 32/8
+                    \xNotesOff
+                    \pluckRestEvent
+                    \hideTime
+                    \time 42/8
                     s8
                     \glissando
                     \set glissandoMap = #'()
@@ -907,19 +971,53 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
                     s8
                     \glissando
+                }
+                {
                     \numericTimeSignature
-                    \hideTime
                     \xNotesOff
-                    \pluckHide
-                    \bar ""
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckHide
+                    \pluckStart
+                    \hideTime
+                    \bar ""
+                    \accidentalStyle modern-cautionary
                     \time 8/4
                     s2
                     \glissando
@@ -938,12 +1036,12 @@
                     \pluckHide
                     s2
                     \numericTimeSignature
-                    \xNotesOff
-                    \pluckShow
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \hideTime
-                    \pluckNoteEvent
+                    \xNotesOff
                     \featherFaster
+                    \pluckShow
+                    \pluckNoteEvent
+                    \hideTime
                     \time 1/4
                     <
                         f,
@@ -1031,12 +1129,12 @@
                     \numericTimeSignature
                     \noBreak
                     \xNotesOff
-                    \bar ""
-                    \pluckShow
-                    \featherSlower
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \hideTime
+                    \pluckShow
                     \pluckNoteEvent
+                    \hideTime
+                    \featherSlower
+                    \bar ""
                     \time 1/4
                     <
                         \tweak Stem.avoid-note-head ##t
@@ -1125,11 +1223,11 @@
                     \numericTimeSignature
                     \noBreak
                     \xNotesOff
-                    \pluckShow
-                    \bar ""
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \hideTime
+                    \pluckShow
                     \pluckNoteEvent
+                    \hideTime
+                    \bar ""
                     \time 7/4
                     s2.
                     \glissando
@@ -1137,21 +1235,21 @@
                     r1
                     \fermata
                     \numericTimeSignature
-                    \set glissandoMap = #'()
                     \noBreak
-                    \xNotesOff
                     \pluckRestEvent
                     \freeLineStart
-                    \hideTime
+                    \xNotesOff
                     \textLengthOn
+                    \set glissandoMap = #'()
+                    \hideTime
                     \once \override TextScript.outside-staff-priority = ##f
-                    \time 8/8
+                    \time 14/8
                     s8
                     ^ \markup { repeat }
                     \glissando
-                    \once \hide Rest
                     \set glissandoMap = #'()
                     \textLengthOff
+                    \once \hide Rest
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -1166,8 +1264,26 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    s8
+                    \glissando
+                    \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -1177,12 +1293,12 @@
                 {
                     \numericTimeSignature
                     \xNotesOff
+                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckStart
                     \break
                     \pluckShow
-                    \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \hideTime
                     \pluckNoteEvent
-                    \pluckStart
+                    \hideTime
                     \accidentalStyle modern-cautionary
                     \time 7/4
                     <
@@ -1202,21 +1318,21 @@
                     r1
                     \fermata
                     \numericTimeSignature
-                    \set glissandoMap = #'()
                     \noBreak
-                    \xNotesOff
                     \pluckRestEvent
                     \freeLineStart
-                    \hideTime
+                    \xNotesOff
                     \textLengthOn
+                    \set glissandoMap = #'()
+                    \hideTime
                     \once \override TextScript.outside-staff-priority = ##f
                     \time 8/8
                     s8
                     ^ \markup { repeat }
                     \glissando
-                    \once \hide Rest
                     \set glissandoMap = #'()
                     \textLengthOff
+                    \once \hide Rest
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -1231,19 +1347,19 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()
                     s8
                     \glissando
                     \numericTimeSignature
-                    \hideTime
-                    \pluckNoteEvent
-                    \xNotesOff
                     \pluckShow
+                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \xNotesOff
+                    \hideTime
                     \time 7/8
                     <
                         f,
@@ -1286,11 +1402,11 @@
                     \numericTimeSignature
                     \noBreak
                     \xNotesOff
-                    \pluckShow
-                    \bar ""
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
-                    \hideTime
+                    \pluckShow
                     \pluckNoteEvent
+                    \hideTime
+                    \bar ""
                     \time 7/4
                     s2.
                     \glissando
@@ -1298,21 +1414,21 @@
                     r1
                     \fermata
                     \numericTimeSignature
-                    \set glissandoMap = #'()
                     \noBreak
-                    \xNotesOff
                     \pluckRestEvent
                     \freeLineStart
-                    \hideTime
+                    \xNotesOff
                     \textLengthOn
+                    \set glissandoMap = #'()
+                    \hideTime
                     \once \override TextScript.outside-staff-priority = ##f
                     \time 11/8
                     s8
                     ^ \markup { repeat }
                     \glissando
-                    \once \hide Rest
                     \set glissandoMap = #'()
                     \textLengthOff
+                    \once \hide Rest
                     r8
                     \glissando
                     \set glissandoMap = #'()
@@ -1336,19 +1452,23 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
+                    \set glissandoMap = #'()
                     \freeLineArrow
-                    \set glissandoMap = #'()
                     r8
                     \glissando
                     \set glissandoMap = #'()
                     s8
                     \glissando
+                }
+                {
                     \numericTimeSignature
-                    \hideTime
                     \xNotesOff
-                    \pluckHide
-                    \bar ""
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \pluckHide
+                    \pluckStart
+                    \hideTime
+                    \bar ""
+                    \accidentalStyle modern-cautionary
                     \time 7/4
                     s4
                     \glissando
@@ -1367,11 +1487,11 @@
                     \pluckHide
                     s2
                     \numericTimeSignature
-                    \hideTime
-                    \pluckNoteEvent
-                    \xNotesOff
                     \pluckShow
+                    \pluckNoteEvent
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \xNotesOff
+                    \hideTime
                     \time 4/4
                     <
                         c
@@ -1403,8 +1523,8 @@
                     >4
                     \glissando
                     \pluckNoteEvent
-                    \noPluck
                     \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
+                    \noPluck
                     <
                         f
                         \tweak Stem.avoid-note-head ##t
@@ -1414,11 +1534,11 @@
                     >4
                     \glissando
                     \numericTimeSignature
-                    \set glissandoMap = #'()
                     \noBreak
-                    \xNotesOff
                     \pluckRestEvent
                     \freeLineStart
+                    \xNotesOff
+                    \set glissandoMap = #'()
                     \hideTime
                     \once \override TextScript.outside-staff-priority = ##f
                     \time 26/8
@@ -1501,8 +1621,8 @@
                     \set glissandoMap = #'()
                     s8
                     \glissando
-                    \freeLineArrow
                     \set glissandoMap = #'()
+                    \freeLineArrow
                     r8
                     \glissando
                     \set glissandoMap = #'()

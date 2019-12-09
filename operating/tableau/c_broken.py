@@ -248,7 +248,7 @@ op = OperatingScore()
 op.staves[0].extend([SEGMENT_0_I,])
 op.staves[1].extend([SEGMENT_1_I,])
 
-op.stylesheets+=(_settings.OPERATING_PATH + "/stylesheets/e_broken.ily",)
+op.stylesheets+=(_settings.OPERATING_PATH + "/stylesheets/c_broken.ily",)
 
 calliope.illustrate(op)
 

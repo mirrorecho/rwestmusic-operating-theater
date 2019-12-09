@@ -22,12 +22,12 @@
         {
             {
                 \numericTimeSignature
-                \set glissandoMap = #'()
-                \pluckHide
-                \xNotesOff
-                \bar ""
                 \pluckStart
                 \hideTime
+                \xNotesOff
+                \bar ""
+                \set glissandoMap = #'()
+                \pluckHide
                 \accidentalStyle modern-cautionary
                 \time 8/4
                 s2
@@ -43,11 +43,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_10_MID }
@@ -67,11 +67,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_11_LOW }
@@ -91,11 +91,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
+                \pluckHide
                 \hideTime
+                \xNotesOff
                 \time 8/4
                 s2
                 ^ \markup { DEF_12_LOW }
@@ -115,11 +115,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_13_LOW }
@@ -139,11 +139,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_14_MID }
@@ -163,11 +163,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_15_LOWEST }
@@ -187,11 +187,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_1_HIGHEST }
@@ -209,11 +209,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_2_HIGHEST }
@@ -233,11 +233,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_3_HIGH }
@@ -257,17 +257,17 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_4_HIGH }
                 \glissando
                 \pluckShowReson
-                            \set glissandoMap = #'(( 0 . 3) ( 1 . 4))
+                            \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
                 \clef "treble"
                 <
                     \tweak style #'harmonic-black
@@ -281,17 +281,45 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
+                \bar ""
+                \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ) ( 2 . 2 ) ( 3 . 3 ))
+                \hideTime
                 \xNotesOff
+                \pluckHide
+                \time 8/4
+                s2
+                ^ \markup { DEF_5_6_MID }
+                \glissando
+                \pluckShowReson
+                            \set glissandoMap = #'(( 0 . 0) ( 1 . 1) ( 2 . 2) ( 3 . 3))
+                \clef "treble"
+                <
+                    \tweak style #'harmonic-black
+                    a'
+                    \tweak style #'harmonic-black
+                    d''
+                    \tweak style #'harmonic-black
+                    e''
+                    \tweak style #'harmonic-black
+                    f''
+                >1
+                _ \markup { 6 }
+                \glissando
+                \pluckRestEvent
+                \pluckHide
+                s2
+                \numericTimeSignature
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_5_HIGH }
                 \glissando
                 \pluckShowReson
-                            \set glissandoMap = #'(( 0 . 5) ( 1 . 6))
+                            \set glissandoMap = #'(( 0 . 0) ( 1 . 1))
                 \clef "treble"
                 <
                     \tweak style #'harmonic-black
@@ -305,11 +333,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_6_MID }
@@ -329,11 +357,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_7_LOW }
@@ -353,11 +381,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_8_MID }
@@ -377,11 +405,11 @@
                 \pluckHide
                 s2
                 \numericTimeSignature
-                \pluckHide
-                \xNotesOff
                 \set glissandoMap = #'(( 0 . 0 ) ( 1 . 1 ))
                 \bar ""
                 \hideTime
+                \xNotesOff
+                \pluckHide
                 \time 8/4
                 s2
                 ^ \markup { DEF_9_MID }

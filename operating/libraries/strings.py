@@ -77,6 +77,63 @@ DEF_3_4_HIGH = StringDefEvent( # HAD BEEN 5 HIGH
     clef = "treble"
     )
 
+DEF_3_4_HIGH = StringDefEvent(
+    indicator = 6,
+    string_map = {
+        17: (0,),
+        16: (1,),
+        14: (2,),
+        9: (3,),
+        },
+    clef = "treble"
+    )
+
+
+DEF_5_LOW = StringDefEvent(
+    indicator = 5,
+    string_map = {
+        -24: (0,),
+        -25: (1,),
+        },
+        clef = "bass"
+    )
+
+DEF_6_MID = StringDefEvent(
+    indicator = 6,
+    string_map = {
+        -3: (0,),
+        -5: (1,),
+        },
+        clef = "bass"
+    )
+
+DEF_7_LOW = StringDefEvent(
+    indicator = 7,
+    string_map = {
+        -15: (0,),
+        -17: (1,),
+        },
+        clef = "bass"
+    )
+
+DEF_8_LOW = StringDefEvent(
+    indicator = 8,
+    string_map = {
+        -19: (0,),
+        -24: (1,),
+        },
+        clef = "bass"
+    )
+
+DEF_9_LOW = StringDefEvent(
+    indicator = 9,
+    string_map = {
+        -29: (0,),
+        -31: (1,),
+        },
+        clef = "bass"
+    )
+
 # DEF_4_HIGH = StringDefEvent(
 #     indicator = 4,
 #     string_map = {
@@ -113,25 +170,15 @@ DEF_3_4_HIGH = StringDefEvent( # HAD BEEN 5 HIGH
 #     clef = "treble"
 #     )
 
-DEF_5_6_MID = StringDefEvent(
-    indicator = 6,
-    string_map = {
-        17: (0,),
-        16: (1,),
-        14: (2,),
-        9: (3,),
-        },
-    clef = "treble"
-    )
 
-DEF_7_LOW = StringDefEvent(
-    indicator = 7,
-    string_map = {
-        -24: (0,),
-        -25: (1,),
-        },
-        clef = "bass"
-    )
+# DEF_5_LOW = StringDefEvent(
+#     indicator = 7,
+#     string_map = {
+#         -24: (0,),
+#         -25: (1,),
+#         },
+#         clef = "bass"
+#     )
 
 DEF_8_MID = StringDefEvent(
     indicator = 8,

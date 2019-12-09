@@ -193,9 +193,10 @@ SEGMENT_1_IV = StringSegment(
 
     FindResonCell(
         string_def_event = strings.DEF_4_HIGH,
-    ).swap_strings().tag_events(("p",)),
+        improvisation=True,
+    ).tag_events(("p",)),
     StringCellSpace(
-        beats=13,
+        beats=15,
         text="markup_column:repeat, find resonant position(s),|then play a few loud plucks",
         text_length_on = False,
         ), 

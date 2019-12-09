@@ -13,7 +13,7 @@
     subtitle = \markup {
             \center-align {
                 \fontsize #1 {
-                    { "Faster," \note #"4" #UP "= 112 approx., speeding up" }
+                    { "Faster," \note #"4" #UP "= 120 approx." }
                 }
             }
     }

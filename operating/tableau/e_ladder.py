@@ -20,35 +20,86 @@ from operating.libraries.base_cells import (
 
 
 SEGMENT_0_I = StringSegment(
-    StringDefCell(
-        string_def_event=strings.DEF_14_MID,
-        ),
+    # StringDefCell(
+    #     string_def_event=strings.DEF_14_MID,
+    #     ),
     PulseSimpleCell(
-        string_def_event=strings.DEF_14_MID,
+        string_def_event=strings.DEF_6_MID,
         improvisation=True,
         ).tag_events(("f",)),
     StringCellSpace(
-        beats=21,
+        beats=35,
         text="repeat, keep pulse constant",
-        # text_length_on=False,
+        text_length_on=False,
         ),
-
+)
+# --------------------------------------------
+SEGMENT_1_I = StringSegment(
+    StringDefCell(
+        string_def_event=strings.DEF_15_LOWEST,
+        padding_beats=(1,1),
+        ),
     StringCellSpace(
-        beats=8.5,
-        # arrow=False,
-        # text_length_on=False,
+        beats=18,
+        text="markup_column:get a ladder!|(and climb up a little)",
+        text_length_on=False,
+        ),
+    SingleCell(string_def_event=strings.DEF_15_LOWEST,
+        ),
+    StringCellSpace(
+        beats=8,
+        text="repeat",
+        improvisation=True,
         ),
 
-    BoardCell(board_name="IV"),
+)
+# =====================================================================
+# =====================================================================
 
-    FermataCell(string_def_event=strings.DEF_14_MID,
+SEGMENT_0_II = StringSegment(
+    FindResonCell(string_def_event=strings.DEF_15_LOWEST,
         break_start=True,
         ),
     StringCellSpace(
-        beats=2,
-        arrow=False,
-        # text_length_on=False,
+        beats=8,
+        text="markup_column:repeat (with same pulse as pl. 1)|find resonant position",
+        text_length_on=False,
         ),
+    # StringCellSpace(
+    #     beats=3,
+    #     text="(cont.)",
+    #     # arrow=False,
+    #     # text_length_on=False,
+    #     ),
+    BoardCell(board_name="IV"),
+
+    # FermataCell(string_def_event=strings.DEF_14_MID,
+    #     break_start=True,
+    #     ),
+    # StringCellSpace(
+    #     beats=2,
+    #     arrow=False,
+    #     # text_length_on=False,
+    #     ),
+)    
+# --------------------------------------------
+SEGMENT_1_II = StringSegment(
+    FeatherFasterCell(string_def_event=strings.DEF_15_LOWEST,
+        
+        ),
+    FeatherSlowerCell(string_def_event=strings.DEF_15_LOWEST,
+        bar_start="",
+        ),
+    StringCellSpace(
+        text="several Xs",
+        text_length_on=False,
+        ),
+)
+
+# =====================================================================
+# =====================================================================
+
+SEGMENT_0_III = StringSegment(
     RunIntoCell(string_def_event=strings.DEF_14_MID,
         improvisation=True,
         break_start=True,
@@ -82,37 +133,9 @@ SEGMENT_0_I = StringSegment(
 # =====================================================================
 # =====================================================================
 
-SEGMENT_1_I = StringSegment(
-    StringDefCell(
-        string_def_event=strings.DEF_15_LOWEST,
-        padding_beats=(2,1),
-        ),
-    StringCellSpace(
-        beats=7,
-        text="climb up the ladder a little",
-        text_length_on=False,
-        ),
-    SingleCell(string_def_event=strings.DEF_15_LOWEST,
-        ),
-    StringCellSpace(
-        text="several Xs",
-        ),
-    FindResonCell(string_def_event=strings.DEF_15_LOWEST,
-        ),
-    StringCellSpace(
-        text="markup_column:repeat (with same pulse as pl. 1)|find resonant position"
-        ),
 
-    FeatherFasterCell(string_def_event=strings.DEF_15_LOWEST,
-        break_start=True,
-        ),
-    FeatherSlowerCell(string_def_event=strings.DEF_15_LOWEST,
-        bar_start="",
-        ),
-    StringCellSpace(
-        text="several Xs",
-        text_length_on=False,
-        ),
+
+SEGMENT_1_III = StringSegment(
     StringCellSpace(
         beats=3,
         text="markup_column:(optional get off the ladder|hand string to 3rd performer)"
@@ -151,8 +174,14 @@ SEGMENT_1_I = StringSegment(
 
 
 op = OperatingScore()
-op.staves[0].extend([SEGMENT_0_I,])
-op.staves[1].extend([SEGMENT_1_I,])
+op.staves[0].extend([
+    SEGMENT_0_I,
+    # SEGMENT_0_II,
+    ])
+op.staves[1].extend([
+    SEGMENT_1_I,
+    # SEGMENT_1_II,
+    ])
 
 op.stylesheets+=(_settings.OPERATING_PATH + "/stylesheets/e_ladder.ily",)
 

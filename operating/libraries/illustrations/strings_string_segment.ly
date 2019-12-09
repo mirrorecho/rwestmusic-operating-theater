@@ -288,7 +288,7 @@
                 \pluckHide
                 \time 8/4
                 s2
-                ^ \markup { DEF_5_6_MID }
+                ^ \markup { DEF_3_4_HIGH }
                 \glissando
                 \pluckShowReson
                             \set glissandoMap = #'(( 0 . 0) ( 1 . 1) ( 2 . 2) ( 3 . 3))
@@ -364,7 +364,7 @@
                 \pluckHide
                 \time 8/4
                 s2
-                ^ \markup { DEF_7_LOW }
+                ^ \markup { DEF_5_LOW }
                 \glissando
                 \pluckShowReson
                             \set glissandoMap = #'(( 0 . 0) ( 1 . 1))

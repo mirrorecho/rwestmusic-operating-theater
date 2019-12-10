@@ -22,7 +22,7 @@ from operating.libraries.base_cells import (
 SEGMENT_0_I = StringSegment(
     # StringDefCell(string_def_event = strings.DEF_10_MID()),
 
-    PulseSlowCell(string_def_event = strings.DEF_10_MID
+    PulseSlowCell(string_def_event = strings.DEF_6_MID
         ).tag_events(("mf",)),
     StringCellSpace(
         beats=20,
@@ -30,18 +30,18 @@ SEGMENT_0_I = StringSegment(
         text_length_on = False,
         ), 
 
-    RunIntoCell(string_def_event=strings.DEF_10_MID,
+    RunIntoCell(string_def_event=strings.DEF_6_MID,
         ),
-    RunSimpleCell(string_def_event=strings.DEF_10_MID,
+    RunSimpleCell(string_def_event=strings.DEF_6_MID,
         bar_start = ";"
         ),
 
-    JigSixCell(string_def_event=strings.DEF_10_MID,
+    JigSixCell(string_def_event=strings.DEF_6_MID,
         ).tag_events(("together",)),
-    PulseSixCell(string_def_event=strings.DEF_10_MID,
+    PulseSixCell(string_def_event=strings.DEF_6_MID,
         bar_start=";"
         ),
-    QuestionCell(string_def_event=strings.DEF_10_MID,
+    QuestionCell(string_def_event=strings.DEF_6_MID,
         bar_start=";"
         ).tag_events((), ("fermata",)),
 
@@ -52,28 +52,28 @@ SEGMENT_1_I = StringSegment(
     # BoardCell(board_verb="remove",
     #     pitches = ("S", "S", "S", "S"),
     #     ),
-    StringDefCell(string_def_event = strings.DEF_6_MID,
+    StringDefCell(string_def_event = strings.DEF_7_LOW(),
         padding_beats=(1,1),
         ),
     
-    PulseSlowCell(string_def_event = strings.DEF_6_MID,
+    PulseSlowCell(string_def_event = strings.DEF_7_LOW,
         ).tag_events(("mf",)),
-    PulseSixCell(string_def_event = strings.DEF_6_MID,
+    PulseSixCell(string_def_event = strings.DEF_7_LOW,
         ),
-    SingleCell(string_def_event = strings.DEF_6_MID,
+    SingleCell(string_def_event = strings.DEF_7_LOW,
         ),
     StringCellSpace(
         beats=5,
-        text="markup_column:chose from these|3 boxes at random|(with pl.1 pulse)",
+        text="markup_column:choose from these |3 boxes at random|(with pl.1 pulse)",
         text_length_on = False,
         ), 
 
-    JigSixCell(string_def_event=strings.DEF_6_MID,
+    JigSixCell(string_def_event=strings.DEF_7_LOW,
         ).tag_events(("together",)),
-    PulseSixCell(string_def_event=strings.DEF_6_MID,
+    PulseSixCell(string_def_event=strings.DEF_7_LOW,
         bar_start=";"
         ),
-    QuestionCell(string_def_event=strings.DEF_6_MID,
+    QuestionCell(string_def_event=strings.DEF_7_LOW,
         bar_start=";"
         ).tag_events((), ("fermata",)),
 )
@@ -82,21 +82,21 @@ SEGMENT_1_I = StringSegment(
 
 SEGMENT_0_II = StringSegment(
 
-    JigSevenCell(string_def_event=strings.DEF_6_MID,
+    JigSevenCell(string_def_event=strings.DEF_7_LOW,
         break_start=True,
         ),
-    PulseFourIntoCell(string_def_event=strings.DEF_6_MID,
+    PulseFourIntoCell(string_def_event=strings.DEF_7_LOW,
         bar_start=";"
         ),
-    QuestionCell(string_def_event=strings.DEF_6_MID,
+    QuestionCell(string_def_event=strings.DEF_7_LOW,
         bar_start=";"
         ).tag_events((),("fermata",)),
 
-    StringCellSpace(text="repeat",
+    StringCellSpace(text="repeat (together)",
         beats=5,
         ), 
 
-    FindResonCell(string_def_event=strings.DEF_6_MID,
+    FindResonCell(string_def_event=strings.DEF_7_LOW,
         improvisation=True,
         ),
     StringCellSpace(
@@ -107,21 +107,21 @@ SEGMENT_0_II = StringSegment(
 )
 # --------------------------------------------
 SEGMENT_1_II = StringSegment(
-    JigSevenCell(string_def_event=strings.DEF_10_MID,
+    JigSevenCell(string_def_event=strings.DEF_7_LOW,
         break_start=True,
         ),
-    PulseFourIntoCell(string_def_event=strings.DEF_10_MID,
+    PulseFourIntoCell(string_def_event=strings.DEF_7_LOW,
         bar_start=";"
         ),
-    QuestionCell(string_def_event=strings.DEF_10_MID,
+    QuestionCell(string_def_event=strings.DEF_7_LOW,
         bar_start=";"
         ).tag_events((),("fermata",)),
 
-    StringCellSpace(text="repeat",
+    StringCellSpace(text="repeat (together)",
         beats=5,
         ),
 
-    FindResonCell(string_def_event=strings.DEF_10_MID,
+    FindResonCell(string_def_event=strings.DEF_7_LOW,
         improvisation=True,
         ),
     StringCellSpace(
@@ -144,7 +144,7 @@ SEGMENT_0_III = StringSegment(
     FermataCell(string_def_event = strings.DEF_6_MID,),
     
     JigSevenCell(string_def_event=strings.DEF_6_MID,
-        ),
+        ).tag_events(("together",),),
     PulseFourIntoCell(string_def_event=strings.DEF_6_MID,
         bar_start=";"
         ),
@@ -159,26 +159,26 @@ SEGMENT_0_III = StringSegment(
 )
 # --------------------------------------------
 SEGMENT_1_III = StringSegment(    
-    FeatherFasterCell(string_def_event = strings.DEF_10_MID,
+    FeatherFasterCell(string_def_event = strings.DEF_6_MID,
         break_start=True,
         dynamics = (
             ("p", "\\<",),
             ("mf",),
             )
     ).inverse_tensions(),
-    FermataCell(string_def_event = strings.DEF_10_MID,),
+    FermataCell(string_def_event = strings.DEF_6_MID,),
     
-    JigSevenCell(string_def_event=strings.DEF_10_MID,
-        ),
-    PulseFourIntoCell(string_def_event=strings.DEF_10_MID,
+    JigSevenCell(string_def_event=strings.DEF_6_MID,
+        ).tag_events(("together",),),
+    PulseFourIntoCell(string_def_event=strings.DEF_6_MID,
         bar_start=";"
         ),
-    JigSevenSimpleCell(string_def_event=strings.DEF_10_MID,
+    JigSevenSimpleCell(string_def_event=strings.DEF_6_MID,
         ),
-    PulseFourIntoCell(string_def_event=strings.DEF_10_MID,
+    PulseFourIntoCell(string_def_event=strings.DEF_6_MID,
         bar_start=";"
         ),
-    QuestionCell(string_def_event=strings.DEF_10_MID,
+    QuestionCell(string_def_event=strings.DEF_6_MID,
         bar_start=";"
         ).swap_strings().tag_events((),("fermata",)),
 )
@@ -209,7 +209,7 @@ SEGMENT_0_IV =StringSegment(
 )
 # --------------------------------------------
 SEGMENT_1_IV = StringSegment(  
-    FindResonCell(string_def_event=strings.DEF_10_MID,
+    FindResonCell(string_def_event=strings.DEF_6_MID,
         break_start=True,
         improvisation=True,
         ).swap_strings(),
@@ -217,13 +217,13 @@ SEGMENT_1_IV = StringSegment(
         beats=7,
         text="markup_column:repeat keeping pulse constant,|find resonant position(s)",
         ),
-    FeatherFasterCell(string_def_event = strings.DEF_10_MID,
+    FeatherFasterCell(string_def_event = strings.DEF_6_MID,
         dynamics = (
             ("p", "\\<",),
             ("mf",),
             )
     ).tag_events(("not necessarily together",)),
-    FeatherSlowerCell(string_def_event = strings.DEF_10_MID,
+    FeatherSlowerCell(string_def_event = strings.DEF_6_MID,
         dynamics = (
             ("\\>",),
             ("mp",),

@@ -3,6 +3,7 @@ import abjad, calliope
 from operating.structure.string_def_event import StringDefEvent
 from operating.structure.string_def_cell import StringDefCell
 from operating.structure.string_segment import StringSegment
+from operating import _settings
 
 DEF_0_NONE = StringDefEvent(
     string_map = {},
@@ -17,14 +18,7 @@ DEF_1_HIGHEST = StringDefEvent(
     clef = "treble"
     )
 
-# DEF_2_HIGH = StringDefEvent(
-#     indicator = 2,
-#     string_map = {
-#         42: (0,),
-#         35: (1,),
-#         },
-#     clef = "treble"
-#     )
+
 
 DEF_2_HIGH = StringDefEvent(
     indicator = 2,
@@ -48,14 +42,7 @@ DEF_3_HIGH = StringDefEvent( # HAD BEEN 5 HIGH
     clef = "treble"
     )
 
-# DEF_4_HIGH = StringDefEvent(
-#     indicator = 4,
-#     string_map = {
-#         28: (0,),
-#         23: (1,),
-#         },
-#     clef = "treble"
-#     )
+
 DEF_4_HIGH = StringDefEvent( #  HAD BEEN 6 MID
     indicator = 4,
     string_map = {
@@ -76,18 +63,6 @@ DEF_3_4_HIGH = StringDefEvent( # HAD BEEN 5 HIGH
         },
     clef = "treble"
     )
-
-DEF_3_4_HIGH = StringDefEvent(
-    indicator = 6,
-    string_map = {
-        17: (0,),
-        16: (1,),
-        14: (2,),
-        9: (3,),
-        },
-    clef = "treble"
-    )
-
 
 DEF_5_LOW = StringDefEvent(
     indicator = 5,
@@ -119,8 +94,8 @@ DEF_7_LOW = StringDefEvent(
 DEF_8_LOW = StringDefEvent(
     indicator = 8,
     string_map = {
-        -19: (0,),
-        -24: (1,),
+        -7: (0,),
+        -12: (1,),
         },
         clef = "bass"
     )
@@ -128,105 +103,14 @@ DEF_8_LOW = StringDefEvent(
 DEF_9_LOW = StringDefEvent(
     indicator = 9,
     string_map = {
-        -29: (0,),
-        -31: (1,),
-        },
-        clef = "bass"
-    )
-
-# DEF_4_HIGH = StringDefEvent(
-#     indicator = 4,
-#     string_map = {
-#         28: (0,),
-#         23: (1,),
-#         },
-#     clef = "treble"
-#     )
-# DEF_4_HIGH = StringDefEvent( #  HAD BEEN 6 MID
-#     indicator = 4,
-#     string_map = {
-
-#         },
-#     clef = "treble"
-#     )
-
-
-# DEF_5_HIGH = StringDefEvent(
-#     indicator = 5,
-#     string_map = {
-#         17: (0,),
-#         16: (1,),
-#         },
-#     clef = "treble"
-#     )
-
-
-# DEF_6_MID = StringDefEvent(
-#     indicator = 6,
-#     string_map = {
-#         14: (0,),
-#         9: (1,),
-#         },
-#     clef = "treble"
-#     )
-
-
-# DEF_5_LOW = StringDefEvent(
-#     indicator = 7,
-#     string_map = {
-#         -24: (0,),
-#         -25: (1,),
-#         },
-#         clef = "bass"
-#     )
-
-DEF_8_MID = StringDefEvent(
-    indicator = 8,
-    string_map = {
-        7: (0,),
-        5: (1,),
-        },
-    clef = "treble"
-    )
-
-DEF_9_MID = StringDefEvent(
-    indicator = 9,
-    string_map = {
-        4: (0,),
-        -1: (1,),
-        },
-        clef = "treble"
-    )
-
-DEF_10_MID = StringDefEvent(
-    indicator = 10,
-    string_map = {
-        -3: (0,),
-        -5: (1,),
-        },
-        clef = "bass"
-    )
-
-DEF_11_LOW = StringDefEvent(
-    indicator = 11,
-    string_map = {
-        -15: (0,),
-        -17: (1,),
-        },
-        clef = "bass"
-    )
-
-DEF_12_LOW = StringDefEvent(
-    indicator = 12,
-    string_map = {
         -19: (0,),
         -24: (1,),
         },
         clef = "bass"
     )
 
-DEF_13_LOW = StringDefEvent(
-    indicator = 13,
+DEF_10_LOW = StringDefEvent(
+    indicator = 10,
     string_map = {
         -29: (0,),
         -31: (1,),
@@ -234,17 +118,8 @@ DEF_13_LOW = StringDefEvent(
         clef = "bass"
     )
 
-DEF_14_MID = StringDefEvent(
-    indicator = 14,
-    string_map = {
-        -7: (0,),
-        -12: (1,),
-        },
-        clef = "bass"
-    )
-
-DEF_15_LOWEST = StringDefEvent(
-    indicator = 15,
+DEF_11_LOWEST = StringDefEvent(
+    indicator = 11,
     string_map = {
         -34: (0,),
         -39: (1,),
@@ -253,17 +128,53 @@ DEF_15_LOWEST = StringDefEvent(
     )
 
 
-
 if __name__ == "__main__":
-    import sys, inspect
-    TEST_CELLS = []
-    for c in inspect.getmembers(sys.modules[__name__]):
-        if isinstance(c[1], StringDefEvent):
-            
+    from operating.score import OperatingScoreSinglePlayer
+    # import sys, inspect
 
-            my_cell = StringDefCell(string_def_event=c[1], name = c[0])
-            my_cell.tag(c[0])
-            TEST_CELLS.append(my_cell)
-                
-    calliope.illustrate(StringSegment(*TEST_CELLS))
+    # TEST_CELLS = []
+
+    # for c in inspect.getmembers(sys.modules[__name__]):
+    #     if isinstance(c[1], StringDefEvent):
+            
+    #         my_cell = StringDefCell(string_def_event=c[1], name = c[0])
+    #         my_cell.tag(c[0])
+    #         TEST_CELLS.append(my_cell)
+
+    mark_strings = [
+            DEF_1_HIGHEST(),
+            DEF_2_HIGH(), 
+            DEF_3_HIGH(),
+            DEF_4_HIGH(),
+            DEF_5_LOW(),
+            DEF_6_MID(),
+            DEF_7_LOW(),
+            DEF_8_LOW(),
+            DEF_9_LOW(),
+            DEF_10_LOW(),
+            DEF_11_LOWEST(),]
+
+
+    op = OperatingScoreSinglePlayer()
+    seg = StringSegment(*[
+        StringDefCell(string_def_event=ms) for ms in mark_strings
+        ])
+    for c in seg.cells:
+        c.events[0].tag("\\once \\hide Clef \\clef percussion")
+
+
+    seg.cells[0].tag_events((), ("8va",), ("8va!",))
+    seg.cells[9].tag_events((), ("8vb",), ("8vb!",))
+    seg.cells[10].tag_events((), ("8vb",), ("8vb!",))
+
+    seg.cells[:4].setattrs(clef="treble")
+    seg.cells[4:].setattrs(clef="bass")
+
+    # for c in seg.cells[:5]:
+    #     c
+
+    op.staves[0].append(seg)
+    op.stylesheets+=(_settings.OPERATING_PATH + "/stylesheets/strings.ily",)
+
+    calliope.illustrate(op)
 

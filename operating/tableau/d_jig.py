@@ -30,7 +30,7 @@ op.staves[0].extend([StringSegment(
         ),
     StringCellSpace(
         beats=36,
-        text="markup_column:both choose freely from these or simlar lines, repeat|pick up any strings, and continue switching strings",
+        text="markup_column:both choose freely from these or simlar lines; repeat;|pick up any strings, and continue switching strings;|avoid tieing strings at the same time as the other player|(so someone is always playing)",
         text_length_on=False,
         ),
 )])
@@ -90,19 +90,19 @@ op.staves[4].extend([StringSegment(
 
 
 op.staves[5].extend([StringSegment(
-    StringDefCell(string_def_event=strings.DEF_7_LOW(),
-        padding_beats=(1, 36),
-    ).tag_events(("markup_column:......................................|.",)),
-)])
-op.staves[6].extend([StringSegment(
     StringDefCell(string_def_event=strings.DEF_8_LOW(),
         padding_beats=(1, 36),
     ).tag_events(("markup_column:......................................|.",)),
 )])
-op.staves[7].extend([StringSegment(
+op.staves[6].extend([StringSegment(
     StringDefCell(string_def_event=strings.DEF_9_LOW(),
         padding_beats=(1, 36),
     ).tag_events(("markup_column:......................................|.",)),
+)])
+op.staves[7].extend([StringSegment(
+    StringDefCell(string_def_event=strings.DEF_10_LOW(),
+        padding_beats=(1, 36),
+    ).tag_events(("markup_column:......................................|.",), ("8vb",), ("8vb!",)),
 )])
 
 op.staves[8].extend([StringSegment(
@@ -112,12 +112,10 @@ op.staves[8].extend([StringSegment(
         |place any of these""",
         padding_beats=(1, 36),
         pitches = ("S", "S", 
-            # strings.DEF_5_LOW.pitches[0] +
-            # strings.DEF_10_MID.pitches[0] +
             strings.DEF_7_LOW.pitches[0] +
-            # strings.DEF_12_LOW.pitches[0] +
             strings.DEF_8_LOW.pitches[0] +
-            strings.DEF_9_LOW.pitches[0]
+            strings.DEF_9_LOW.pitches[0] +
+            strings.DEF_10_LOW.pitches[0]
             , "S"),
         # init_rhythm = (1,1,4,1),
         # time_signature = (7,4)

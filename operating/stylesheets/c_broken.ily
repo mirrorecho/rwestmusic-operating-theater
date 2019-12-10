@@ -10,5 +10,11 @@
             }
         }
     }
-    % tagline = "Copyright 2019 Randall West."
+    subtitle = \markup {
+            \center-align {
+                \fontsize #1 {
+                    { \note #"4" #UP "= 90 approx., steady pulse" }
+                }
+            }
+    }
 }

@@ -34,7 +34,7 @@ SEGMENT_0_I = StringSegment(
     
     PulseSimpleCell(string_def_event=DEF_3_4_HIGH,
         improvisation=True,
-        ),
+        ).tag_events(("mp",)),
     StringCellSpace(
         beats=26,
         text="repeat, keeping pulse constant",
@@ -45,8 +45,9 @@ SEGMENT_0_I = StringSegment(
 SEGMENT_1_I = StringSegment(
     StringDefCell(string_def_event=strings.DEF_5_LOW(),
         padding_beats=(1,2),
-        ).tag_events(("at the foot of the piano",)),
-    JigSevenCell(string_def_event=strings.DEF_5_LOW),
+        ).tag_events(("at the tail of the piano",)),
+    JigSevenCell(string_def_event=strings.DEF_5_LOW
+        ).tag_events(("mp",)),
     StringCellSpace(
         beats=25.5,
         text="repeat, freely at first, then with pl.1 pulse",
@@ -103,7 +104,7 @@ SEGMENT_1_II = StringSegment(
 SEGMENT_0_III = StringSegment(    
     StringCellSpace(
         break_start=True,
-        text="markup_column:walk to back|(trade places with pl.2)"
+        text="markup_column:walk to tail|(trade places with pl.2)"
         ),
     StringDefCell(string_def_event=strings.DEF_5_LOW(),
         padding_beats=(1,1),
@@ -111,7 +112,7 @@ SEGMENT_0_III = StringSegment(
 
     QuestionCell(string_def_event=strings.DEF_5_LOW, break_start=True,
         improvisation=True,
-        ).tag_events((),("fermata",)),
+        ).tag_events(("mf",),("fermata",)),
 
     StringCellSpace(string_def_event=strings.DEF_5_LOW,
         beats=18,
@@ -122,11 +123,16 @@ SEGMENT_0_III = StringSegment(
 SEGMENT_1_III = StringSegment( 
     StringCellSpace(
         break_start=True,
-        text="markup_column:walk to front|(trade places with pl.1)"
+        text="markup_column:walk to keyboard|(trade places with pl.1)"
         ),
     BoardCell(
         board_verb="place",
-        pitches = ("S", "S", (-31, -25,), "S"),
+        pitches = ("S", "S", 
+            strings.DEF_5_LOW.pitches[0] + 
+            strings.DEF_6_MID.pitches[0]
+            # strings.DEF_5_HIGH.pitches[0] +
+            # strings.DEF_6_MID.pitches[0]
+            , "S"),
         # init_rhythm = (1,1,4,1),
         # time_signature = (7,4)
         ),
@@ -155,30 +161,30 @@ SEGMENT_1_III = StringSegment(
 # =====================================================================
 
 SEGMENT_0_IV = StringSegment(    
-    StringDefCell(string_def_event=strings.DEF_8_MID(),
+    StringDefCell(string_def_event=strings.DEF_6_MID(),
         padding_beats = (1,1)
         ),
-    JigSixCell(string_def_event=strings.DEF_8_MID,
-        ).tag_events(("mf",)),
-    PulseSixCell(string_def_event=strings.DEF_8_MID,
+    JigSixCell(string_def_event=strings.DEF_6_MID,
+        ),
+    PulseSixCell(string_def_event=strings.DEF_6_MID,
         bar_start = ";"
         ),
-    # FermataCell(string_def_event = strings.DEF_8_MID,
+    # FermataCell(string_def_event = strings.DEF_6_MID,
     #     bar_start=";",),
     StringCellSpace(
         beats=5,
-        text="markup_column:several Xs,|until pl.2 continues",
+        text="markup_column:repeat,|until pl.2 continues",
         text_length_on = False,
         ), 
-    # SingleCell(string_def_event=strings.DEF_8_MID,
+    # SingleCell(string_def_event=strings.DEF_6_MID,
     #     break_start=False,
     #     ).tag_events(("together",)
     #     ),
-    QuestionCell(string_def_event=strings.DEF_8_MID, 
+    QuestionCell(string_def_event=strings.DEF_6_MID, 
         ).tag_events((),("fermata",)),
     StringCellSpace(
         beats=4,
-        text="markup_column:repeat several Xs|(together)",
+        text="markup_column:repeat,|(together)",
         text_length_on = False,
         ),
 
@@ -215,7 +221,7 @@ SEGMENT_1_IV = StringSegment(
         ).tag_events((),("fermata",)),
     StringCellSpace(
         beats=4,
-        text="markup_column:repeat several Xs|(together)",
+        text="markup_column:repeat,|(together)",
         text_length_on = False,
         ),
     

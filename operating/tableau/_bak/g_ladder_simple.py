@@ -21,10 +21,10 @@ from operating.libraries.base_cells import (
 
 SEGMENT_14 = StringSegment(
     StringDefCell(
-        string_def_event=strings.DEF_14_MID,
+        string_def_event=strings.DEF_11_LOW,
         ),
     PulseSimpleCell(
-        string_def_event=strings.DEF_14_MID,
+        string_def_event=strings.DEF_11_LOW,
         improvisation=True,
         ).tag_events(("f",)),
     StringCellSpace(
@@ -44,12 +44,12 @@ SEGMENT_15 = StringSegment(
     BoardCell(
         break_start=True,
         pitches = ("S", "S", 
-            strings.DEF_14_MID.pitches[0]
+            strings.DEF_11_LOW.pitches[0]
             , "S"),
         ),
 
     StringDefCell(
-        string_def_event=strings.DEF_15_LOWEST,
+        string_def_event=strings.DEF_10_LOWEST,
         padding_beats=(1,1),
         ),
     StringCellSpace(
@@ -58,11 +58,11 @@ SEGMENT_15 = StringSegment(
         text_length_on=False,
         ),
 
-    PulseSlowCell(string_def_event=strings.DEF_15_LOWEST,
+    PulseSlowCell(string_def_event=strings.DEF_10_LOWEST,
         break_start = False,
         ),
 
-    PulseSimpleCell(string_def_event=strings.DEF_15_LOWEST,
+    PulseSimpleCell(string_def_event=strings.DEF_10_LOWEST,
         break_start = False,
         improvisation=True,
         ),
@@ -74,15 +74,15 @@ SEGMENT_15 = StringSegment(
     BoardCell(
         break_start=True,
         pitches = ("S", "S", 
-            strings.DEF_15_LOWEST.pitches[0][1:]
+            strings.DEF_10_LOWEST.pitches[0][1:]
             , "S"),
         ),
 
-    FindResonCell(string_def_event=strings.DEF_15_LOWEST,
+    FindResonCell(string_def_event=strings.DEF_10_LOWEST,
         improvisation=True,
         ),
 
-    # SingleCell(string_def_event=strings.DEF_15_LOWEST,
+    # SingleCell(string_def_event=strings.DEF_10_LOWEST,
 
     #     ),
     StringCellSpace(
@@ -97,10 +97,10 @@ SEGMENT_15 = StringSegment(
             , "S"),
         ),
 
-    FeatherFasterCell(string_def_event=strings.DEF_15_LOWEST,
+    FeatherFasterCell(string_def_event=strings.DEF_10_LOWEST,
         # break_start=True,
         ),
-    FeatherSlowerCell(string_def_event=strings.DEF_15_LOWEST,
+    FeatherSlowerCell(string_def_event=strings.DEF_10_LOWEST,
         bar_start="",
         ),
     StringCellSpace(
@@ -112,20 +112,20 @@ SEGMENT_15 = StringSegment(
     BoardCell(
         break_start=True,
         pitches = ("S", "S", 
-            strings.DEF_15_LOWEST.pitches[0][:1]
+            strings.DEF_10_LOWEST.pitches[0][:1]
             , "S"),
         ),
 
-    RunIntoCell(string_def_event=strings.DEF_14_MID,
+    RunIntoCell(string_def_event=strings.DEF_11_LOW,
         improvisation=True,
         # break_start=True,
         # ).tag_events(("repeat, starting on higher threads, moving lower each time",),
         ),
-    JigSixCell(string_def_event=strings.DEF_14_MID,
+    JigSixCell(string_def_event=strings.DEF_11_LOW,
         improvisation=True,
         bar_start=";",
         ),
-    PulseSixCell(string_def_event=strings.DEF_14_MID,
+    PulseSixCell(string_def_event=strings.DEF_11_LOW,
         improvisation=True,
         bar_start=";",
         ),
@@ -144,14 +144,14 @@ SEGMENT_15 = StringSegment(
         text_length_on=False,
         ),
 
-    # JigSevenCell(string_def_event=strings.DEF_14_MID,
+    # JigSevenCell(string_def_event=strings.DEF_11_LOW,
     #     improvisation=True,
     #     ).tag_events(("together",),),
-    # PulseFourIntoCell(string_def_event=strings.DEF_14_MID,
+    # PulseFourIntoCell(string_def_event=strings.DEF_11_LOW,
     #     improvisation=True,
     #     bar_start=";",
     #     ),
-    # PulseSimpleCell(string_def_event=strings.DEF_15_LOWEST,
+    # PulseSimpleCell(string_def_event=strings.DEF_10_LOWEST,
     #     improvisation=True,
     #     ),
     # StringCellSpace(
@@ -195,14 +195,14 @@ SEGMENT_15.cells[13].events[3].tag("8vb!")
 #     #     text="until other pl. cue",
 #     #     text_length_on=False,
 #     #     ),
-#     # JigSevenCell(string_def_event=strings.DEF_15_LOWEST,
+#     # JigSevenCell(string_def_event=strings.DEF_10_LOWEST,
 #     #     improvisation=True,
 #     #     ).tag_events(("together",),),
-#     # PulseFourIntoCell(string_def_event=strings.DEF_15_LOWEST,
+#     # PulseFourIntoCell(string_def_event=strings.DEF_10_LOWEST,
 #     #     bar_start=";",
 #     #     improvisation=True,
 #     #     ),
-#     # FermataCell(string_def_event=strings.DEF_15_LOWEST,
+#     # FermataCell(string_def_event=strings.DEF_10_LOWEST,
 #     #     ),
 #     # StringCellSpace(
 #     #     text="several Xs"

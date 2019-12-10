@@ -151,7 +151,7 @@ SEGMENT_0_III = StringSegment(
 SEGMENT_1_III = StringSegment(
     SingleCell(string_def_event=strings.DEF_2_HIGH,
         break_start=True,
-        ).swap_strings().tag_events(("pp",)),
+        ).swap_strings().tag_events(("p",)),
     StringCellSpace(text="repeat"), 
 
 
@@ -170,7 +170,7 @@ SEGMENT_1_III = StringSegment(
 # =======================================================================
 SEGMENT_0_IV = StringSegment(
     PulseSixCell(string_def_event = strings.DEF_3_HIGH
-        ).tag_events(("p"),),
+        ),
     StringCellSpace(text="repeat",
         text_length_on = False,
         beats = 6,
@@ -194,7 +194,7 @@ SEGMENT_1_IV = StringSegment(
     FindResonCell(
         string_def_event = strings.DEF_4_HIGH,
         improvisation=True,
-    ).tag_events(("p",)),
+    ),
     StringCellSpace(
         beats=15,
         text="markup_column:repeat, find resonant position(s),|then play a few loud plucks",

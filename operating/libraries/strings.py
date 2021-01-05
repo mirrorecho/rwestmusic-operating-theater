@@ -18,8 +18,6 @@ DEF_1_HIGHEST = StringDefEvent(
     clef = "treble"
     )
 
-
-
 DEF_2_HIGH = StringDefEvent(
     indicator = 2,
     respell="sharps",
